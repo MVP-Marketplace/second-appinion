@@ -1,4 +1,5 @@
 const User = require("../db/models/user"),
+  { sendWelcomeEmail } = require("../emails/"),
   jwt = require("jsonwebtoken");
 
 // ***********************************************//
@@ -12,7 +13,7 @@ exports.createUser = async (req, res) => {
       email,
       password,
     });
-    //   sendWelcomeEmail(user.email, user.name);
+    sendWelcomeEmail(user.email, user.name);
     const token = await user.generateAuthToken();
     res.cookie("jwt", token, {
       httpOnly: true,
@@ -117,7 +118,7 @@ exports.logoutAllDevices = async (req, res) => {
 exports.deleteUser = async (req, res) => {
   try {
     await req.user.remove();
-    // sendCancellationEmail(req.user.email, req.user.name);
+    sendCancellationEmail(req.user.email, req.user.name);
     res.clearCookie("jwt");
     res.json({ message: "user deleted" });
   } catch (e) {
