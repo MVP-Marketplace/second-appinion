@@ -193,7 +193,7 @@ exports.updatePassword = async (req, res) => {
    req.user.password = req.body.password;
    await req.user.save();
    res.clearCookie('jwt');
-   res.json({ message: 'password updated successfully' });
+   res.json({ message: 'Password updated successfully' });
  } catch (e) {
    res.json({ error: e.toString() });
  }
