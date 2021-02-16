@@ -45,6 +45,64 @@ exports.loginUser = async (req, res) => {
   }
 };
 
+
+
+// * Password Reset Request
+// * This route sends an email that the
+// * user must click within 10 minutes
+// * to reset their password.
+// * @return {}
+// */
+
+exports.requestPasswordReset = async (req, res) => {
+ try {
+   const { email } = req.query,
+     user = await User.findOne({ email });
+   if (!user) throw new Error("Account doesn't exist");
+   // Build jwt token
+   const token = jwt.sign(
+     { _id: user._id.toString(), name: user.name },
+     process.env.JWT_SECRET,
+     {
+       expiresIn: '10m',
+     }
+   );
+   forgotPasswordEmail(email, token);
+   res.json({ message: 'Reset password email sent' });
+ } catch (e) {
+   res.json({ error: e.toString() });
+ }
+};
+
+/**
+* @param {token}
+* Redirect to password reset page
+* @return {}
+*/
+exports.passwordRedirect = async (req, res) => {
+ const { token } = req.params;
+ try {
+   jwt.verify(token, process.env.JWT_SECRET, function (err, decoded) {
+     if (err) throw new Error(err.message);
+   });
+   res.cookie('jwt', token, {
+     httpOnly: true,
+     maxAge: 600000,
+     sameSite: 'Strict',
+   });
+   res.redirect(process.env.URL + '/update-password');
+ } catch (e) {
+   res.json({ error: e.toString() });
+ }
+};
+
+/**
+* @param {req.user}
+* Get current user
+* @return {user}
+*/
+
+
 //Authenticated Routes Below
 
 /**
@@ -124,4 +182,19 @@ exports.deleteUser = async (req, res) => {
   } catch (e) {
     res.status(500).json({ error: e.toString() });
   }
+};
+
+// * Update password
+// * @return {}
+// */
+
+exports.updatePassword = async (req, res) => {
+ try {
+   req.user.password = req.body.password;
+   await req.user.save();
+   res.clearCookie('jwt');
+   res.json({ message: 'Password updated successfully' });
+ } catch (e) {
+   res.json({ error: e.toString() });
+ }
 };
