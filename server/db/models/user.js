@@ -39,16 +39,6 @@ const userSchema = new mongoose.Schema(
       type: String,
       trim: true,
     },
-    age: {
-      type: String,
-      trim: true,
-      required: true,
-    },
-    gender: {
-      type: String,
-      trim: true,
-      required: true,
-    },
     admin: {
       type: Boolean,
       required: true,
@@ -62,13 +52,6 @@ const userSchema = new mongoose.Schema(
         },
       },
     ],
-    teethPhotos: {
-      type: String,
-    },
-    xrayPhotos: {
-      type: String,
-      required: true,
-    },
   },
   {
     timestamps: true,
