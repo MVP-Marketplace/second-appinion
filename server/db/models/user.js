@@ -35,6 +35,20 @@ const userSchema = new mongoose.Schema(
         }
       },
     },
+    phone: {
+      type: String,
+      trim: true,
+    },
+    age: {
+      type: String,
+      trim: true,
+      required: true,
+    },
+    gender: {
+      type: String,
+      trim: true,
+      required: true,
+    },
     admin: {
       type: Boolean,
       required: true,
@@ -48,8 +62,12 @@ const userSchema = new mongoose.Schema(
         },
       },
     ],
-    avatar: {
+    teethPhotos: {
       type: String,
+    },
+    xrayPhotos: {
+      type: String,
+      required: true,
     },
   },
   {
