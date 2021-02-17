@@ -6,12 +6,13 @@ const User = require("../db/models/user"),
 // Create a user
 // ***********************************************//
 exports.createUser = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, phone } = req.body;
   try {
     const user = new User({
       name,
       email,
       password,
+      phone
     });
     sendWelcomeEmail(user.email, user.name);
     const token = await user.generateAuthToken();
@@ -119,7 +120,7 @@ exports.getCurrentUser = async (req, res) => res.json(req.user);
  */
 exports.updateCurrentUser = async (req, res) => {
   const updates = Object.keys(req.body);
-  const allowedUpdates = ["name", "email", "password"];
+  const allowedUpdates = ["name", "email", "password", "phone"];
   const isValidOperation = updates.every((update) =>
     allowedUpdates.includes(update)
   );
