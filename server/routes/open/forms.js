@@ -1,7 +1,7 @@
 const router = require("express").Router(),
-  { createForm, uploadXray } = require("../../controllers/tasks");
+  { createForm, uploadXray } = require("../../controllers/forms");
 
 router.post("/", createForm);
-router.post("/xray", uploadXray);
+router.post("/upload", uploadXray);
 
 module.exports = router;

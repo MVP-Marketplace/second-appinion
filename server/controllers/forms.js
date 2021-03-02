@@ -1,4 +1,4 @@
-const mongoosse = require("mongoose"),
+const mongoose = require("mongoose"),
   cloudinary = require("cloudinary").v2,
   Form = require("../db/models/form");
 
@@ -8,7 +8,6 @@ const mongoosse = require("mongoose"),
 exports.createForm = async (req, res) => {
   const form = await new Form({
     ...req.body,
-    email: req.form.email,
   });
   try {
     form.save();
@@ -45,7 +44,7 @@ exports.getSpecificForm = async (req, res) => {
     return res.status(400).send("Not a valid form id");
 
   try {
-    const form = await Form.findOne({ _id, email: req.form.email });
+    const form = await Form.findOne({ _id });
     if (!form) return res.status(404).send();
     res.json(form);
   } catch (e) {

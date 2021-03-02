@@ -15,8 +15,8 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 // Unauthenticated routes
+app.use("/api/forms", formRouter);
 app.use("/api/users", openRoutes);
-app.use("api/forms", formRouter);
 
 app.use(cookieParser());
 
@@ -36,7 +36,7 @@ app.use(
 app.use("/api/*", passport.authenticate("jwt", { session: false }));
 
 app.use("/api/users", userRouter);
-app.use("api/forms", secureFormRouter);
+app.use("/api/forms", secureFormRouter);
 
 // We'll add more stuff in between in a little bit.
 
