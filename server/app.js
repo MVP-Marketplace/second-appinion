@@ -8,6 +8,7 @@ const express = require("express"),
   secureFormRouter = require("./routes/secure/forms"),
   passport = require("./middleware/authentication"),
   openRoutes = require("./routes/open/index"),
+  fileUpload = require("express-fileupload"),
   path = require("path");
 
 app.use(express.json());
@@ -23,6 +24,13 @@ if (process.env.NODE_ENV === "production") {
   // Serve any static files
   app.use(express.static(path.resolve(__dirname, "..", "client", "build")));
 }
+
+app.use(
+  fileUpload({
+    useTempFiles: true,
+    tempFileDir: "/tmp/images",
+  })
+);
 
 //  Authenticated  Routes
 app.use("/api/*", passport.authenticate("jwt", { session: false }));
