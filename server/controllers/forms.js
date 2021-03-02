@@ -45,7 +45,7 @@ exports.getSpecificForm = async (req, res) => {
 
   try {
     const form = await Form.findOne({ _id });
-    if (!form) return res.status(404).send();
+    if (!form) return res.status(404).send("Form not found");
     res.json(form);
   } catch (e) {
     res.status(500).json({ error: e.toString() });
@@ -92,9 +92,8 @@ exports.getAllForms = async (req, res) => {
 // ***********************************************//
 exports.deleteForm = async (req, res) => {
   try {
-    const form = await Task.findOneAndDelete({
+    const form = await Form.findOneAndDelete({
       _id: req.params.id,
-      email: req.form.email,
     });
     if (!form) return res.status(404).json({ error: "Form not found" });
     res.json({ message: "Form has been deleted." });
