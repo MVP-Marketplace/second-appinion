@@ -4,6 +4,8 @@ const express = require("express"),
   morgan = require("morgan"),
   cookieParser = require("cookie-parser"),
   userRouter = require("./routes/secure/users"),
+  formRouter = require("./routes/open/forms"),
+  secureFormRouter = require("./routes/secure/forms"),
   passport = require("./middleware/authentication"),
   openRoutes = require("./routes/open/index"),
   path = require("path");
@@ -13,6 +15,7 @@ app.use(morgan("dev"));
 
 // Unauthenticated routes
 app.use("/api/users", openRoutes);
+app.use("api/forms", formRouter);
 
 app.use(cookieParser());
 
@@ -25,6 +28,7 @@ if (process.env.NODE_ENV === "production") {
 app.use("/api/*", passport.authenticate("jwt", { session: false }));
 
 app.use("/api/users", userRouter);
+app.use("api/forms", secureFormRouter);
 
 // We'll add more stuff in between in a little bit.
 
