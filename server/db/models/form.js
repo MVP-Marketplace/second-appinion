@@ -102,7 +102,7 @@ const formSchema = mongoose.Schema(
     },
     completedBy: {
       type: String,
-      // required: true,
+      required: true,
       trim: true,
     },
   },
