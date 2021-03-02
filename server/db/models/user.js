@@ -35,6 +35,10 @@ const userSchema = new mongoose.Schema(
         }
       },
     },
+    phone: {
+      type: String,
+      trim: true,
+    },
     admin: {
       type: Boolean,
       required: true,
@@ -48,9 +52,6 @@ const userSchema = new mongoose.Schema(
         },
       },
     ],
-    avatar: {
-      type: String,
-    },
   },
   {
     timestamps: true,
