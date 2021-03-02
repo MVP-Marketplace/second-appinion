@@ -1,4 +1,5 @@
 const mongoose = require("mongoose"),
+  { sendConfirmationEmail } = require("../emails/"),
   cloudinary = require("cloudinary").v2,
   Form = require("../db/models/form");
 
@@ -11,6 +12,7 @@ exports.createForm = async (req, res) => {
   });
   try {
     form.save();
+    sendConfirmationEmail(form.email);
     res.status(201).json(form);
   } catch (e) {
     res.status(400).json({ error: e.toString() });
