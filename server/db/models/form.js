@@ -34,6 +34,14 @@ const formSchema = mongoose.Schema(
           painLocation: {
             type: String,
             required: true,
+            // options: [
+            //     'Upper',
+            //     'Lower',
+            //     'Left',
+            //     'Right',
+            //     'Tooth',
+            //     'Gum'
+            // ],
           },
           painStrength: {
             type: String,
