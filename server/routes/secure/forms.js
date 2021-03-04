@@ -11,6 +11,4 @@ router.get("/", getAllForms);
 
 router.delete("/:id", deleteForm);
 
-router.post("/");
-
 module.exports = router;
