@@ -31,3 +31,14 @@ exports.forgotPasswordEmail = (email, token) => {
     html: exampleHTMLEmail,
   });
 };
+
+exports.sendConfirmationEmail = (email) => {
+  sgMail.send({
+    to: email,
+    from: `${process.env.FROM_EMAIL}`,
+    subject: "Second Appinion",
+    text: `Hello! This email is to confirm that we have received your submission for a second opinion by a dental professional. An unbiased dentist will review your x-rays and questionnaire completed and will email you with the second opinion. 
+    
+    Thank you for choosing Second Appinion!`,
+  });
+};
