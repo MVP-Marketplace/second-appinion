@@ -1,0 +1,28 @@
+.footer-main-container {
+  background-color: #4972a3;
+  height: 175px;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+}
+.footer-column-1,
+.footer-bottom-row__icons {
+  cursor: pointer;
+}
+.footer-column-1 {
+  color: white;
+  font-size: 13px;
+  line-height: 16px;
+  padding-left: 5%;
+}
+
+.footer-bottom-row {
+  text-align: center;
+}
+
+.footer-bottom-row__icons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+  margin: auto;
+}
