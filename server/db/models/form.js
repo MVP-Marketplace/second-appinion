@@ -18,6 +18,9 @@ const formSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    imageUpload: {
+      type: String,
+    },
     age: {
       type: String,
       required: true,
