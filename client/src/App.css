@@ -26,3 +26,19 @@
   width: 40%;
   margin: auto;
 }
+
+.form-questions-main-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.MuiMobileStepper-dotActive {
+  background-color: #4972a3;
+}
+
+.MuiMobileStepper-root {
+  background-color: transparent;
+  width: 100%;
+  position: fixed;
+  bottom: 25%;
+}
