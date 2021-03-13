@@ -11,7 +11,7 @@ const FormPersonalDetails = () => {
           </p>
           <form className="first-page-form">
             <div>
-              <label htmlFor="email">Name:</label>
+              <label htmlFor="email">1. Name:</label>
               <br />
               <input
                 className="small-input-form"
@@ -21,7 +21,7 @@ const FormPersonalDetails = () => {
               />
             </div>
             <div>
-              <label htmlFor="age">How old are you?</label>
+              <label htmlFor="age">2. How old are you?</label>
               <br />
               <input
                 className="small-input-form"
@@ -31,7 +31,7 @@ const FormPersonalDetails = () => {
               />
             </div>
             <div>
-              <label htmlFor="gender">Gender:</label>
+              <label htmlFor="gender">3. Gender:</label>
               <br />
               <input
                 className="small-input-form"
