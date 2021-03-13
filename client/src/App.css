@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f9fbff;
+  font-family: Lato;
+  font-style: normal;
+}
+
 .footer-main-container {
   background-color: #4972a3;
   height: 175px;
@@ -39,6 +49,46 @@
 .MuiMobileStepper-root {
   background-color: transparent;
   width: 100%;
+  margin: auto;
   position: fixed;
-  bottom: 25%;
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.first-page-form-container-main {
+  display: flex;
+  justify-content: center;
+}
+
+.first-page-form-container {
+  top: 10%;
+  background-color: #ffff;
+  box-shadow: 0px 4px 4px #eae9e9;
+  border-radius: 40px;
+  position: absolute;
+  width: 70%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.first-page-header {
+  margin-bottom: 20%;
+}
+
+.first-page-form {
+  line-height: 2.5rem;
+}
+
+.small-input-form {
+  border: 1px solid #4972a3;
+  box-sizing: border-box;
+  border-radius: 15px;
+  width: 30%;
+  height: 1.3rem;
 }
