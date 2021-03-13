@@ -78,17 +78,51 @@ body {
 }
 
 .first-page-header {
-  margin-bottom: 20%;
+  margin-bottom: 15%;
 }
 
 .first-page-form {
   line-height: 2.5rem;
 }
 
-.small-input-form {
+.small-input-form,
+.wide-input-form {
   border: 1px solid #4972a3;
   box-sizing: border-box;
-  border-radius: 15px;
-  width: 30%;
-  height: 1.3rem;
+  border-radius: 8px;
+  outline: none;
+  padding: 3%;
+}
+
+.small-input-form {
+  width: 50%;
+  height: 1.6rem;
+}
+
+.wide-input-form {
+  width: 100%;
+  margin-top: 5%;
+  height: 2.5rem;
+}
+
+.second-page-form {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  top: 5%;
+}
+
+.single-page-form-question-container {
+  background: #ffffff;
+  border-radius: 40px;
+  width: 60%;
+  height: fit-content;
+  padding: 3% 3% 5% 6%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  line-height: 1.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 3%;
 }
