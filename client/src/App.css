@@ -86,7 +86,8 @@ body {
 }
 
 .small-input-form,
-.wide-input-form {
+.wide-input-form,
+.dropdown {
   border: 1px solid #4972a3;
   box-sizing: border-box;
   border-radius: 8px;
@@ -103,6 +104,11 @@ body {
   width: 100%;
   margin-top: 5%;
   height: 2.5rem;
+}
+
+.dropdown {
+  width: 50%;
+  height: 2.2rem;
 }
 
 .second-page-form {
@@ -125,4 +131,27 @@ body {
   line-height: 1.8rem;
   flex-wrap: wrap;
   margin-bottom: 3%;
+}
+
+.dental-pain-form-question {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+}
+
+.dental-pain-form-column,
+.dental-pain-form-column-2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.form-question-header {
+  margin-bottom: 0;
+}
+
+.form-question-header-caption {
+  margin-top: 0;
+  font-size: 0.75rem;
 }
