@@ -10,7 +10,6 @@ import DentalPainFormPart2 from "../components/DentalPainFormPart2";
 import PreviousWorkForm from "../components/PreviousWorkForm";
 import SubmitPageForm from "../components/SubmitPageForm";
 import { StylesProvider } from "@material-ui/core/styles";
-import Footer from "../components/Footer";
 
 export default function UserForm() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -74,7 +73,6 @@ export default function UserForm() {
           />
         </StylesProvider>
       </div>
-      <Footer />
     </>
   );
 }
