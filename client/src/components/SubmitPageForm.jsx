@@ -11,40 +11,13 @@ const SubmitPageForm = () => {
       <div className="second-page-form-container">
         <form className="second-page-form">
           <div className="single-page-form-question-container">
-            <p>How long have you been in pain?</p>
+            <p>Have you had a tooth pulled or removed?</p>
             <label>
-              <input type="radio" value="option1" name="value" checked={true} />
-              Days
+              <input type="radio" value="Yes" name="toothPulledRemoved" />
+              Yes
             </label>
             <label>
-              <input type="radio" value="option2" name="value" />
-              Weeks
-            </label>
-            <label>
-              <input type="radio" value="option2" name="value" />
-              Months
-            </label>
-          </div>
-          <div className="single-page-form-question-container">
-            <p>What causes the pain?</p>
-            <label>
-              <input type="radio" value="option1" name="value" checked={true} />
-              Hot
-            </label>
-            <label>
-              <input type="radio" value="option2" name="value" />
-              Cold
-            </label>
-            <label>
-              <input type="radio" value="option2" name="value" />
-              Chewing
-            </label>
-            <label>
-              <input type="radio" value="option2" name="value" />
-              Constant pain with no stimulus
-            </label>
-            <label>
-              <input type="radio" value="option2" name="value" />
+              <input type="radio" value="No" name="toothPulledRemoved" />
               No
             </label>
           </div>
@@ -56,7 +29,12 @@ const SubmitPageForm = () => {
             <p className="form-question-header-caption">
               (Please type your response below)
             </p>
-            <textarea className="largest-submit-input-form" />
+            <textarea
+              className="largest-submit-input-form"
+              id="additionalInformationForDentis"
+              type="text"
+              name="additionalInformationForDentis"
+            />
           </div>
           <div className="wide-button-form-container">
             <button className="wide-button">Submit</button>
