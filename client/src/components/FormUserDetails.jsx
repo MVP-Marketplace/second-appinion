@@ -14,26 +14,38 @@ const FormUserDetails = () => {
           <div className="single-page-form-question-container">
             <p>4. When was your last dental visit?</p>
             <label>
-              <input type="radio" value="option1" name="value" checked={true} />
+              <input
+                type="radio"
+                value="in the last week"
+                name="lastDentalVisit"
+              />
               In the last week
             </label>
             <label>
-              <input type="radio" value="option2" name="value" />
+              <input
+                type="radio"
+                value="in the last month"
+                name="lastDentalVisit"
+              />
               In the last month
             </label>
             <label>
-              <input type="radio" value="option2" name="value" />
+              <input
+                type="radio"
+                value="in the last year"
+                name="lastDentalVisit"
+              />
               In the last year
             </label>
           </div>
           <div className="single-page-form-question-container">
             <p>5. Did the dentist tell you that you need dental work?</p>
             <label>
-              <input type="radio" value="option1" name="value" checked={true} />
+              <input type="radio" value="yes" name="dentalWorkNeeded" />
               Yes
             </label>
             <label>
-              <input type="radio" value="option2" name="value" />
+              <input type="radio" value="no" name="dentalWorkNeeded" />
               No
             </label>
           </div>
@@ -43,9 +55,9 @@ const FormUserDetails = () => {
             </label>
             <textarea
               className="wide-input-form"
-              id="dentist-told"
+              id="dentistTold"
               type="text"
-              name="dentist-told"
+              name="dentistTold"
             />
           </div>
         </form>

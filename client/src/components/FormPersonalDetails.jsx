@@ -11,7 +11,7 @@ const FormPersonalDetails = () => {
           </p>
           <form className="first-page-form">
             <div>
-              <label htmlFor="email">1. Name:</label>
+              <label htmlFor="email">1. Email:</label>
               <br />
               <input
                 className="small-input-form"
