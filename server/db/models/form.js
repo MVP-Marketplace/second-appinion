@@ -16,7 +16,7 @@ const formSchema = mongoose.Schema(
     },
     xrayUpload: {
       type: String,
-      required: true,
+      // required: true,
     },
     imageUpload: {
       type: String,
@@ -29,6 +29,17 @@ const formSchema = mongoose.Schema(
     gender: {
       type: String,
       required: true,
+    },
+    lastDentalVisit: {
+      type: String,
+      required: true,
+    },
+    dentalWorkNeeded: {
+      type: String,
+      required: true,
+    },
+    dentistTold: {
+      type: String,
     },
     dentalPain: {
       type: String,
@@ -47,15 +58,7 @@ const formSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    painWorsen: {
-      type: String,
-      required: true,
-    },
-    painBiteDown: {
-      type: String,
-      required: true,
-    },
-    painBiteRelease: {
+    painCause: {
       type: String,
       required: true,
     },
@@ -63,23 +66,15 @@ const formSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    painDissipate: {
+    painWorsen: {
       type: String,
       required: true,
     },
-    lastDentalVisit: {
+    painBiteRelease: {
       type: String,
       required: true,
     },
-    dentalWorkNeeded: {
-      type: String,
-      required: true,
-    },
-    needCavitiesFilled: {
-      type: String,
-      required: true,
-    },
-    fillingsReplaced: {
+    cavitiesBefore: {
       type: String,
       required: true,
     },
@@ -91,13 +86,8 @@ const formSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    cosmeticDentalSurgery: {
+    additionalInformationForDentist: {
       type: String,
-      required: true,
-    },
-    toothNeedsWork: {
-      type: String,
-      required: true,
     },
     completed: {
       type: Boolean,
@@ -105,7 +95,6 @@ const formSchema = mongoose.Schema(
     },
     completedBy: {
       type: String,
-      required: true,
       trim: true,
     },
   },
