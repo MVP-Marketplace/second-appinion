@@ -49,7 +49,7 @@ export default function UserForm() {
           </div>
           <MobileStepper
             steps={maxSteps}
-            position="fixed"
+            position="bottom"
             variant="dots"
             activeStep={activeStep}
             nextButton={
