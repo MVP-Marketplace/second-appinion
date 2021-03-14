@@ -24,12 +24,12 @@ const PreviousWorkForm = () => {
           <div className="single-page-form-question-container">
             <p>Have you ever had a cavity?</p>
             <label>
-              <input type="radio" value="1-3 cavities" name="cavitiesBefore" />
-              1-3 cavities
+              <input type="radio" value="1-3 cavities" name="cavitiesBefore" />1
+              to 3 cavities
             </label>
             <label>
-              <input type="radio" value="4+ cavities" name="cavitiesBefore" />
-              4+ cavities
+              <input type="radio" value="4+ cavities" name="cavitiesBefore" />4
+              or more cavities
             </label>
             <label>
               <input type="radio" value="No" name="cavitiesBefore" />
