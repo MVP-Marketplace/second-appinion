@@ -30,15 +30,20 @@ const FormPersonalDetails = () => {
                 name="age"
               />
             </div>
-            <div>
-              <label htmlFor="gender">3. Gender:</label>
-              <br />
-              <input
-                className="small-input-form"
-                id="gender"
-                type="text"
-                name="gender"
-              />
+            <label htmlFor="gender">3. Gender:</label>
+            <div className="gender-radio-buttons">
+              <label>
+                <input type="radio" value="Female" name="gender" />
+                Female
+              </label>
+              <label>
+                <input type="radio" value="Male" name="gender" />
+                Male
+              </label>
+              <label>
+                <input type="radio" value="Other" name="gender" />
+                Other
+              </label>
             </div>
           </form>
         </div>
