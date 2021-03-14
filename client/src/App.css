@@ -49,9 +49,8 @@ body {
 .MuiMobileStepper-root {
   background-color: transparent;
   width: 100%;
-  margin: auto;
-  position: fixed;
-  bottom: 5%;
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
@@ -112,11 +111,13 @@ body {
 }
 
 .second-page-form {
-  position: absolute;
+  position: relative;
   width: 100vw;
   height: 100vh;
   flex-direction: column;
-  top: 5%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  overflow: scroll;
 }
 
 .single-page-form-question-container {
