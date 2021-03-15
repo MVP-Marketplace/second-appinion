@@ -99,11 +99,6 @@ body {
   height: 1.6rem;
 }
 
-.gender-radio-buttons {
-  display: flex;
-  flex-direction: column;
-}
-
 .wide-input-form {
   width: 100%;
   margin-top: 5%;
