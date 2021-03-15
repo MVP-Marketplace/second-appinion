@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MobileStepper from "@material-ui/core/MobileStepper";
 import Button from "@material-ui/core/Button";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
@@ -12,25 +12,28 @@ import SubmitPageForm from "../components/SubmitPageForm";
 import { StylesProvider } from "@material-ui/core/styles";
 
 export default function UserForm() {
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [formData, setFormData] = useState("");
+  const [activeStep, setActiveStep] = useState(0);
+  const props = { formData, setFormData };
+
   const steps = [
     {
-      path: <FormPersonalDetails />,
+      path: <FormPersonalDetails {...props} />,
     },
     {
-      path: <FormUserDetails />,
+      path: <FormUserDetails {...props} />,
     },
     {
-      path: <DentalPainForm />,
+      path: <DentalPainForm {...props} />,
     },
     {
-      path: <DentalPainFormPart2 />,
+      path: <DentalPainFormPart2 {...props} />,
     },
     {
-      path: <PreviousWorkForm />,
+      path: <PreviousWorkForm {...props} />,
     },
     {
-      path: <SubmitPageForm />,
+      path: <SubmitPageForm {...props} />,
     },
   ];
   const maxSteps = steps.length;
@@ -57,6 +60,7 @@ export default function UserForm() {
                 size="small"
                 onClick={handleNext}
                 disabled={activeStep === maxSteps - 1}
+                type="submit"
               >
                 <KeyboardArrowRight />
               </Button>
