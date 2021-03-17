@@ -38,7 +38,6 @@ body {
   margin: auto;
 }
 
-
 .form-questions-main-container {
   width: 100vw;
   height: 100vh;
@@ -192,6 +191,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 25px;
+  margin: 10px;
 }
 .container {
   font-family: "Space Mono", monospace;
@@ -271,7 +271,6 @@ body {
     width: 275px;
     margin-left: 1.2rem;
   }
-
 }
 
 /*********************************BOTTOMBODY**********************/
@@ -292,6 +291,43 @@ body {
     margin-left: 3.2rem;
   }
   .pic {
+    width: 50%;
+    font-size: 5px;
+  }
+}
+
+/*********************************WELCOME**********************/
+.welcome {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.welcomeImg {
+  width: 475px;
+}
+.welcomeBttn {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 25px;
+  margin: 25px;
+}
+.signup {
+  padding-bottom: 5px;
+}
+.signin {
+  padding-bottom: 5px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .welcome {
+    width: 100%;
+  }
+  .welcomeImg {
     width: 50%;
     font-size: 5px;
   }
