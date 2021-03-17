@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f9fbff;
+  font-family: Lato;
+  font-style: normal;
+}
+
 .footer-main-container {
   background-color: #4972a3;
   height: 175px;
@@ -26,6 +36,151 @@
   width: 40%;
   margin: auto;
 }
+
+
+.form-questions-main-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.MuiMobileStepper-dotActive {
+  background-color: #4972a3;
+}
+
+.MuiMobileStepper-root {
+  background-color: transparent;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.first-page-form-container-main {
+  display: flex;
+  justify-content: center;
+}
+
+.first-page-form-container {
+  top: 10%;
+  background-color: #ffff;
+  box-shadow: 0px 4px 4px #eae9e9;
+  border-radius: 40px;
+  position: absolute;
+  width: 70%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.first-page-header {
+  margin-bottom: 15%;
+}
+
+.first-page-form {
+  line-height: 2.5rem;
+}
+
+.small-input-form,
+.wide-input-form,
+.largest-submit-input-form,
+.dropdown {
+  border: 1px solid #4972a3;
+  box-sizing: border-box;
+  border-radius: 8px;
+  outline: none;
+  padding: 3%;
+}
+
+.small-input-form {
+  width: 50%;
+  height: 1.6rem;
+}
+
+.wide-input-form {
+  width: 100%;
+  margin-top: 5%;
+  height: 2.5rem;
+}
+
+.largest-submit-input-form {
+  width: 100%;
+  margin-top: 5%;
+  height: 7rem;
+}
+
+.dropdown {
+  width: 50%;
+  height: 2.2rem;
+}
+
+.second-page-form {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  overflow: scroll;
+}
+
+.single-page-form-question-container {
+  background: #ffffff;
+  border-radius: 40px;
+  width: 60%;
+  height: fit-content;
+  padding: 3% 3% 5% 6%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  line-height: 1.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 3%;
+}
+
+.dental-pain-form-question {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+}
+
+.dental-pain-form-column,
+.dental-pain-form-column-2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.form-question-header {
+  margin-bottom: 0;
+}
+
+.form-question-header-caption {
+  margin-top: 0;
+  font-size: 0.75rem;
+}
+
+.wide-button-form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+}
+
+.wide-button {
+  background-color: #4972a3;
+  border-radius: 10px;
+  width: 60%;
+  height: 30%;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+
 /*********************************HOMEBODY**********************/
 #bookbutton {
   background-color: #517fb6;
@@ -44,7 +199,7 @@
   justify-content: center;
   padding-bottom: 20px;
 }
-.homeImg {
+.homeImg 
   width: 450px;
   margin: 10px;
   display: flex;
@@ -52,4 +207,5 @@
   justify-content: center;
   border-radius: 65px;
   box-shadow: 3px 2px 2px rgb(94, 94, 94);
+
 }
