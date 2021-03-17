@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import userForm from "./pages/UserForm";
+
 import "./App.css";
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/form" component={userForm} />
+
         {/* <Route exact path="/welcome" component={WelcomePage} />
           <Route exact path="/signup" component={SignUpPage} />
           <Route exact path="/login" component={Login} />

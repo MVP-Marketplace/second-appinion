@@ -37,6 +37,7 @@ body {
   margin: auto;
 }
 
+
 .form-questions-main-container {
   width: 100vw;
   height: 100vh;
@@ -180,6 +181,7 @@ body {
   font-size: 1.2rem;
   margin-top: 5%;
 }
+
 /*********************************HOMEBODY**********************/
 #bookbutton {
   background-color: #517fb6;
@@ -199,6 +201,7 @@ body {
   padding-bottom: 20px;
 }
 .homeImg {
+
   width: 450px;
   margin: 10px;
   display: flex;
@@ -206,4 +209,5 @@ body {
   justify-content: center;
   border-radius: 65px;
   box-shadow: 3px 2px 2px rgb(94, 94, 94);
+
 }
