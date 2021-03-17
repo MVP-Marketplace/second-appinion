@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import userForm from "./pages/UserForm";
-
 import "./App.css";
 
 const App = () => {
