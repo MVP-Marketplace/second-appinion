@@ -69,12 +69,11 @@ body {
   border-radius: 40px;
   position: absolute;
   width: 70%;
-  height: 65%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding: 5% 5% 5% 6%;
 }
 
 .first-page-header {
@@ -110,7 +109,7 @@ body {
 .largest-submit-input-form {
   width: 100%;
   margin-top: 5%;
-  height: 7rem;
+  height: 7.5rem;
 }
 
 .dropdown {
@@ -180,6 +179,8 @@ body {
   color: white;
   border: none;
   font-size: 1.2rem;
+  margin-top: 5%;
+}
 
 /*********************************HOMEBODY**********************/
 #bookbutton {
@@ -199,7 +200,8 @@ body {
   justify-content: center;
   padding-bottom: 20px;
 }
-.homeImg 
+.homeImg {
+
   width: 450px;
   margin: 10px;
   display: flex;

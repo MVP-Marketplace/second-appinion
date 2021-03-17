@@ -1,39 +1,69 @@
 import React, { useState } from "react";
 
-const FormUserDetails = () => {
-  const [value, setValue] = useState("");
+const FormUserDetails = (props) => {
+  const [formData, setFormData] = useState(null);
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    console.log(formData);
+  };
+
+  const onSubmit = (formData) => {
+    console.log(formData);
   };
 
   return (
     <>
       <div className="second-page-form-container">
-        <form className="second-page-form">
+        <form className="second-page-form" onSubmit={onSubmit}>
           <div className="single-page-form-question-container">
             <p>4. When was your last dental visit?</p>
             <label>
-              <input type="radio" value="option1" name="value" checked={true} />
+              <input
+                type="radio"
+                value="in the last week"
+                name="lastDentalVisit"
+                onChange={handleChange}
+              />
               In the last week
             </label>
             <label>
-              <input type="radio" value="option2" name="value" />
+              <input
+                type="radio"
+                value="in the last month"
+                name="lastDentalVisit"
+                onChange={handleChange}
+              />
               In the last month
             </label>
             <label>
-              <input type="radio" value="option2" name="value" />
+              <input
+                type="radio"
+                value="in the last year"
+                name="lastDentalVisit"
+                onChange={handleChange}
+              />
               In the last year
             </label>
           </div>
           <div className="single-page-form-question-container">
             <p>5. Did the dentist tell you that you need dental work?</p>
             <label>
-              <input type="radio" value="option1" name="value" checked={true} />
+              <input
+                type="radio"
+                value="yes"
+                name="dentalWorkNeeded"
+                onChange={handleChange}
+              />
               Yes
             </label>
             <label>
-              <input type="radio" value="option2" name="value" />
+              <input
+                type="radio"
+                value="no"
+                name="dentalWorkNeeded"
+                onChange={handleChange}
+              />
               No
             </label>
           </div>
@@ -43,9 +73,10 @@ const FormUserDetails = () => {
             </label>
             <textarea
               className="wide-input-form"
-              id="dentist-told"
+              id="dentistTold"
               type="text"
-              name="dentist-told"
+              name="dentistTold"
+              onChange={handleChange}
             />
           </div>
         </form>

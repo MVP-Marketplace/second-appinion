@@ -1,50 +1,39 @@
 import React, { useState } from "react";
 
-const SubmitPageForm = () => {
-  const [value, setValue] = useState("");
+const SubmitPageForm = (props) => {
+  const [formData, setFormData] = useState(null);
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    console.log(formData);
   };
+
+  const onSubmit = (formData) => {
+    console.log(formData);
+  };
+
   return (
     <>
       <div className="second-page-form-container">
-        <form className="second-page-form">
+        <form className="second-page-form" onSubmit={onSubmit}>
           <div className="single-page-form-question-container">
-            <p>How long have you been in pain?</p>
+            <p>Have you had a tooth pulled or removed?</p>
             <label>
-              <input type="radio" value="option1" name="value" checked={true} />
-              Days
+              <input
+                type="radio"
+                value="Yes"
+                name="toothPulledRemoved"
+                onChange={handleChange}
+              />
+              Yes
             </label>
             <label>
-              <input type="radio" value="option2" name="value" />
-              Weeks
-            </label>
-            <label>
-              <input type="radio" value="option2" name="value" />
-              Months
-            </label>
-          </div>
-          <div className="single-page-form-question-container">
-            <p>What causes the pain?</p>
-            <label>
-              <input type="radio" value="option1" name="value" checked={true} />
-              Hot
-            </label>
-            <label>
-              <input type="radio" value="option2" name="value" />
-              Cold
-            </label>
-            <label>
-              <input type="radio" value="option2" name="value" />
-              Chewing
-            </label>
-            <label>
-              <input type="radio" value="option2" name="value" />
-              Constant pain with no stimulus
-            </label>
-            <label>
-              <input type="radio" value="option2" name="value" />
+              <input
+                type="radio"
+                value="No"
+                name="toothPulledRemoved"
+                onChange={handleChange}
+              />
               No
             </label>
           </div>
@@ -56,10 +45,18 @@ const SubmitPageForm = () => {
             <p className="form-question-header-caption">
               (Please type your response below)
             </p>
-            <textarea className="largest-submit-input-form" />
+            <textarea
+              className="largest-submit-input-form"
+              id="additionalInformationForDentis"
+              type="text"
+              name="additionalInformationForDentis"
+              onChange={handleChange}
+            />
           </div>
           <div className="wide-button-form-container">
-            <button className="wide-button">Submit</button>
+            <button className="wide-button" type="submit">
+              Submit
+            </button>
           </div>
         </form>
       </div>
