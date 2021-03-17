@@ -1,6 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Home from "../Images/image (11).png";
+import { Link } from "react-router-dom";
+import time from "../Images/time.png";
+import customer from "../Images/customer.png";
+import pill from "../Images/pill.png";
 import { Grid, Button } from "@material-ui/core";
 
 // const useStyles = makeStyles((theme) => ({
@@ -21,14 +25,28 @@ const HomeBody = () => {
         <img className="homeImg" src={Home} />
       </Grid>
       <Grid>
-        <Button
-          variant="contained"
-          size="large"
-          color="primary"
-          id="bookbutton"
-        >
-          BOOK NOW
-        </Button>
+        <Link to="/welcome">
+          <Button variant="contained" size="large" id="bookbutton">
+            BOOK NOW
+          </Button>
+        </Link>
+      </Grid>
+      <div>
+        <h1>Why us?</h1>
+      </div>
+      <Grid className="btmBody">
+        <Grid>
+          <img className="pic" src={time} alt="" />
+          <h4>Timely Second Opinion from field experts</h4>
+        </Grid>
+        <Grid>
+          <img className="pic" src={customer} alt="" />
+          <h4>Build Trusting relationshipsd</h4>
+        </Grid>
+        <Grid>
+          <img className="pic" src={pill} alt="" />
+          <h4>Service promise</h4>
+        </Grid>
       </Grid>
     </Grid>
   );
