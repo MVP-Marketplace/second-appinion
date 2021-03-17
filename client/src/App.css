@@ -1,9 +1,10 @@
 .footer-main-container {
   background-color: #4972a3;
   height: 175px;
-  width: 100vw;
-  position: fixed;
+  width: 100%;
+  /* position: fixed; */
   bottom: 0;
+  padding-top: 12px;
 }
 .footer-column-1,
 .footer-bottom-row__icons {
@@ -13,7 +14,7 @@
   color: white;
   font-size: 13px;
   line-height: 16px;
-  padding-left: 5%;
+  padding-left: 2%;
 }
 
 .footer-bottom-row {
@@ -29,6 +30,7 @@
 /*********************************HOMEBODY**********************/
 #bookbutton {
   background-color: #517fb6;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,18 +40,51 @@
 .container {
   font-family: "Space Mono", monospace;
   font-weight: bold !important;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 20px;
+  padding: 20px;
 }
 .homeImg {
-  width: 450px;
+  width: 475px;
   margin: 10px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 65px;
-  box-shadow: 3px 2px 2px rgb(94, 94, 94);
+  border-radius: 80px;
+  box-shadow: 3px 2px 2px rgb(148, 147, 147);
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .homeImg {
+    width: 275px;
+    margin-left: 1.2rem;
+  }
+}
+
+/*********************************BOTTOMBODY**********************/
+.btmBody {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* text-align: center; */
+}
+.pic {
+  width: 100px;
+  text-align: center;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .btmBody {
+    width: 100%;
+    margin-left: 3.2rem;
+  }
+  .pic {
+    width: 50%;
+    font-size: 5px;
+  }
+}
+
+/*********************************NAVBAR**********************/
