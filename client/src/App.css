@@ -203,7 +203,6 @@ body {
   justify-content: center;
   padding-bottom: 20px;
   margin-top: 5rem;
-
 }
 .homeImg {
   width: 475px;
@@ -215,7 +214,16 @@ body {
   border-radius: 80px;
   box-shadow: 3px 2px 2px rgb(148, 147, 147);
 }
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .homeImg {
+    width: 275px;
+    margin-left: 1.2rem;
+    font-size: 5px;
+  }
+  .container {
+    font-size: 2px;
+  }
+}
 
 /*********************************HAMBURGER**********************/
 
@@ -266,12 +274,6 @@ body {
   padding-bottom: 0 !important;
   border-radius: 30% !important;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .homeImg {
-    width: 275px;
-    margin-left: 1.2rem;
-  }
-}
 
 /*********************************BOTTOMBODY**********************/
 .btmBody {
@@ -280,10 +282,12 @@ body {
   flex-direction: row;
   justify-content: center;
   /* text-align: center; */
+  border: 2rem;
 }
 .pic {
   width: 100px;
   text-align: center;
+  padding: 2rem;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .btmBody {
@@ -293,6 +297,7 @@ body {
   .pic {
     width: 50%;
     font-size: 5px;
+    border: 2rem;
   }
 }
 
@@ -329,6 +334,83 @@ body {
   }
   .welcomeImg {
     width: 50%;
+    font-size: 5px;
+  }
+}
+/*********************************LOGIN**********************/
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text {
+  border-radius: 50%;
+}
+
+/*********************************ONBOARD1**********************/
+.onboardWelcome {
+  font-weight: bold;
+}
+.onboard1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img1 {
+  width: 475px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .onboard1 {
+    padding-top: 8rem;
+    width: 100%;
+    font-size: 10px;
+  }
+  .img1 {
+    width: 80%;
+    font-size: 5px;
+  }
+}
+/*********************************ONBOARD2**********************/
+.onboard2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img2 {
+  width: 475px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .onboard2 {
+    padding-top: 8rem;
+    width: 100%;
+    font-size: 10px;
+  }
+  .img2 {
+    width: 75%;
+    font-size: 5px;
+  }
+}
+/*********************************ONBOARD3**********************/
+.onboard3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img3 {
+  width: 475px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .onboard3 {
+    padding-top: 8rem;
+    width: 100%;
+    font-size: 10px;
+  }
+  .img3 {
+    width: 75%;
     font-size: 5px;
   }
 }
