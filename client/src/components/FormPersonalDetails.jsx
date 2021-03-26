@@ -21,20 +21,29 @@ const FormPersonalDetails = (props) => {
             following questions.
           </p>
           <form className="first-page-form" onSubmit={onSubmit}>
+            <label htmlFor="name">Name:</label>
             <div>
-              <label htmlFor="email">1. Email:</label>
-              <div>
-                <input
-                  className="small-input-form"
-                  id="email"
-                  type="email"
-                  name="email"
-                  onChange={handleChange}
-                />
-              </div>
+              <input
+                className="small-input-form"
+                id="name"
+                type="text"
+                name="name"
+                onChange={handleChange}
+              />
             </div>
+
+            <label htmlFor="email">Email:</label>
             <div>
-              <label htmlFor="age">2. How old are you?</label>
+              <input
+                className="small-input-form"
+                id="email"
+                type="email"
+                name="email"
+                onChange={handleChange}
+              />
+            </div>
+            <label htmlFor="age">How old are you?</label>
+            <div>
               <input
                 className="small-input-form"
                 id="age"
@@ -43,7 +52,7 @@ const FormPersonalDetails = (props) => {
                 onChange={handleChange}
               />
             </div>
-            <label htmlFor="gender">3. Gender:</label>
+            <label htmlFor="gender">Gender:</label>
             <div>
               <input
                 className="small-input-form"

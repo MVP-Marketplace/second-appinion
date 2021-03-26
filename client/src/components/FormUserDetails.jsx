@@ -14,10 +14,10 @@ const FormUserDetails = (props) => {
 
   return (
     <>
-      <div className="second-page-form-container">
-        <form className="second-page-form" onSubmit={onSubmit}>
+      <div className="all-page-form-container-container">
+        <form className="all-page-forms" onSubmit={onSubmit}>
           <div className="single-page-form-question-container">
-            <p>4. When was your last dental visit?</p>
+            <p>When was your last dental visit?</p>
             <label>
               <input
                 type="radio"
@@ -47,7 +47,7 @@ const FormUserDetails = (props) => {
             </label>
           </div>
           <div className="single-page-form-question-container">
-            <p>5. Did the dentist tell you that you need dental work?</p>
+            <p>Did the dentist tell you that you need dental work?</p>
             <label>
               <input
                 type="radio"
@@ -69,7 +69,7 @@ const FormUserDetails = (props) => {
           </div>
           <div className="single-page-form-question-container">
             <label htmlFor="dentist-told">
-              6. What were you told? Please explain
+              What were you told? Please explain
             </label>
             <textarea
               className="wide-input-form"

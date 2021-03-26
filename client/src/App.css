@@ -69,7 +69,7 @@ body {
   border-radius: 40px;
   position: absolute;
   width: 70%;
-  height: fit-content;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,7 +103,7 @@ body {
 .wide-input-form {
   width: 100%;
   margin-top: 5%;
-  height: 2.5rem;
+  height: auto;
 }
 
 .largest-submit-input-form {
@@ -117,12 +117,12 @@ body {
   height: 2.2rem;
 }
 
-.second-page-form {
+.all-page-forms {
   position: relative;
   width: 100vw;
   height: 100vh;
   flex-direction: column;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 10%;
   overflow: scroll;
 }
@@ -131,7 +131,7 @@ body {
   background: #ffffff;
   border-radius: 40px;
   width: 60%;
-  height: fit-content;
+  height: auto;
   padding: 3% 3% 5% 6%;
   display: flex;
   flex-direction: column;
@@ -145,7 +145,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: fit-content;
+  height: auto;
 }
 
 .dental-pain-form-column,

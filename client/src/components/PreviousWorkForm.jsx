@@ -14,8 +14,8 @@ const PreviousWorkForm = (props) => {
 
   return (
     <>
-      <div className="second-page-form-container">
-        <form className="second-page-form" onSubmit={onSubmit}>
+      <div className="all-page-form-container-container">
+        <form className="all-page-forms" onSubmit={onSubmit}>
           <div className="single-page-form-question-container">
             <p>If chewing causes pain, is the pain upon release of the bite?</p>
             <label>

@@ -14,8 +14,8 @@ const SubmitPageForm = (props) => {
 
   return (
     <>
-      <div className="second-page-form-container">
-        <form className="second-page-form" onSubmit={onSubmit}>
+      <div className="all-page-form-container">
+        <form className="all-page-forms" onSubmit={onSubmit}>
           <div className="single-page-form-question-container">
             <p>Have you had a tooth pulled or removed?</p>
             <label>
