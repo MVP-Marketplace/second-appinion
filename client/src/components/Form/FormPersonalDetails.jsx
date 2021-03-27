@@ -39,7 +39,7 @@ const FormPersonalDetails = ({ formData, setFormData }) => {
                 required
               />
             </div>
-            <label htmlFor="age">How old are you?</label>
+            <label htmlFor="age">Age:</label>
             <div>
               <input
                 className="small-input-form"

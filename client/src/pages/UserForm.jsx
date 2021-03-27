@@ -9,6 +9,7 @@ import DentalPainForm from "../components/Form/DentalPainForm";
 import DentalPainFormPart2 from "../components/Form/DentalPainFormPart2";
 import PreviousWorkForm from "../components/Form/PreviousWorkForm";
 import SubmitPageForm from "../components/Form/SubmitPageForm";
+import Confirm from "../components/Form/Confirm";
 import { StylesProvider } from "@material-ui/core/styles";
 
 export default function UserForm() {
@@ -37,6 +38,9 @@ export default function UserForm() {
     },
     {
       path: <SubmitPageForm setFormData={setFormData} formData={formData} />,
+    },
+    {
+      path: <Confirm setFormData={setFormData} formData={formData} />,
     },
   ];
   const maxSteps = steps.length;
