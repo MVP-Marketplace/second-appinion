@@ -1,38 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 
-const DentalPainForm = (props) => {
-  const [formData, setFormData] = useState(null);
-
+const DentalPainForm = ({ formData, setFormData }) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(formData);
-  };
-
-  const onSubmit = (formData) => {
     console.log(formData);
   };
 
   return (
     <>
       <div className="all-page-form-container-container">
-        <form className="all-page-forms" onSubmit={onSubmit}>
+        <form className="all-page-forms">
           <div className="single-page-form-question-container">
-            <p>Are you currently experiencing any oral pain?</p>
-            <label>
-              <input
-                type="radio"
-                value="yes"
-                name="dentalPain"
-                onChange={handleChange}
-              />
-              Yes
+            <label htmlFor="pain">
+              Are you currently experiencing any oral pain?
             </label>
+            <input
+              id="dentailPain"
+              type="radio"
+              value="Yes"
+              name="dentalPain"
+              onChange={handleChange}
+              checked={formData.dentalPain === "Yes"}
+            />{" "}
+            Yes
             <label>
               <input
                 type="radio"
-                value="no"
+                value="No"
                 name="dentalPain"
                 onChange={handleChange}
+                checked={formData.dentalPain === "No"}
               />
               No
             </label>
@@ -47,27 +44,30 @@ const DentalPainForm = (props) => {
                 <label>
                   <input
                     onChange={handleChange}
-                    type="radio"
+                    type="checkbox"
                     value="Upper right"
                     name="painLocation"
+                    checked={formData.painLocation === "Upper right"}
                   />
                   Upper right
                 </label>
                 <label>
                   <input
-                    type="radio"
+                    type="checkbox"
                     value="Upper left"
                     name="painLocation"
                     onChange={handleChange}
+                    checked={formData.painLocation === "Upper left"}
                   />
                   Upper left
                 </label>
                 <label>
                   <input
-                    type="radio"
+                    type="checkbox"
                     value="Tooth"
                     name="painLocation"
                     onChange={handleChange}
+                    checked={formData.painLocation === "Tooth"}
                   />
                   Tooth
                 </label>
@@ -75,28 +75,31 @@ const DentalPainForm = (props) => {
               <div className="dental-pain-form-column-2">
                 <label>
                   <input
-                    type="radio"
-                    value="painLocation"
-                    name="dentalPain"
+                    type="checkbox"
+                    value="Lower right"
+                    name="painLocation"
                     onChange={handleChange}
+                    checked={formData.painLocation === "Lower right"}
                   />
                   Lower right
                 </label>
                 <label>
                   <input
-                    type="radio"
+                    type="checkbox"
                     value="Lower left"
                     name="painLocation"
                     onChange={handleChange}
+                    checked={formData.painLocation === "Lower left"}
                   />
                   Lower left
                 </label>
                 <label>
                   <input
-                    type="radio"
+                    type="checkbox"
                     value="Gum"
                     name="painLocation"
                     onChange={handleChange}
+                    checked={formData.painLocation === "Gum"}
                   />
                   Gum
                 </label>
@@ -113,41 +116,21 @@ const DentalPainForm = (props) => {
               id="painStrength"
               type="text"
               name="painStrength"
+              value={formData.painStrength}
+              onChange={handleChange}
             >
               <option value=""></option>
-              <option value="0" onChange={handleChange}>
-                0
-              </option>
-              <option value="1" onChange={handleChange}>
-                1
-              </option>
-              <option value="2" onChange={handleChange}>
-                2
-              </option>
-              <option value="3" onChange={handleChange}>
-                3
-              </option>
-              <option value="4" onChange={handleChange}>
-                4
-              </option>
-              <option value="5" onChange={handleChange}>
-                5
-              </option>
-              <option value="6" onChange={handleChange}>
-                6
-              </option>
-              <option value="7" onChange={handleChange}>
-                7
-              </option>
-              <option value="8" onChange={handleChange}>
-                8
-              </option>
-              <option value="9" onChange={handleChange}>
-                9
-              </option>
-              <option value="10" onChange={handleChange}>
-                10
-              </option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
             </select>
           </div>
         </form>

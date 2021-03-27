@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 
-const FormPersonalDetails = (props) => {
-  const [formData, setFormData] = useState(null);
-
+const FormPersonalDetails = ({ formData, setFormData }) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(formData);
-  };
-
-  const onSubmit = (formData) => {
     console.log(formData);
   };
 
@@ -20,7 +14,7 @@ const FormPersonalDetails = (props) => {
             Let's get to know each other a bit better. Please answer the
             following questions.
           </p>
-          <form className="first-page-form" onSubmit={onSubmit}>
+          <form className="first-page-form">
             <label htmlFor="name">Name:</label>
             <div>
               <input
@@ -28,6 +22,7 @@ const FormPersonalDetails = (props) => {
                 id="name"
                 type="text"
                 name="name"
+                value={formData.name || ""}
                 onChange={handleChange}
               />
             </div>
@@ -39,7 +34,9 @@ const FormPersonalDetails = (props) => {
                 id="email"
                 type="email"
                 name="email"
+                value={formData.email || ""}
                 onChange={handleChange}
+                required
               />
             </div>
             <label htmlFor="age">How old are you?</label>
@@ -49,6 +46,7 @@ const FormPersonalDetails = (props) => {
                 id="age"
                 type="text"
                 name="age"
+                value={formData.age || ""}
                 onChange={handleChange}
               />
             </div>
@@ -59,6 +57,7 @@ const FormPersonalDetails = (props) => {
                 id="gender"
                 type="text"
                 name="gender"
+                value={formData.gender || ""}
                 onChange={handleChange}
               />
             </div>

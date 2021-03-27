@@ -1,21 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
-const SubmitPageForm = (props) => {
-  const [formData, setFormData] = useState(null);
-
+const SubmitPageForm = ({ formData, setFormData }) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(formData);
-  };
-
-  const onSubmit = (formData) => {
     console.log(formData);
   };
 
   return (
     <>
       <div className="all-page-form-container">
-        <form className="all-page-forms" onSubmit={onSubmit}>
+        <form className="all-page-forms">
           <div className="single-page-form-question-container">
             <p>Have you had a tooth pulled or removed?</p>
             <label>
@@ -24,6 +18,7 @@ const SubmitPageForm = (props) => {
                 value="Yes"
                 name="toothPulledRemoved"
                 onChange={handleChange}
+                checked={formData.toothPulledRemoved === "Yes"}
               />
               Yes
             </label>
@@ -33,6 +28,7 @@ const SubmitPageForm = (props) => {
                 value="No"
                 name="toothPulledRemoved"
                 onChange={handleChange}
+                checked={formData.toothPulledRemoved === "No"}
               />
               No
             </label>
@@ -47,9 +43,10 @@ const SubmitPageForm = (props) => {
             </p>
             <textarea
               className="largest-submit-input-form"
-              id="additionalInformationForDentis"
+              id="additionalInformationForDentist"
               type="text"
-              name="additionalInformationForDentis"
+              name="additionalInformationForDentist"
+              value={formData.additionalInformationForDentist || ""}
               onChange={handleChange}
             />
           </div>

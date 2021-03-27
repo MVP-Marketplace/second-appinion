@@ -1,21 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
-const DentalPainFormPart2 = (props) => {
-  const [formData, setFormData] = useState(null);
-
+const DentalPainFormPart2 = ({ formData, setFormData }) => {
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(formData);
-  };
-
-  const onSubmit = (formData) => {
+    setFormData(e.target.value);
     console.log(formData);
   };
 
   return (
     <>
       <div className="all-page-form-container-container">
-        <form className="all-page-forms" onSubmit={onSubmit}>
+        <form className="all-page-forms">
           <div className="single-page-form-question-container">
             <p>How long have you been in pain?</p>
             <label>
@@ -24,6 +18,7 @@ const DentalPainFormPart2 = (props) => {
                 value="Days"
                 name="painDuration"
                 onChange={handleChange}
+                checked={formData.painDuration === "Days"}
               />
               Days
             </label>
@@ -33,6 +28,7 @@ const DentalPainFormPart2 = (props) => {
                 value="Weeks"
                 name="painDuration"
                 onChange={handleChange}
+                checked={formData.painDuration === "Weeks"}
               />
               Weeks
             </label>
@@ -42,6 +38,7 @@ const DentalPainFormPart2 = (props) => {
                 value="Months"
                 name="painDuration"
                 onChange={handleChange}
+                checked={formData.painDuration === "Months"}
               />
               Months
             </label>
@@ -54,6 +51,7 @@ const DentalPainFormPart2 = (props) => {
                 value="Hot"
                 name="painCause"
                 onChange={handleChange}
+                checked={formData.painCause === "Hot"}
               />
               Hot
             </label>
@@ -63,6 +61,7 @@ const DentalPainFormPart2 = (props) => {
                 value="Cold"
                 name="painCause"
                 onChange={handleChange}
+                checked={formData.painCause === "Cold"}
               />
               Cold
             </label>
@@ -72,6 +71,7 @@ const DentalPainFormPart2 = (props) => {
                 value="Chewing"
                 name="painCause"
                 onChange={handleChange}
+                checked={formData.painCause === "Chewing"}
               />
               Chewing
             </label>
@@ -81,6 +81,9 @@ const DentalPainFormPart2 = (props) => {
                 value="Constant pain with no stimulus"
                 name="painCause"
                 onChange={handleChange}
+                checked={
+                  formData.painCause === "Constant pain with no stimulus"
+                }
               />
               Constant pain with no stimulus
             </label>
@@ -96,6 +99,7 @@ const DentalPainFormPart2 = (props) => {
                 value="Yes"
                 name="painLingering"
                 onChange={handleChange}
+                checked={formData.painLingering === "Yes"}
               />
               Yes
             </label>
@@ -105,6 +109,7 @@ const DentalPainFormPart2 = (props) => {
                 value="No"
                 name="painLingering"
                 onChange={handleChange}
+                checked={formData.painLingering === "No"}
               />
               No
             </label>

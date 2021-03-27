@@ -1,21 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
-const PreviousWorkForm = (props) => {
-  const [formData, setFormData] = useState(null);
-
+const PreviousWorkForm = ({ formData, setFormData }) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(formData);
-  };
-
-  const onSubmit = (formData) => {
     console.log(formData);
   };
 
   return (
     <>
       <div className="all-page-form-container-container">
-        <form className="all-page-forms" onSubmit={onSubmit}>
+        <form className="all-page-forms">
           <div className="single-page-form-question-container">
             <p>If chewing causes pain, is the pain upon release of the bite?</p>
             <label>
@@ -24,6 +18,7 @@ const PreviousWorkForm = (props) => {
                 value="Yes"
                 name="painBiteRelease"
                 onChange={handleChange}
+                checked={formData.painBiteRelease === "Yes"}
               />
               Yes
             </label>
@@ -33,6 +28,7 @@ const PreviousWorkForm = (props) => {
                 value="No"
                 name="painBiteRelease"
                 onChange={handleChange}
+                checked={formData.painBiteRelease === "No"}
               />
               No
             </label>
@@ -42,18 +38,20 @@ const PreviousWorkForm = (props) => {
             <label>
               <input
                 type="radio"
-                value="1-3 cavities"
+                value="1 to 3 cavities"
                 name="cavitiesBefore"
                 onChange={handleChange}
+                checked={formData.painBiteRelease === "1 to 3 cavities"}
               />
               1 to 3 cavities
             </label>
             <label>
               <input
                 type="radio"
-                value="4+ cavities"
+                value="4 or more cavities"
                 name="cavitiesBefore"
                 onChange={handleChange}
+                checked={formData.painBiteRelease === "4 or more cavities"}
               />
               4 or more cavities
             </label>
@@ -63,6 +61,7 @@ const PreviousWorkForm = (props) => {
                 value="No"
                 name="cavitiesBefore"
                 onChange={handleChange}
+                checked={formData.painBiteRelease === "No"}
               />
               No
             </label>
@@ -75,6 +74,7 @@ const PreviousWorkForm = (props) => {
                 value="Yes"
                 name="rootCanalBefore"
                 onChange={handleChange}
+                checked={formData.painBiteRelease === "Yes"}
               />
               Yes
             </label>
@@ -84,6 +84,7 @@ const PreviousWorkForm = (props) => {
                 value="No"
                 name="rootCanalBefore"
                 onChange={handleChange}
+                checked={formData.painBiteRelease === "No"}
               />
               No
             </label>

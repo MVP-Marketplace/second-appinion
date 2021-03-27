@@ -1,47 +1,44 @@
 import React, { useState } from "react";
 
-const FormUserDetails = (props) => {
-  const [formData, setFormData] = useState(null);
-
+const FormUserDetails = ({ formData, setFormData }) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(formData);
-  };
-
-  const onSubmit = (formData) => {
     console.log(formData);
   };
 
   return (
     <>
       <div className="all-page-form-container-container">
-        <form className="all-page-forms" onSubmit={onSubmit}>
+        <form className="all-page-forms">
           <div className="single-page-form-question-container">
             <p>When was your last dental visit?</p>
             <label>
               <input
                 type="radio"
-                value="in the last week"
+                value="In the last week"
                 name="lastDentalVisit"
                 onChange={handleChange}
+                checked={formData.lastDentalVisit === "In the last week"}
               />
               In the last week
             </label>
             <label>
               <input
                 type="radio"
-                value="in the last month"
+                value="In the last month"
                 name="lastDentalVisit"
                 onChange={handleChange}
+                checked={formData.lastDentalVisit === "In the last month"}
               />
               In the last month
             </label>
             <label>
               <input
                 type="radio"
-                value="in the last year"
+                value="In the last year"
                 name="lastDentalVisit"
                 onChange={handleChange}
+                checked={formData.lastDentalVisit === "In the last year"}
               />
               In the last year
             </label>
@@ -54,6 +51,7 @@ const FormUserDetails = (props) => {
                 value="yes"
                 name="dentalWorkNeeded"
                 onChange={handleChange}
+                checked={formData.dentalWorkNeeded === "Yes"}
               />
               Yes
             </label>
@@ -63,6 +61,7 @@ const FormUserDetails = (props) => {
                 value="no"
                 name="dentalWorkNeeded"
                 onChange={handleChange}
+                checked={formData.dentalWorkNeeded === "No"}
               />
               No
             </label>
@@ -76,6 +75,7 @@ const FormUserDetails = (props) => {
               id="dentistTold"
               type="text"
               name="dentistTold"
+              value={formData.dentistTold || ""}
               onChange={handleChange}
             />
           </div>
