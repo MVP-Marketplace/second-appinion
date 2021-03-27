@@ -2,7 +2,7 @@ import React from "react";
 
 const DentalPainFormPart2 = ({ formData, setFormData }) => {
   const handleChange = (e) => {
-    setFormData(e.target.value);
+    setFormData({ ...formData, [e.target.name]: e.target.value });
     console.log(formData);
   };
 
