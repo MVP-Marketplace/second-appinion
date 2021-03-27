@@ -48,7 +48,7 @@ const FormUserDetails = ({ formData, setFormData }) => {
             <label>
               <input
                 type="radio"
-                value="yes"
+                value="Yes"
                 name="dentalWorkNeeded"
                 onChange={handleChange}
                 checked={formData.dentalWorkNeeded === "Yes"}
@@ -58,7 +58,7 @@ const FormUserDetails = ({ formData, setFormData }) => {
             <label>
               <input
                 type="radio"
-                value="no"
+                value="No"
                 name="dentalWorkNeeded"
                 onChange={handleChange}
                 checked={formData.dentalWorkNeeded === "No"}

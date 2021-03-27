@@ -41,7 +41,7 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
                 value="1 to 3 cavities"
                 name="cavitiesBefore"
                 onChange={handleChange}
-                checked={formData.painBiteRelease === "1 to 3 cavities"}
+                checked={formData.cavitiesBefore === "1 to 3 cavities"}
               />
               1 to 3 cavities
             </label>
@@ -51,7 +51,7 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
                 value="4 or more cavities"
                 name="cavitiesBefore"
                 onChange={handleChange}
-                checked={formData.painBiteRelease === "4 or more cavities"}
+                checked={formData.cavitiesBefore === "4 or more cavities"}
               />
               4 or more cavities
             </label>
@@ -61,7 +61,7 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
                 value="No"
                 name="cavitiesBefore"
                 onChange={handleChange}
-                checked={formData.painBiteRelease === "No"}
+                checked={formData.cavitiesBefore === "No"}
               />
               No
             </label>
@@ -74,7 +74,7 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
                 value="Yes"
                 name="rootCanalBefore"
                 onChange={handleChange}
-                checked={formData.painBiteRelease === "Yes"}
+                checked={formData.rootCanalBefore === "Yes"}
               />
               Yes
             </label>
@@ -84,7 +84,7 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
                 value="No"
                 name="rootCanalBefore"
                 onChange={handleChange}
-                checked={formData.painBiteRelease === "No"}
+                checked={formData.rootCanalBefore === "No"}
               />
               No
             </label>
