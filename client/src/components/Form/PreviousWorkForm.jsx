@@ -1,4 +1,16 @@
 import React from "react";
+import { withStyles } from "@material-ui/core/styles";
+import { Radio } from "@material-ui/core";
+
+const DefaultRadio = withStyles({
+  root: {
+    color: "#4972a3",
+    "&$checked": {
+      color: "#4972a3",
+    },
+  },
+  checked: {},
+})((props) => <Radio color="default" size="small" {...props} />);
 
 const PreviousWorkForm = ({ formData, setFormData }) => {
   const handleChange = (e) => {
@@ -11,9 +23,11 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
       <div className="all-page-form-container-container">
         <form className="all-page-forms">
           <div className="single-page-form-question-container">
-            <p>If chewing causes pain, is the pain upon release of the bite?</p>
-            <label>
-              <input
+            <label htmlFor="painBiteRelease">
+              If chewing causes pain, is the pain upon release of the bite?
+            </label>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="Yes"
                 name="painBiteRelease"
@@ -21,9 +35,9 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
                 checked={formData.painBiteRelease === "Yes"}
               />
               Yes
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="No"
                 name="painBiteRelease"
@@ -31,12 +45,12 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
                 checked={formData.painBiteRelease === "No"}
               />
               No
-            </label>
+            </div>
           </div>
           <div className="single-page-form-question-container">
-            <p>Have you ever had a cavity?</p>
-            <label>
-              <input
+            <label htmlFor="cavitiesBefore">Have you ever had a cavity?</label>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="1 to 3 cavities"
                 name="cavitiesBefore"
@@ -44,9 +58,9 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
                 checked={formData.cavitiesBefore === "1 to 3 cavities"}
               />
               1 to 3 cavities
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="4 or more cavities"
                 name="cavitiesBefore"
@@ -54,9 +68,9 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
                 checked={formData.cavitiesBefore === "4 or more cavities"}
               />
               4 or more cavities
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="No"
                 name="cavitiesBefore"
@@ -64,12 +78,14 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
                 checked={formData.cavitiesBefore === "No"}
               />
               No
-            </label>
+            </div>
           </div>
           <div className="single-page-form-question-container">
-            <p>Have you ever had a root canal?</p>
-            <label>
-              <input
+            <label htmlFor="rootCanalBefore">
+              Have you ever had a root canal?
+            </label>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="Yes"
                 name="rootCanalBefore"
@@ -77,9 +93,9 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
                 checked={formData.rootCanalBefore === "Yes"}
               />
               Yes
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="No"
                 name="rootCanalBefore"
@@ -87,7 +103,7 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
                 checked={formData.rootCanalBefore === "No"}
               />
               No
-            </label>
+            </div>
           </div>
         </form>
       </div>

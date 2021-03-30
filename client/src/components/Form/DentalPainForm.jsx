@@ -1,4 +1,27 @@
 import React from "react";
+import { withStyles } from "@material-ui/core/styles";
+import { Radio, Checkbox } from "@material-ui/core";
+
+const DefaultRadio = withStyles({
+  root: {
+    color: "#4972a3",
+    "&$checked": {
+      color: "#4972a3",
+    },
+  },
+  checked: {},
+})((props) => <Radio color="default" size="small" {...props} />);
+
+const DefaultCheckbox = withStyles({
+  root: {
+    color: "#4972a3",
+    padding: 0,
+    "&$checked": {
+      color: "#4972a3",
+    },
+  },
+  checked: {},
+})((props) => <Checkbox color="default" size="small" {...props} />);
 
 const DentalPainForm = ({ formData, setFormData }) => {
   const handleChange = (e) => {
@@ -14,17 +37,19 @@ const DentalPainForm = ({ formData, setFormData }) => {
             <label htmlFor="pain">
               Are you currently experiencing any oral pain?
             </label>
-            <input
-              id="dentailPain"
-              type="radio"
-              value="Yes"
-              name="dentalPain"
-              onChange={handleChange}
-              checked={formData.dentalPain === "Yes"}
-            />{" "}
-            Yes
-            <label>
-              <input
+            <div>
+              <DefaultRadio
+                id="dentailPain"
+                type="radio"
+                value="Yes"
+                name="dentalPain"
+                onChange={handleChange}
+                checked={formData.dentalPain === "Yes"}
+              />
+              Yes
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="No"
                 name="dentalPain"
@@ -32,17 +57,19 @@ const DentalPainForm = ({ formData, setFormData }) => {
                 checked={formData.dentalPain === "No"}
               />
               No
-            </label>
+            </div>
           </div>
           <div className="single-page-form-question-container">
-            <p className="form-question-header">Where is the pain?</p>
+            <label htmlFor="painLocation" className="form-question-header">
+              Where is the pain?
+            </label>
             <p className="form-question-header-caption">
               (Choose all that apply)
             </p>
             <div className="dental-pain-form-question">
               <div className="dental-pain-form-column">
-                <label>
-                  <input
+                <div>
+                  <DefaultCheckbox
                     onChange={handleChange}
                     type="checkbox"
                     value="Upper right"
@@ -50,9 +77,9 @@ const DentalPainForm = ({ formData, setFormData }) => {
                     checked={formData.painLocation === "Upper right"}
                   />
                   Upper right
-                </label>
-                <label>
-                  <input
+                </div>
+                <div>
+                  <DefaultCheckbox
                     type="checkbox"
                     value="Upper left"
                     name="painLocation"
@@ -60,9 +87,9 @@ const DentalPainForm = ({ formData, setFormData }) => {
                     checked={formData.painLocation === "Upper left"}
                   />
                   Upper left
-                </label>
-                <label>
-                  <input
+                </div>
+                <div>
+                  <DefaultCheckbox
                     type="checkbox"
                     value="Tooth"
                     name="painLocation"
@@ -70,11 +97,11 @@ const DentalPainForm = ({ formData, setFormData }) => {
                     checked={formData.painLocation === "Tooth"}
                   />
                   Tooth
-                </label>
+                </div>
               </div>
               <div className="dental-pain-form-column-2">
-                <label>
-                  <input
+                <div>
+                  <DefaultCheckbox
                     type="checkbox"
                     value="Lower right"
                     name="painLocation"
@@ -82,9 +109,9 @@ const DentalPainForm = ({ formData, setFormData }) => {
                     checked={formData.painLocation === "Lower right"}
                   />
                   Lower right
-                </label>
-                <label>
-                  <input
+                </div>
+                <div>
+                  <DefaultCheckbox
                     type="checkbox"
                     value="Lower left"
                     name="painLocation"
@@ -92,9 +119,9 @@ const DentalPainForm = ({ formData, setFormData }) => {
                     checked={formData.painLocation === "Lower left"}
                   />
                   Lower left
-                </label>
-                <label>
-                  <input
+                </div>
+                <div>
+                  <DefaultCheckbox
                     type="checkbox"
                     value="Gum"
                     name="painLocation"
@@ -102,7 +129,7 @@ const DentalPainForm = ({ formData, setFormData }) => {
                     checked={formData.painLocation === "Gum"}
                   />
                   Gum
-                </label>
+                </div>
               </div>
             </div>
           </div>

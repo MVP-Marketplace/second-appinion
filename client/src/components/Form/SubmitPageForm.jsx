@@ -1,4 +1,16 @@
 import React from "react";
+import { withStyles } from "@material-ui/core/styles";
+import { Radio } from "@material-ui/core";
+
+const DefaultRadio = withStyles({
+  root: {
+    color: "#4972a3",
+    "&$checked": {
+      color: "#4972a3",
+    },
+  },
+  checked: {},
+})((props) => <Radio color="default" size="small" {...props} />);
 
 const SubmitPageForm = ({ formData, setFormData }) => {
   const handleChange = (e) => {
@@ -11,9 +23,11 @@ const SubmitPageForm = ({ formData, setFormData }) => {
       <div className="all-page-form-container">
         <form className="all-page-forms">
           <div className="single-page-form-question-container">
-            <p>Have you had a tooth pulled or removed?</p>
-            <label>
-              <input
+            <label htmlFor="toothPulledRemoved">
+              Have you had a tooth pulled or removed?
+            </label>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="Yes"
                 name="toothPulledRemoved"
@@ -21,9 +35,9 @@ const SubmitPageForm = ({ formData, setFormData }) => {
                 checked={formData.toothPulledRemoved === "Yes"}
               />
               Yes
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="No"
                 name="toothPulledRemoved"
@@ -31,10 +45,10 @@ const SubmitPageForm = ({ formData, setFormData }) => {
                 checked={formData.toothPulledRemoved === "No"}
               />
               No
-            </label>
+            </div>
           </div>
           <div className="single-page-form-question-container">
-            <label htmlFor="email">
+            <label htmlFor="additionalInformationForDentist">
               Please add any other information you would like the dentist to
               know.
             </label>
@@ -49,11 +63,6 @@ const SubmitPageForm = ({ formData, setFormData }) => {
               value={formData.additionalInformationForDentist || ""}
               onChange={handleChange}
             />
-          </div>
-          <div className="wide-button-form-container">
-            <button className="wide-button" type="submit">
-              Submit
-            </button>
           </div>
         </form>
       </div>

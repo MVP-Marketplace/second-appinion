@@ -1,4 +1,16 @@
 import React from "react";
+import { withStyles } from "@material-ui/core/styles";
+import { Radio } from "@material-ui/core";
+
+const DefaultRadio = withStyles({
+  root: {
+    color: "#4972a3",
+    "&$checked": {
+      color: "#4972a3",
+    },
+  },
+  checked: {},
+})((props) => <Radio color="default" size="small" {...props} />);
 
 const DentalPainFormPart2 = ({ formData, setFormData }) => {
   const handleChange = (e) => {
@@ -11,9 +23,11 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
       <div className="all-page-form-container-container">
         <form className="all-page-forms">
           <div className="single-page-form-question-container">
-            <p>How long have you been in pain?</p>
-            <label>
-              <input
+            <label htmlFor="painDuration">
+              How long have you been in pain?
+            </label>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="Days"
                 name="painDuration"
@@ -21,9 +35,9 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
                 checked={formData.painDuration === "Days"}
               />
               Days
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="Weeks"
                 name="painDuration"
@@ -31,9 +45,9 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
                 checked={formData.painDuration === "Weeks"}
               />
               Weeks
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="Months"
                 name="painDuration"
@@ -41,12 +55,12 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
                 checked={formData.painDuration === "Months"}
               />
               Months
-            </label>
+            </div>
           </div>
           <div className="single-page-form-question-container">
-            <p>What causes the pain?</p>
-            <label>
-              <input
+            <label htmlFor="painCause">What causes the pain?</label>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="Hot"
                 name="painCause"
@@ -54,9 +68,9 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
                 checked={formData.painCause === "Hot"}
               />
               Hot
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="Cold"
                 name="painCause"
@@ -64,9 +78,9 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
                 checked={formData.painCause === "Cold"}
               />
               Cold
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="Chewing"
                 name="painCause"
@@ -74,9 +88,9 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
                 checked={formData.painCause === "Chewing"}
               />
               Chewing
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="Constant pain with no stimulus"
                 name="painCause"
@@ -86,15 +100,15 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
                 }
               />
               Constant pain with no stimulus
-            </label>
+            </div>
           </div>
           <div className="single-page-form-question-container">
-            <p>
+            <label htmlFor="painLingering">
               If hot and cold causes pain does the pain linger for more than 30
               seconds?
-            </p>
-            <label>
-              <input
+            </label>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="Yes"
                 name="painLingering"
@@ -102,9 +116,9 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
                 checked={formData.painLingering === "Yes"}
               />
               Yes
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="No"
                 name="painLingering"
@@ -112,7 +126,7 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
                 checked={formData.painLingering === "No"}
               />
               No
-            </label>
+            </div>
           </div>
         </form>
       </div>

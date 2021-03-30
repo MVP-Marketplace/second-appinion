@@ -1,4 +1,16 @@
 import React from "react";
+import { withStyles } from "@material-ui/core/styles";
+import { Radio } from "@material-ui/core";
+
+const DefaultRadio = withStyles({
+  root: {
+    color: "#4972a3",
+    "&$checked": {
+      color: "#4972a3",
+    },
+  },
+  checked: {},
+})((props) => <Radio color="default" size="small" {...props} />);
 
 const FormUserDetails = ({ formData, setFormData }) => {
   const handleChange = (e) => {
@@ -11,9 +23,11 @@ const FormUserDetails = ({ formData, setFormData }) => {
       <div className="all-page-form-container-container">
         <form className="all-page-forms">
           <div className="single-page-form-question-container">
-            <p>When was your last dental visit?</p>
-            <label>
-              <input
+            <label htmlFor="lastDentalVisit">
+              When was your last dental visit?
+            </label>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="In the last week"
                 name="lastDentalVisit"
@@ -21,9 +35,9 @@ const FormUserDetails = ({ formData, setFormData }) => {
                 checked={formData.lastDentalVisit === "In the last week"}
               />
               In the last week
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="In the last month"
                 name="lastDentalVisit"
@@ -31,9 +45,9 @@ const FormUserDetails = ({ formData, setFormData }) => {
                 checked={formData.lastDentalVisit === "In the last month"}
               />
               In the last month
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="In the last year"
                 name="lastDentalVisit"
@@ -41,12 +55,12 @@ const FormUserDetails = ({ formData, setFormData }) => {
                 checked={formData.lastDentalVisit === "In the last year"}
               />
               In the last year
-            </label>
+            </div>
           </div>
           <div className="single-page-form-question-container">
             <p>Did the dentist tell you that you need dental work?</p>
-            <label>
-              <input
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="Yes"
                 name="dentalWorkNeeded"
@@ -54,9 +68,9 @@ const FormUserDetails = ({ formData, setFormData }) => {
                 checked={formData.dentalWorkNeeded === "Yes"}
               />
               Yes
-            </label>
-            <label>
-              <input
+            </div>
+            <div>
+              <DefaultRadio
                 type="radio"
                 value="No"
                 name="dentalWorkNeeded"
@@ -64,11 +78,11 @@ const FormUserDetails = ({ formData, setFormData }) => {
                 checked={formData.dentalWorkNeeded === "No"}
               />
               No
-            </label>
+            </div>
           </div>
           <div className="single-page-form-question-container">
             <label htmlFor="dentist-told">
-              What were you told? Please explain
+              What were you told by the dentist? Please explain
             </label>
             <textarea
               className="wide-input-form"
