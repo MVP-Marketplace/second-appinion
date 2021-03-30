@@ -124,7 +124,7 @@ body {
   flex-direction: column;
   margin-top: 10%;
   margin-bottom: 10%;
-  overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 .single-page-form-question-container {
@@ -174,12 +174,13 @@ body {
 .wide-button {
   background-color: #4972a3;
   border-radius: 10px;
-  width: 60%;
-  height: 30%;
+  width: 70%;
+  height: auto;
   color: white;
   border: none;
   font-size: 1.2rem;
   margin-top: 5%;
+  padding: 4%;
 }
 
 /*********************************HOMEBODY**********************/
