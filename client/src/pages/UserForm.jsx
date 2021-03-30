@@ -10,6 +10,9 @@ import DentalPainFormPart2 from "../components/DentalPainFormPart2";
 import PreviousWorkForm from "../components/PreviousWorkForm";
 import SubmitPageForm from "../components/SubmitPageForm";
 import { StylesProvider } from "@material-ui/core/styles";
+import FirstOnboard from "../components/FirstOnboard";
+import SecondOnboard from "../components/SecondOnboard";
+import ThirdOnboard from "../components/ThirdOnboard";
 
 export default function UserForm() {
   const [formData, setFormData] = useState("");
@@ -17,6 +20,15 @@ export default function UserForm() {
   const props = { formData, setFormData };
 
   const steps = [
+    {
+      path: <FirstOnboard {...props} />,
+    },
+    {
+      path: <SecondOnboard {...props} />,
+    },
+    {
+      path: <ThirdOnboard {...props} />,
+    },
     {
       path: <FormPersonalDetails {...props} />,
     },

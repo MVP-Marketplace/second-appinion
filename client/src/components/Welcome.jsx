@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Grid, Button } from "@material-ui/core";
 import welcome from "../Images/welcome.png";
 
@@ -9,7 +9,7 @@ const Welcome = () => {
       <Grid className="welcome">
         <img className="welcomeImg" src={welcome} alt="welcome image" />
         <Grid className="welcomeBttn">
-          <Link>
+          <Link to="/signup">
             <Button
               className="signup"
               variant="contained"
@@ -19,7 +19,7 @@ const Welcome = () => {
               Sign Up
             </Button>
           </Link>
-          <Link>
+          <Link to="/login">
             <Button
               className="signin"
               variant="contained"
