@@ -69,7 +69,7 @@ body {
   border-radius: 40px;
   position: absolute;
   width: 70%;
-  height: fit-content;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,7 +77,7 @@ body {
 }
 
 .first-page-header {
-  margin-bottom: 15%;
+  margin-bottom: 13%;
 }
 
 .first-page-form {
@@ -96,14 +96,14 @@ body {
 }
 
 .small-input-form {
-  width: 50%;
-  height: 1.6rem;
+  width: 70%;
+  height: 1.8rem;
 }
 
 .wide-input-form {
   width: 100%;
   margin-top: 5%;
-  height: 2.5rem;
+  height: auto;
 }
 
 .largest-submit-input-form {
@@ -117,21 +117,21 @@ body {
   height: 2.2rem;
 }
 
-.second-page-form {
+.all-page-forms {
   position: relative;
   width: 100vw;
   height: 100vh;
   flex-direction: column;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 10%;
-  overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 .single-page-form-question-container {
   background: #ffffff;
   border-radius: 40px;
   width: 60%;
-  height: fit-content;
+  height: auto;
   padding: 3% 3% 5% 6%;
   display: flex;
   flex-direction: column;
@@ -145,7 +145,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: fit-content;
+  height: auto;
 }
 
 .dental-pain-form-column,
@@ -174,12 +174,13 @@ body {
 .wide-button {
   background-color: #4972a3;
   border-radius: 10px;
-  width: 60%;
-  height: 30%;
+  width: 70%;
+  height: auto;
   color: white;
   border: none;
   font-size: 1.2rem;
   margin-top: 5%;
+  padding: 4%;
 }
 
 /*********************************HOMEBODY**********************/
@@ -214,6 +215,7 @@ body {
   border-radius: 80px;
   box-shadow: 3px 2px 2px rgb(148, 147, 147);
 }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .homeImg {
     width: 275px;

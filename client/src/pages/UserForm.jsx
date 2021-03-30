@@ -3,24 +3,29 @@ import MobileStepper from "@material-ui/core/MobileStepper";
 import Button from "@material-ui/core/Button";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
-import FormPersonalDetails from "../components/FormPersonalDetails";
-import FormUserDetails from "../components/FormUserDetails";
-import DentalPainForm from "../components/DentalPainForm";
-import DentalPainFormPart2 from "../components/DentalPainFormPart2";
-import PreviousWorkForm from "../components/PreviousWorkForm";
-import SubmitPageForm from "../components/SubmitPageForm";
+import FormPersonalDetails from "../components/Form/FormPersonalDetails";
+import FormUserDetails from "../components/Form/FormUserDetails";
+import DentalPainForm from "../components/Form/DentalPainForm";
+import DentalPainFormPart2 from "../components/Form/DentalPainFormPart2";
+import PreviousWorkForm from "../components/Form/PreviousWorkForm";
+import SubmitPageForm from "../components/Form/SubmitPageForm";
+import Confirm from "../components/Form/Confirm";
 import { StylesProvider } from "@material-ui/core/styles";
 import FirstOnboard from "../components/FirstOnboard";
 import SecondOnboard from "../components/SecondOnboard";
 import ThirdOnboard from "../components/ThirdOnboard";
 
 export default function UserForm() {
-  const [formData, setFormData] = useState("");
+  const [formData, setFormData] = useState([]);
   const [activeStep, setActiveStep] = useState(0);
-  const props = { formData, setFormData };
 
   const steps = [
     {
+
+      path: (
+        <FormPersonalDetails setFormData={setFormData} formData={formData} />
+      ),
+
       path: <FirstOnboard {...props} />,
     },
     {
@@ -33,19 +38,24 @@ export default function UserForm() {
       path: <FormPersonalDetails {...props} />,
     },
     {
-      path: <FormUserDetails {...props} />,
+      path: <FormUserDetails setFormData={setFormData} formData={formData} />,
     },
     {
-      path: <DentalPainForm {...props} />,
+      path: <DentalPainForm setFormData={setFormData} formData={formData} />,
     },
     {
-      path: <DentalPainFormPart2 {...props} />,
+      path: (
+        <DentalPainFormPart2 setFormData={setFormData} formData={formData} />
+      ),
     },
     {
-      path: <PreviousWorkForm {...props} />,
+      path: <PreviousWorkForm setFormData={setFormData} formData={formData} />,
     },
     {
-      path: <SubmitPageForm {...props} />,
+      path: <SubmitPageForm setFormData={setFormData} formData={formData} />,
+    },
+    {
+      path: <Confirm setFormData={setFormData} formData={formData} />,
     },
   ];
   const maxSteps = steps.length;
@@ -72,7 +82,6 @@ export default function UserForm() {
                 size="small"
                 onClick={handleNext}
                 disabled={activeStep === maxSteps - 1}
-                type="submit"
               >
                 <KeyboardArrowRight />
               </Button>
