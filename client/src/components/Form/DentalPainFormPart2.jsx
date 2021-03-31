@@ -23,7 +23,7 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
       <div className="all-page-form-container-container">
         <form className="all-page-forms">
           <div className="single-page-form-question-container">
-            <label htmlFor="painDuration">
+            <label htmlFor="painDuration" className="required">
               How long have you been in pain?
             </label>
             <div>
@@ -58,7 +58,9 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
             </div>
           </div>
           <div className="single-page-form-question-container">
-            <label htmlFor="painCause">What causes the pain?</label>
+            <label htmlFor="painCause" className="required">
+              What causes the pain?
+            </label>
             <div>
               <DefaultRadio
                 type="radio"
@@ -103,7 +105,7 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
             </div>
           </div>
           <div className="single-page-form-question-container">
-            <label htmlFor="painLingering">
+            <label htmlFor="painLingering" className="required">
               If hot and cold causes pain does the pain linger for more than 30
               seconds?
             </label>

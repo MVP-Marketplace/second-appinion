@@ -34,7 +34,7 @@ const DentalPainForm = ({ formData, setFormData }) => {
       <div className="all-page-form-container-container">
         <form className="all-page-forms">
           <div className="single-page-form-question-container">
-            <label htmlFor="pain">
+            <label htmlFor="pain" className="required">
               Are you currently experiencing any oral pain?
             </label>
             <div>
@@ -60,7 +60,10 @@ const DentalPainForm = ({ formData, setFormData }) => {
             </div>
           </div>
           <div className="single-page-form-question-container">
-            <label htmlFor="painLocation" className="form-question-header">
+            <label
+              htmlFor="painLocation"
+              className="form-question-header required"
+            >
               Where is the pain?
             </label>
             <p className="form-question-header-caption">
@@ -134,7 +137,9 @@ const DentalPainForm = ({ formData, setFormData }) => {
             </div>
           </div>
           <div className="single-page-form-question-container">
-            <label htmlFor="painStrength">How bad is your pain?</label>
+            <label htmlFor="painStrength" className="required">
+              How bad is your pain?
+            </label>
             <p className="form-question-header-caption">
               1 is just annoying, 10 is take me now!
             </p>

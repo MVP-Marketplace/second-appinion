@@ -23,7 +23,7 @@ const FormUserDetails = ({ formData, setFormData }) => {
       <div className="all-page-form-container-container">
         <form className="all-page-forms">
           <div className="single-page-form-question-container">
-            <label htmlFor="lastDentalVisit">
+            <label htmlFor="lastDentalVisit" className="required">
               When was your last dental visit?
             </label>
             <div>
@@ -58,7 +58,9 @@ const FormUserDetails = ({ formData, setFormData }) => {
             </div>
           </div>
           <div className="single-page-form-question-container">
-            <p>Did the dentist tell you that you need dental work?</p>
+            <label htmlFor="dentalWorkNeeded" className="required">
+              Did the dentist tell you that you need dental work?
+            </label>
             <div>
               <DefaultRadio
                 type="radio"
@@ -81,7 +83,7 @@ const FormUserDetails = ({ formData, setFormData }) => {
             </div>
           </div>
           <div className="single-page-form-question-container">
-            <label htmlFor="dentist-told">
+            <label htmlFor="dentist-told" className="required">
               What were you told by the dentist? Please explain
             </label>
             <textarea
