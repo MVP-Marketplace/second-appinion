@@ -163,7 +163,7 @@ body {
 
 .form-question-header-caption {
   margin-top: 0;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 
 .wide-button-form-container {
@@ -192,6 +192,9 @@ body {
   margin-bottom: 5%;
 }
 
+.MuiInputBase-input {
+  color: #000;
+}
 /*********************************HOMEBODY**********************/
 #bookbutton {
   background-color: #517fb6;
