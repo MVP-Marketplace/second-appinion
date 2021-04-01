@@ -9,7 +9,7 @@ const Welcome = () => {
       <Grid className="welcome">
         <img className="welcomeImg" src={welcome} alt="welcome image" />
         <Grid className="welcomeBttn">
-          <Link>
+          <Link to="/signup">
             <Button
               className="signup"
               variant="contained"
@@ -19,7 +19,7 @@ const Welcome = () => {
               Sign Up
             </Button>
           </Link>
-          <Link>
+          <Link to="/login">
             <Button
               className="signin"
               variant="contained"

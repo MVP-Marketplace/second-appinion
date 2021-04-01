@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import UserOnboard from "./pages/UserOnboard";
 import Welcome from "./components/Welcome";
 import userForm from "./pages/UserForm";
 import ConfirmationPrompt from "./pages/ConfirmationPrompt";
@@ -17,6 +18,7 @@ const App = () => {
         <Route exact path="/welcome" component={Welcome} />
         {/* <Route exact path="/signup" component={SignUp} /> */}
         {/* <Route exact path="/login" component={Login} /> */}
+        {/* <Route exact path="/onboard" component={UserOnboard} /> */}
         {/*<Route exact path="/resetpassword" component={ResetPassword} />
           <Route exact path="/updatepassword" component={UpdatePassword} />
           <Route exact path="/results" component={Results} /> */}

@@ -25,9 +25,9 @@ const HomeBody = () => {
         <img className="homeImg" src={Home} />
       </Grid>
       <Grid>
-        <Link to="/welcome">
+        <Link to="/form">
           <Button variant="contained" size="large" id="bookbutton">
-            BOOK NOW
+            START HERE!
           </Button>
         </Link>
       </Grid>
