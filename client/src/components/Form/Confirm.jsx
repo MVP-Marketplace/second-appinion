@@ -2,13 +2,18 @@ import React from "react";
 import axios from "axios";
 import TextField from "@material-ui/core/TextField";
 import Divider from "@material-ui/core/Divider";
+import { useHistory } from "react-router-dom";
 
 const Confirm = ({ formData }) => {
+  const history = useHistory();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const form = e.target;
     try {
       await axios.post("/api/forms", formData);
-      // history.push('/confirmation');
+      history.push("/complete");
+      form.reset();
       console.log("submitted");
     } catch (error) {
       console.log(error);
