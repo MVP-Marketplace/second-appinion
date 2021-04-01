@@ -23,7 +23,7 @@ const PreviousWorkForm = ({ formData, setFormData }) => {
       <div className="all-page-form-container-container">
         <form className="all-page-forms">
           <div className="single-page-form-question-container">
-            <label htmlFor="painBiteRelease">
+            <label htmlFor="painBiteRelease" className="required">
               If chewing causes pain, is the pain upon release of the bite?
             </label>
             <div>

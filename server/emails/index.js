@@ -8,7 +8,7 @@ exports.sendWelcomeEmail = (email, name) => {
     to: email,
     from: `${process.env.FROM_EMAIL}`,
     subject: "Thanks for signing up.",
-    text: `Hi ${name}! Welcome to your task manager api.`,
+    text: `Hi ${name}! Welcome to Second Appinion`,
   });
 };
 
@@ -39,6 +39,6 @@ exports.sendConfirmationEmail = (email) => {
     subject: "Second Appinion",
     text: `Hello! This email is to confirm that we have received your submission for a second opinion by a dental professional. An unbiased dentist will review your x-rays and questionnaire completed and will email you with the second opinion. 
     
-    Thank you for choosing Second Appinion!`,
+  Thank you for choosing Second Appinion!`,
   });
 };
