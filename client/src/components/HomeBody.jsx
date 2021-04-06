@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Home from "../Images/image (11).png";
+import { Link } from "react-router-dom";
 import time from "../Images/time.png";
 import customer from "../Images/customer.png";
 import pill from "../Images/pill.png";
@@ -24,9 +25,11 @@ const HomeBody = () => {
         <img className="homeImg" src={Home} />
       </Grid>
       <Grid>
-        <Button variant="contained" size="large" id="bookbutton">
-          BOOK NOW
-        </Button>
+        <Link to="/form">
+          <Button variant="contained" size="large" id="bookbutton">
+            START HERE!
+          </Button>
+        </Link>
       </Grid>
       <div>
         <h1>Why us?</h1>

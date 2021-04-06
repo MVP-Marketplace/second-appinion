@@ -63,21 +63,23 @@ body {
 }
 
 .first-page-form-container {
-  top: 10%;
+  margin-top: 5%;
+  margin-bottom: 12%;
   background-color: #ffff;
   box-shadow: 0px 4px 4px #eae9e9;
   border-radius: 40px;
-  position: absolute;
+  position: relative;
   width: 70%;
-  height: fit-content;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 5% 5% 5% 6%;
+  word-wrap: break-word;
 }
 
 .first-page-header {
-  margin-bottom: 15%;
+  margin-bottom: 13%;
 }
 
 .first-page-form {
@@ -96,14 +98,14 @@ body {
 }
 
 .small-input-form {
-  width: 50%;
-  height: 1.6rem;
+  width: 70%;
+  height: 1.8rem;
 }
 
 .wide-input-form {
   width: 100%;
   margin-top: 5%;
-  height: 2.5rem;
+  height: auto;
 }
 
 .largest-submit-input-form {
@@ -117,22 +119,22 @@ body {
   height: 2.2rem;
 }
 
-.second-page-form {
+.all-page-forms {
   position: relative;
   width: 100vw;
   height: 100vh;
   flex-direction: column;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 10%;
-  overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 .single-page-form-question-container {
   background: #ffffff;
   border-radius: 40px;
   width: 60%;
-  height: fit-content;
-  padding: 3% 3% 5% 6%;
+  height: auto;
+  padding: 5% 5% 5% 6%;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -145,7 +147,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: fit-content;
+  height: auto;
 }
 
 .dental-pain-form-column,
@@ -161,24 +163,64 @@ body {
 
 .form-question-header-caption {
   margin-top: 0;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 
 .wide-button-form-container {
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 20%;
 }
 
 .wide-button {
   background-color: #4972a3;
   border-radius: 10px;
-  width: 60%;
-  height: 30%;
+  width: 70%;
+  height: 20%;
   color: white;
   border: none;
   font-size: 1.2rem;
+  margin-top: 5%;
+  padding: 3%;
+}
+
+.required::before {
+  content: "*";
+  color: red;
+}
+
+.confirm-page-header {
+  margin-bottom: 5%;
+}
+
+.MuiInputBase-input {
+  color: #000;
+}
+
+.confirmation-page-container {
+  width: 100vw;
+  height: 100vh;
+}
+.confirmation-image-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.confirmation-page-image,
+.confirmation-text-container {
+  margin: auto;
+}
+
+.confirmation-page-image {
+  position: relative;
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 10%;
+}
+
+.confirmation-text-container {
+  width: 80%;
   margin-top: 5%;
 }
 
@@ -191,6 +233,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 25px;
+  margin: 10px;
 }
 .container {
   font-family: "Space Mono", monospace;
@@ -213,6 +256,19 @@ body {
   border-radius: 80px;
   box-shadow: 3px 2px 2px rgb(148, 147, 147);
 }
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .homeImg {
+    width: 275px;
+    margin-left: 1.2rem;
+    font-size: 5px;
+  }
+  .container {
+    font-size: 2px;
+  }
+}
+
 
 /*********************************HAMBURGER**********************/
 
@@ -262,6 +318,7 @@ body {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   border-radius: 30% !important;
+
 } */
 /* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .homeImg {
@@ -271,6 +328,8 @@ body {
 
 } */
 
+}
+
 /*********************************BOTTOMBODY**********************/
 .btmBody {
   width: 100%;
@@ -278,10 +337,12 @@ body {
   flex-direction: row;
   justify-content: center;
   /* text-align: center; */
+  border: 2rem;
 }
 .pic {
   width: 100px;
   text-align: center;
+  padding: 2rem;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .btmBody {
@@ -290,6 +351,121 @@ body {
   }
   .pic {
     width: 50%;
+    font-size: 5px;
+    border: 2rem;
+  }
+}
+
+/*********************************WELCOME**********************/
+.welcome {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.welcomeImg {
+  width: 475px;
+}
+.welcomeBttn {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 25px;
+  margin: 25px;
+}
+.signup {
+  padding-bottom: 5px;
+}
+.signin {
+  padding-bottom: 5px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .welcome {
+    width: 100%;
+  }
+  .welcomeImg {
+    width: 50%;
+    font-size: 5px;
+  }
+}
+/*********************************LOGIN**********************/
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text {
+  border-radius: 50%;
+}
+
+/*********************************ONBOARD1**********************/
+.onboardWelcome {
+  font-weight: bold;
+}
+.onboard1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img1 {
+  width: 475px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .onboard1 {
+    padding-top: 8rem;
+    width: 100%;
+    font-size: 10px;
+  }
+  .img1 {
+    width: 80%;
+    font-size: 5px;
+  }
+}
+/*********************************ONBOARD2**********************/
+.onboard2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img2 {
+  width: 475px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .onboard2 {
+    padding-top: 8rem;
+    width: 100%;
+    font-size: 10px;
+  }
+  .img2 {
+    width: 75%;
+    font-size: 5px;
+  }
+}
+/*********************************ONBOARD3**********************/
+.onboard3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img3 {
+  width: 475px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .onboard3 {
+    padding-top: 8rem;
+    width: 100%;
+    font-size: 10px;
+  }
+  .img3 {
+    width: 75%;
     font-size: 5px;
   }
 }
