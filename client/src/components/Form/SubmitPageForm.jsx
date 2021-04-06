@@ -1,6 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { Radio } from "@material-ui/core";
+import TextField from "@material-ui/core/TextField";
 
 const DefaultRadio = withStyles({
   root: {
@@ -11,6 +12,16 @@ const DefaultRadio = withStyles({
   },
   checked: {},
 })((props) => <Radio color="default" size="small" {...props} />);
+
+const CssTextField = withStyles({
+  root: {
+    "& .MuiOutlinedInput-root": {
+      "&.Mui-focused fieldset": {
+        borderColor: "#517fb6",
+      },
+    },
+  },
+})(TextField);
 
 const SubmitPageForm = ({ formData, setFormData }) => {
   const handleChange = (e) => {
@@ -53,12 +64,13 @@ const SubmitPageForm = ({ formData, setFormData }) => {
               know.
             </label>
             <p className="form-question-header-caption">
-              (Please type your response below)
+              Type your response below
             </p>
-            <textarea
-              className="largest-submit-input-form"
+            <CssTextField
               id="additionalInformationForDentist"
               type="text"
+              multiline
+              variant="outlined"
               name="additionalInformationForDentist"
               value={formData.additionalInformationForDentist || ""}
               onChange={handleChange}

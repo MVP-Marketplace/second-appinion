@@ -27,7 +27,9 @@ const FormPersonalDetails = ({ formData, setFormData }) => {
               />
             </div>
 
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email" className="required">
+              Email:
+            </label>
             <div>
               <input
                 className="small-input-form"

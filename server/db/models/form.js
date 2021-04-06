@@ -20,12 +20,10 @@ const formSchema = mongoose.Schema(
     },
     age: {
       type: String,
-      required: true,
       trim: true,
     },
     gender: {
       type: String,
-      required: true,
     },
     lastDentalVisit: {
       type: String,
@@ -37,6 +35,7 @@ const formSchema = mongoose.Schema(
     },
     dentistTold: {
       type: String,
+      trim: true,
     },
     dentalPain: {
       type: String,
@@ -49,23 +48,15 @@ const formSchema = mongoose.Schema(
     painStrength: {
       type: String,
       required: true,
-      trim: true,
     },
     painDuration: {
       type: String,
-      required: true,
     },
     painCause: {
       type: String,
-      required: true,
     },
     painLingering: {
       type: String,
-      required: true,
-    },
-    painWorsen: {
-      type: String,
-      required: true,
     },
     painBiteRelease: {
       type: String,
