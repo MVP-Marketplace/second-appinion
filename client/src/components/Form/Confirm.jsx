@@ -91,6 +91,15 @@ const Confirm = ({ formData }) => {
           <p>
             Please add any other information you would like the dentist to know.
           </p>
+
+          <p>{formData.additionalInformationForDentist}</p>
+          <div>
+            <p>X-ray Upload</p>
+            <p>
+              <img src={formData.xrayUpload} />
+            </p>
+          </div>
+
           <TextField
             disabled
             style={{ width: "100%" }}
@@ -99,6 +108,7 @@ const Confirm = ({ formData }) => {
             variant="outlined"
             value={formData.additionalInformationForDentist || ""}
           />
+
           <div className="wide-button-form-container">
             <button className="wide-button" type="submit">
               Submit
