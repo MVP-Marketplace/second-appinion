@@ -11,9 +11,9 @@ import PreviousWorkForm from "../components/Form/PreviousWorkForm";
 import SubmitPageForm from "../components/Form/SubmitPageForm";
 import Confirm from "../components/Form/Confirm";
 import { StylesProvider } from "@material-ui/core/styles";
-import FirstOnboard from "../components/FirstOnboard";
-import SecondOnboard from "../components/SecondOnboard";
-import ThirdOnboard from "../components/ThirdOnboard";
+import FirstOnboard from "../components/Onboard/FirstOnboard";
+import SecondOnboard from "../components/Onboard/SecondOnboard";
+import ThirdOnboard from "../components/Onboard/ThirdOnboard";
 
 export default function UserForm() {
   const [formData, setFormData] = useState([]);
@@ -21,21 +21,24 @@ export default function UserForm() {
 
   const steps = [
     {
+      path:
+        ((
+          <FormPersonalDetails setFormData={setFormData} formData={formData} />
+        ),
+        (<ThirdOnboard setFormData={setFormData} formData={formData} />)),
 
+      path: <FirstOnboard />,
+    },
+    {
+      path: <SecondOnboard />,
+    },
+    {
+      path: <ThirdOnboard setFormData={setFormData} formData={formData} />,
+    },
+    {
       path: (
         <FormPersonalDetails setFormData={setFormData} formData={formData} />
       ),
-
-      path: <FirstOnboard {...props} />,
-    },
-    {
-      path: <SecondOnboard {...props} />,
-    },
-    {
-      path: <ThirdOnboard {...props} />,
-    },
-    {
-      path: <FormPersonalDetails {...props} />,
     },
     {
       path: <FormUserDetails setFormData={setFormData} formData={formData} />,

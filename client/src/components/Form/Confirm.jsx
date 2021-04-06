@@ -56,6 +56,12 @@ const Confirm = ({ formData }) => {
             Please add any other information you would like the dentist to know.
           </p>
           <p>{formData.additionalInformationForDentist}</p>
+          <div>
+            <p>X-ray Upload</p>
+            <p>
+              <img src={formData.xrayUpload} />
+            </p>
+          </div>
           <div className="wide-button-form-container">
             <button className="wide-button" type="submit">
               Submit

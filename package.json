@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "@sendgrid/mail": "^7.4.2",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
-    "cloudinary": "^1.25.0",
+    "cloudinary": "^1.25.1",
+    "cloudinary-react": "^1.7.0",
     "concurrently": "^6.0.0",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
@@ -13,7 +15,9 @@
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "react-images-upload": "^1.2.8",
     "react-router-dom": "^5.2.0",
+    "sweetalert": "^2.1.2",
     "validator": "^13.5.2"
   },
   "devDependencies": {
