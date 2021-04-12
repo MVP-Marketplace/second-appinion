@@ -296,11 +296,34 @@ body {
 
 /*********************************NAVBAR**********************/
 
+.second-appinion-navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  /* border: 2px solid green; */
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  /* padding: .5rem 2rem .5rem 2rem; */
+}
+
 .second-appinion-logo {
   height: 1.9rem;
   position: fixed;
   top: 0.8rem;
   left: 0.8rem;
+}
+
+.modal-container {
+  height: 100vh;
+  width: 30vw;
+  background-color: #4972a3;
+  /* border: 10px solid green; */
+  float: left;
+  position: relative;
+  /* top: 0; */
+  right: 0%;
+  /* transform: translate(-50%, -50%); */
 }
 
 .navbar {
@@ -312,6 +335,7 @@ body {
   display: flex;
   /* color: #4972a3; */
   background-color: #4972a3;
+  /* box-shadow: none; */
 }
 
 .hamburger-menu {

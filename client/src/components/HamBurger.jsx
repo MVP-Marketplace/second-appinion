@@ -1,112 +1,108 @@
 import React from "react";
 import Logo from "../Images/Logo.png";
-// import { Button, Menu, Grid, MenuItem } from "@material-ui/core/";
-// import MenuIcon from "@material-ui/icons/Menu";
+import {
+  // AppBar,
+  // Toolbar,
+  IconButton,
+  Modal,
+  MenuItem,
+  // makeStyles,
+  // Drawer,
+  Menu,
+} from "@material-ui/core/";
+import { makeStyles } from "@material-ui/core/styles";
+import MenuIcon from "@material-ui/icons/Menu";
 // import CloseIcon from "@material-ui/icons/Close";
 
+// function rand() {
+//   return Math.round(Math.random() * 20) - 10;
+// }
+
+// function getModalStyle() {
+//   const top = 50 + rand();
+//   const left = 50 + rand();
+//   return {
+//       top: `${top}%`,
+//       left: `${left}%`,
+//       transform: `translate(-${top}%, -${left}%)`,
+//   };
+// }
+
+const useStyles = makeStyles((theme) => ({
+  modalContainer: {
+    // display: 'flex',
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    // width: '30vw',
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    // border: '2px solid #000',
+    // boxShadow: theme.shadows[0],
+    // padding: theme.spacing(2, 4, 3),
+    // width: '30px',
+    // height: '100px',
+  },
+}));
+
 const HamBurger = () => {
+  const classes = useStyles();
+  // const [modalStyle] = React.useState(getModalStyle);
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <>
-      <a href="/">
-        <img
-          src={Logo}
-          className="second-appinion-logo"
-          alt="Second Appinion Logo"
-        ></img>
-      </a>
-      <div className="navbar-container">
-        <nav className="navbar">
-          <div className="hamburger-menu">
-            <div className="line line-1"></div>
-            <div className="line line-2"></div>
-            <div className="line line-3"></div>
-          </div>
-          <ul>
-            <li className="nav-item">
-              <a href="/" className="navlink">
-                Menu
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="specialist" className="navlink">
-                Specialist
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="services" className="navlink">
-                Services
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="aboutus" className="navlink">
-                About Us
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="faq" className="navlink">
-                FAQ
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav className="second-appinion-navbar">
+        <a href="/">
+          <img
+            src={Logo}
+            alt="Second Appinion Logo"
+            className="second-appinion-logo"
+          ></img>
+        </a>
+        <IconButton className="hamburger-button" onClick={handleOpen}>
+          <MenuIcon fontSize="large" />
+        </IconButton>
+      </nav>
+
+      <Modal open={open} onClose={handleClose} className="modal-container">
+        <ul>
+          <li className="nav-item">
+            <a href="/" className="navlink">
+              Menu
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="specialist" className="navlink">
+              Specialist
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="services" className="navlink">
+              Services
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="aboutus" className="navlink">
+              About Us
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="faq" className="navlink">
+              FAQ
+            </a>
+          </li>
+        </ul>
+      </Modal>
     </>
   );
 };
 export default HamBurger;
-
-// const [anchorEl, setAnchorEl] = React.useState(null);
-// const handleClick = (event) => {
-//   setAnchorEl(event.currentTarget);
-// };
-// const handleClose = () => {
-//   setAnchorEl(null);
-// };
-
-// return (
-//   <>
-//     <Grid className="navbar-container">
-//       <a href="/" className="second-appinion-logo">
-//         <img src={Logo} alt="Second Appinion Logo" className="" />
-//       </a>
-//       <Button
-//         aria-controls="simple-menu"
-//         aria-haspopup="true"
-//         onClick={handleClick}
-//       >
-//         <MenuIcon className="hamburger-icon" />
-//       </Button>
-//       <Menu
-//         className="nav-links-container"
-//         id="simple-menu"
-//         anchorEl={anchorEl}
-//         keepMounted
-//         open={Boolean(anchorEl)}
-//         onClose={handleClose}
-//         PaperProps={{}}
-//       >
-//         <MenuItem className="nav-li navbar-expand-lg" onClick={handleClose}>
-//           Menu
-//           <Button
-//             aria-label="close"
-//             onClick={handleClick}
-//             className="hamburger-close"
-//           >
-//             <CloseIcon className="hamburger-close"></CloseIcon>
-//           </Button>
-//         </MenuItem>
-//         <MenuItem className="nav-li"></MenuItem>
-//         <MenuItem onClick={handleClose} className="nav-li">
-//           Specialists
-//         </MenuItem>
-//         <MenuItem onClick={handleClose} className="nav-li">
-//           Services
-//         </MenuItem>
-//         <MenuItem onClick={handleClose} className="nav-li">
-//           About Us
-//         </MenuItem>
-//         <MenuItem onClick={handleClose} className="nav-li">
-//           FAQ
-//         </MenuItem>
-//       </Menu>
-//     </Grid>
