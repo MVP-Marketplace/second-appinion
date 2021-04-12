@@ -73,7 +73,14 @@ const HamBurger = () => {
         </IconButton>
       </nav>
 
-      <Modal open={open} onClose={handleClose} className="modal-container">
+      <Modal
+        disablePortal
+        disableEnforceFocus
+        disableAutoFocus
+        open={open}
+        onClose={handleClose}
+        className="modal-container"
+      >
         <ul>
           <li className="nav-item">
             <a href="/" className="navlink">
