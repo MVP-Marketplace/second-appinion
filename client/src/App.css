@@ -257,7 +257,6 @@ body {
   box-shadow: 3px 2px 2px rgb(148, 147, 147);
 }
 
-
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .homeImg {
     width: 275px;
@@ -268,7 +267,6 @@ body {
     font-size: 2px;
   }
 }
-
 
 /*********************************HAMBURGER**********************/
 
@@ -327,8 +325,6 @@ body {
   }
 
 } */
-
-}
 
 /*********************************BOTTOMBODY**********************/
 .btmBody {
