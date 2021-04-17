@@ -1,66 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../Images/Logo.png";
-import {
-  // AppBar,
-  // Toolbar,
-  IconButton,
-  Modal,
-  MenuItem,
-  // makeStyles,
-  // Drawer,
-  Menu,
-} from "@material-ui/core/";
-import { makeStyles } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
-// import CloseIcon from "@material-ui/icons/Close";
-
-// function rand() {
-//   return Math.round(Math.random() * 20) - 10;
-// }
-
-// function getModalStyle() {
-//   const top = 50 + rand();
-//   const left = 50 + rand();
-//   return {
-//       top: `${top}%`,
-//       left: `${left}%`,
-//       transform: `translate(-${top}%, -${left}%)`,
-//   };
-// }
-
-const useStyles = makeStyles((theme) => ({
-  modalContainer: {
-    // display: 'flex',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    // width: '30vw',
-  },
-  paper: {
-    backgroundColor: theme.palette.background.paper,
-    // border: '2px solid #000',
-    // boxShadow: theme.shadows[0],
-    // padding: theme.spacing(2, 4, 3),
-    // width: '30px',
-    // height: '100px',
-  },
-}));
+import "boxicons";
 
 const HamBurger = () => {
-  const classes = useStyles();
-  // const [modalStyle] = React.useState(getModalStyle);
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const [sidebar, setSidebar] = useState(false);
+  const showSidebar = () => setSidebar(!sidebar);
 
   return (
     <>
-      <nav className="second-appinion-navbar">
+      <div className="second-appinion-navbar">
         <a href="/">
           <img
             src={Logo}
@@ -68,47 +16,47 @@ const HamBurger = () => {
             className="second-appinion-logo"
           ></img>
         </a>
-        <IconButton className="hamburger-button" onClick={handleOpen}>
-          <MenuIcon fontSize="large" />
-        </IconButton>
-      </nav>
-
-      <Modal
-        disablePortal
-        disableEnforceFocus
-        disableAutoFocus
-        open={open}
-        onClose={handleClose}
-        className="modal-container"
-      >
-        <ul>
-          <li className="nav-item">
-            <a href="/" className="navlink">
-              Menu
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="specialist" className="navlink">
-              Specialist
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="services" className="navlink">
-              Services
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="aboutus" className="navlink">
-              About Us
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="faq" className="navlink">
-              FAQ
-            </a>
+        <button className="hamburger-button" onClick={showSidebar}>
+          <box-icon
+            name="menu"
+            size="lg"
+            color="black"
+            className="hamburger"
+            onClick={showSidebar}
+          ></box-icon>
+        </button>
+      </div>
+      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+        <ul className="nav-menu-items" onClick={showSidebar}>
+          <li className="navbar-toggle">
+            <button className="close-button">
+              <box-icon
+                name="x"
+                size="lg"
+                color="white"
+                className="closeicon"
+              ></box-icon>
+            </button>
+            <ul className="navbar-text">
+              <li className="navbar-text">
+                <a href="/" className="nav-link">
+                  Menu
+                </a>
+              </li>
+              <li className="navbar-text">
+                <a href="services" className="nav-link">
+                  Services
+                </a>
+              </li>
+              <li className="navbar-text">
+                <a href="about" className="nav-link">
+                  About
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
-      </Modal>
+      </nav>
     </>
   );
 };
