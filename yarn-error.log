@@ -1,30 +1,25 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add cloudinay-react
+  /Users/tracilevine/.nvm/versions/node/v14.4.0/bin/node /Users/tracilevine/.nvm/versions/node/v14.4.0/bin/yarn
 
 PATH: 
-  C:\Users\danny\bin;C:\Users\danny\scoop\apps\git\2.28.0.windows.1\mingw64\bin;C:\Users\danny\scoop\apps\git\2.28.0.windows.1\usr\local\bin;C:\Users\danny\scoop\apps\git\2.28.0.windows.1\usr\bin;C:\Users\danny\scoop\apps\git\2.28.0.windows.1\usr\bin;C:\Users\danny\scoop\apps\git\2.28.0.windows.1\mingw64\bin;C:\Users\danny\scoop\apps\git\2.28.0.windows.1\usr\bin;C:\Users\danny\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Users\danny\scoop\apps\nvm\current\nodejs\nodejs;C:\Users\danny\scoop\shims;C:\Users\danny\AppData\Local\Microsoft\WindowsApps;C:\Users\danny\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\heroku\bin;C:\Users\danny\AppData\Local\GitHubDesktop\bin;C:\Users\danny\AppData\Roaming\npm;C:\Users\danny\AppData\Local\Yarn\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\danny\scoop\apps\git\2.28.0.windows.1\usr\bin\vendor_perl;C:\Users\danny\scoop\apps\git\2.28.0.windows.1\usr\bin\core_perl
+  /Users/tracilevine/.nvm/versions/node/v14.4.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 Yarn version: 
   1.22.5
 
 Node version: 
-  14.15.1
+  14.4.0
 
 Platform: 
-  win32 x64
+  darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/cloudinay-react: Not found
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66097:18)
-      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140749:22)
-      at Request.emit (events.js:315:20)
-      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141721:10)
-      at Request.emit (events.js:315:20)
-      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141643:12)
-      at Object.onceWrapper (events.js:421:28)
-      at IncomingMessage.emit (events.js:327:22)
-      at endReadableNT (_stream_readable.js:1327:12)
-      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+  SyntaxError: /Users/tracilevine/Desktop/MVP-projects/second-appinion/package.json: Unexpected token < in JSON at position 104
+      at JSON.parse (<anonymous>)
+      at /Users/tracilevine/.nvm/versions/node/v14.4.0/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/tracilevine/.nvm/versions/node/v14.4.0/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/tracilevine/.nvm/versions/node/v14.4.0/lib/node_modules/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
@@ -32,7 +27,13 @@ npm manifest:
       "@sendgrid/mail": "^7.4.2",
       "axios": "^0.21.1",
       "bcryptjs": "^2.4.3",
+  <<<<<<< HEAD
+      "boxicons": "^2.0.7",
+      "cloudinary": "^1.25.0",
+  =======
       "cloudinary": "^1.25.1",
+      "cloudinary-react": "^1.7.0",
+  >>>>>>> main
       "concurrently": "^6.0.0",
       "cookie-parser": "^1.4.5",
       "express": "^4.17.1",
@@ -68,7 +69,7 @@ npm manifest:
       "heroku-postbuild": "cd client && yarn && yarn run build",
       "prettify": "prettier '*/**/*.js' '*/**/*.jsx' '*/**/*.html' '*/**/*.css' --write"
     },
-    "proxy": "http://localhost:8080"
+    "proxy": "http://localhost:8080/"
   }
 
 yarn manifest: 
@@ -447,10 +448,18 @@ Lockfile:
     dependencies:
       mimic-response "^1.0.0"
   
-  cloudinary-core@^2.10.2:
+  cloudinary-core@^2.10.2, cloudinary-core@^2.11.3:
     version "2.11.3"
     resolved "https://registry.yarnpkg.com/cloudinary-core/-/cloudinary-core-2.11.3.tgz#1440f61c6280485094aac87021b7e10f746dc69e"
     integrity sha512-ZRnpjSgvx+LbSf+aEz5NKzxDB4Z0436aY/0BSDa90kAHiwAyd84VyEi95I74SE80e15Ri9t5S2xtksTXpzk9Xw==
+  
+  cloudinary-react@^1.7.0:
+    version "1.7.0"
+    resolved "https://registry.yarnpkg.com/cloudinary-react/-/cloudinary-react-1.7.0.tgz#c85f131acc97284453d94363c2219022dc6f1d63"
+    integrity sha512-Q2fQrQ+NwJ1Ei5ISHfWX7cZfC9z71OeOZYQv4MV8sDEDVCml2cvRexvbQ7ksDvqkYd3SCegn5vMDuHp5w3NlCQ==
+    dependencies:
+      cloudinary-core "^2.11.3"
+      prop-types "^15.6.2"
   
   cloudinary@^1.25.1:
     version "1.25.1"
