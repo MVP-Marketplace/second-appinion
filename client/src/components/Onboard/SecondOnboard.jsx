@@ -6,7 +6,7 @@ const SecondOnboard = () => {
   return (
     <>
       <Grid className="onboard2">
-        <h1>
+        <h1 className="onboard2Title">
           First, let’s get your X-rays. Call
           <br />
           your dentist and ask them to
