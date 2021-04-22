@@ -5,6 +5,7 @@ import UserOnboard from "./pages/UserOnboard";
 import Welcome from "./components/Welcome";
 import userForm from "./pages/UserForm";
 import ConfirmationPrompt from "./pages/ConfirmationPrompt";
+import Confirm from "./components/Form/Confirm";
 import "./App.css";
 
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/form" component={userForm} />
         <Route exact path="/complete" component={ConfirmationPrompt} />
-
+        <Route exact path="/confirm" component={Confirm} />
         <Route exact path="/welcome" component={Welcome} />
         {/* <Route exact path="/signup" component={SignUp} /> */}
         {/* <Route exact path="/login" component={Login} /> */}

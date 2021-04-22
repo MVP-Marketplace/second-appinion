@@ -18,6 +18,7 @@ const ThirdOnboard = ({ formData, setFormData }) => {
     axios
       .post("https://api.cloudinary.com/v1_1/dannyypz/image/upload", formData)
       .then((response) => {
+        setFormData({ ...formData, xrayUpload: response.data.url });
         console.log(response);
       });
   };
