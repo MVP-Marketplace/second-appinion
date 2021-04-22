@@ -52,13 +52,13 @@ const ThirdOnboard = ({ formData, setFormData }) => {
           name="xrayUpload"
           htmlFor="xrayUpload"
         >
-          Submit
+          Upload your X-ray
         </Button>
 
         <h3 className="onboard3SubTitle">
           Don't have an X-ray? No problem, you
           <br />
-          <a>can send us a picture of your mouth</a>
+          <a>can send us a picture of your mouth.</a>
         </h3>
       </Grid>
     </>

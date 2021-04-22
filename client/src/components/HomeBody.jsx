@@ -17,7 +17,10 @@ const HomeBody = () => {
   return (
     <Grid className="container">
       <Grid className="headerHome">
-        <h1 className="headerTitle">Get a second opinion</h1>
+        <h1 className="headerTitle">
+          Get a second <br />
+          opinion
+        </h1>
         <h3 className="headerSubTitle">Meet your new Specialist</h3>
         {/* <img className="homeImg" src={Home} alt="Customer in a Dentist Chair"/> */}
       </Grid>
@@ -25,7 +28,7 @@ const HomeBody = () => {
       <Grid>
         <Link className="button-link" to="/form">
           <Button variant="contained" size="large" id="bookbutton">
-            START HERE!
+            Book Now
           </Button>
         </Link>
       </Grid>
