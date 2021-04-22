@@ -334,7 +334,6 @@ body {
 
 /*********************************HAMBURGER**********************/
 
-
 /* .second-appinion-logo {
   padding-left: 5%;
   margin: 10px 10px;
@@ -589,7 +588,6 @@ body {
   height: 5%;
   /* align-content: center; */
   /* position: absolute; */
-
 }
 
 .second-appinion-logo {
@@ -655,7 +653,6 @@ body {
   font-weight: bold;
 }
 
-
 /* .navbar-toggle {
   width: 100%;
   height: 80px;
@@ -668,12 +665,12 @@ body {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .second-appinion-logo {
     /* padding-top: 8rem; */
-    /* width: 1.5rem; */
-    height: 1.2rem;
+/* width: 1.5rem; */
+/*height: 1.2rem;
     /* font-size: 10px; */
-  }
+/*  }
   .hamburger-button {
     font-size: medium;
   }
 }
-
+*/

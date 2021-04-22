@@ -72,7 +72,7 @@ exports.getAllForms = async (req, res) => {
     sort[parts[0]] = parts[1] === "desc" ? -1 : 1;
   }
   try {
-    await req.user
+    await req
       .populate({
         path: "forms",
         match,

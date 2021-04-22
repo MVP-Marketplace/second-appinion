@@ -6,10 +6,10 @@ const router = require("express").Router(),
   } = require("../../controllers/forms");
 isAdmin = require("../../middleware/authorization/index");
 
-router.get("/:id", isAdmin(), getSpecificForm);
+router.get("/:id", getSpecificForm);
 
-router.get("/", isAdmin(), getAllForms);
+router.get("/", getAllForms);
 
-router.delete("/:id", isAdmin(), deleteForm);
+router.delete("/:id", deleteForm);
 
 module.exports = router;

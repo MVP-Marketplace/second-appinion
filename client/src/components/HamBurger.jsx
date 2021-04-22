@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../Images/Logo.png";
-import "boxicons";
+//import "boxicons";
 
 const HamBurger = () => {
   const [sidebar, setSidebar] = useState(false);
