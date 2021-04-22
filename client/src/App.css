@@ -15,6 +15,7 @@ body {
   /* position: fixed; */
   bottom: 0;
   padding-top: 12px;
+  /* border: 2px solid green; */
 }
 .footer-column-1,
 .footer-bottom-row__icons {
@@ -60,6 +61,13 @@ body {
 .first-page-form-container-main {
   display: flex;
   justify-content: center;
+  /* width: 60%; */
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* border: 4px solid red; */
+  /* align-items: center; */
 }
 
 .first-page-form-container {
@@ -76,14 +84,34 @@ body {
   justify-content: center;
   padding: 5% 5% 5% 6%;
   word-wrap: break-word;
+  border: 2px solid yellow;
+  /* align-items: center; */
+  /* vertical-align: middle; */
+  /* text-align: center; */
+  /* align-content: center; */
+
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
 
 .first-page-header {
-  margin-bottom: 13%;
+  /* display: flex;
+  text-align: center;
+  font-weight: lighter; */
+
+  /* margin-bottom: 13%; */
+  /* border: red solid 6px; */
 }
 
 .first-page-form {
   line-height: 2.5rem;
+  /* border: red solid 6px; */
+  /* align-items: center; */
+  /* display: flex; */
+  /* align-content: center; */
+  /* justify-content: center; */
 }
 
 .small-input-form,
@@ -94,7 +122,10 @@ body {
   box-sizing: border-box;
   border-radius: 8px;
   outline: none;
-  padding: 3%;
+  /* padding: 3%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .small-input-form {
@@ -127,6 +158,7 @@ body {
   margin-top: 10%;
   margin-bottom: 10%;
   scroll-behavior: smooth;
+  /* text-align: center; */
 }
 
 .single-page-form-question-container {
@@ -225,6 +257,10 @@ body {
 }
 
 /*********************************HOMEBODY**********************/
+.button-link {
+  text-decoration: none;
+}
+
 #bookbutton {
   background-color: #517fb6;
   color: white;
@@ -234,10 +270,25 @@ body {
   justify-content: center;
   border-radius: 25px;
   margin: 10px;
+  z-index: -1;
+  text-decoration: none;
+  font-weight: bold;
 }
+
+.reasonTitle {
+  /* color: #4972a3; */
+  color: #517fb6;
+}
+
+/* #bookbutton:active,
+#bookbutton:focus,
+#bookbutton:hover {
+  text-decoration: none;
+} */
+
 .container {
   font-family: "Space Mono", monospace;
-  font-weight: bold !important;
+  /* font-weight: bold !important; */
   /* width: 100%; */
   display: flex;
   flex-direction: column;
@@ -246,6 +297,19 @@ body {
   padding-bottom: 20px;
   margin-top: 5rem;
 }
+
+.headerHome {
+  /* position: absolute; */
+  /* width: 100%; */
+  /* display: flex; */
+  /* text-: center; */
+  /* justify-content: center; */
+}
+
+.headerTitle {
+  /* font-weight: 700px; */
+}
+
 .homeImg {
   width: 475px;
   margin: 10px;
@@ -269,6 +333,7 @@ body {
 }
 
 /*********************************HAMBURGER**********************/
+
 
 /* .second-appinion-logo {
   padding-left: 5%;
@@ -332,13 +397,33 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* text-align: center; */
-  border: 2rem;
+  padding: 0;
+  /* padding: 10px; */
+  /* align-items: center; */
+  text-align: center;
+  /* border: 2rem solid yellow; */
+  /* margin: 10px; */
 }
+/* .picAndText {
+  border: 2px solid purple
+} */
 .pic {
   width: 100px;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 0;
+  /* border: 2px solid pink */
+}
+.picSubTitle {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 0;
+  /* padding: 3.5rem; */
+  /* border: 2px solid green; */
+  /* margin: 0; */
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .btmBody {
@@ -409,12 +494,18 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.onboardSubTitle {
+  font-weight: lighter;
+  text-align: center;
+}
+
 .img1 {
   width: 475px;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .onboard1 {
-    padding-top: 8rem;
+    padding-top: 4rem;
     width: 100%;
     font-size: 10px;
   }
@@ -429,13 +520,24 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 6rem;
 }
+
+.onboard2Title {
+  text-align: center;
+  font-weight: lighter;
+}
+
 .img2 {
   width: 475px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .onboard2 {
-    padding-top: 8rem;
+    padding-top: 4rem;
     width: 100%;
     font-size: 10px;
   }
@@ -450,13 +552,21 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 4rem;
 }
+
+.onboard3Title,
+.onboard3SubTitle {
+  text-align: center;
+  font-weight: lighter;
+}
+
 .img3 {
-  width: 475px;
+  width: 400px;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .onboard3 {
-    padding-top: 8rem;
+    /* padding-top: 4rem; */
     width: 100%;
     font-size: 10px;
   }
@@ -469,12 +579,17 @@ body {
 /*********************************NAVBAR / MENU**********************/
 
 .second-appinion-navbar {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: space-between;
+  /* border: 6px solid green; */
+  height: 5%;
+  /* align-content: center; */
+  /* position: absolute; */
+
 }
 
 .second-appinion-logo {
@@ -540,10 +655,25 @@ body {
   font-weight: bold;
 }
 
+
 /* .navbar-toggle {
   width: 100%;
   height: 80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-} */
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .second-appinion-logo {
+    /* padding-top: 8rem; */
+    /* width: 1.5rem; */
+    height: 1.2rem;
+    /* font-size: 10px; */
+  }
+  .hamburger-button {
+    font-size: medium;
+  }
+}
+

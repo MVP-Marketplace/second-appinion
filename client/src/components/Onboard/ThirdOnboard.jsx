@@ -25,8 +25,8 @@ const ThirdOnboard = ({ formData, setFormData }) => {
   return (
     <>
       <Grid className="onboard3">
-        <img className="img3" src={onboard3} alt="" />
-        <h1>
+        <img className="img3" src={onboard3} alt="Doctor Looking At X-rays" />
+        <h1 className="onboard3Title">
           Now, let’s upload or take a photo
           <br />
           of your Xrays and submit them
@@ -55,10 +55,10 @@ const ThirdOnboard = ({ formData, setFormData }) => {
           Submit
         </Button>
 
-        <h3>
-          dont have an X-ray? No problem, you can
+        <h3 className="onboard3SubTitle">
+          Don't have an X-ray? No problem, you
           <br />
-          <a>send us a picture of your mouth</a>
+          <a>can send us a picture of your mouth</a>
         </h3>
       </Grid>
     </>
