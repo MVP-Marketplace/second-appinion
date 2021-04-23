@@ -3,6 +3,10 @@ const mongoose = require("mongoose"),
 
 const formSchema = mongoose.Schema(
   {
+    name: {
+      type: String,
+      trim: true,
+    },
     email: {
       type: String,
       required: true,
