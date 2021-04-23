@@ -19,7 +19,7 @@ const HamBurger = () => {
         <button className="hamburger-button" onClick={showSidebar}>
           <box-icon
             name="menu"
-            size="md"
+            size="lg"
             color="black"
             className="hamburger"
             onClick={showSidebar}

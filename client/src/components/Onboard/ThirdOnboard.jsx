@@ -52,12 +52,13 @@ const ThirdOnboard = ({ formData, setFormData }) => {
           htmlFor="xrayUpload"
           enable="true"
         >
-          Submit
+          Upload your X-ray
         </Button>
         <h3>
           dont have an X-ray? No problem, you can
           <br />
-          <a>send us a picture of your mouth</a>
+
+          <a>can send us a picture of your mouth.</a>
         </h3>
       </Grid>
     </>

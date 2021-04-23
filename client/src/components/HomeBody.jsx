@@ -15,24 +15,23 @@ import { Grid, Button } from "@material-ui/core";
 const HomeBody = () => {
   // const classes = useStyles();
   return (
-    <>
-      <Grid className="container">
-        <Grid className="headerHome">
-          <h1 className="headerTitle">Get a second opinion</h1>
-          <h3 className="headerSubTitle">Meet your new Specialist</h3>
-          {/* <img className="homeImg" src={Home} alt="Customer in a Dentist Chair"/> */}
-        </Grid>
-        <img className="homeImg" src={Home} alt="Customer in a Dentist Chair" />
-        <Grid>
-          <Link className="button-link" to="/form">
-            <Button variant="contained" size="large" id="bookbutton">
-              START HERE!
-            </Button>
-          </Link>
-        </Grid>
-        <div>
-          <h1 className="reasonTitle">Why us?</h1>
-        </div>
+
+    <Grid className="container">
+      <Grid className="headerHome">
+        <h1 className="headerTitle">
+          Get a second <br />
+          opinion
+        </h1>
+        <h3 className="headerSubTitle">Meet your new Specialist</h3>
+        {/* <img className="homeImg" src={Home} alt="Customer in a Dentist Chair"/> */}
+      </Grid>
+      <img className="homeImg" src={Home} alt="Customer in a Dentist Chair" />
+      <Grid>
+        <Link className="button-link" to="/form">
+          <Button variant="contained" size="large" id="bookbutton">
+            Book Now
+          </Button>
+        </Link>
       </Grid>
       <Grid className="btmBody">
         <Grid className="picAndText">
