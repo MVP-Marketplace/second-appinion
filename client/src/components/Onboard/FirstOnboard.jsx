@@ -6,13 +6,17 @@ const FirstOnboard = () => {
   return (
     <>
       <Grid className="onboard1">
-        <h1 className="onboardWelcome">Welcome</h1>
-        <h1>
+        <h1 className="onboardWelcome">Welcome!</h1>
+        <h1 className="onboardSubTitle">
           Use Second Appinion to send <br />
           your X-Rays to unbiased <br />
-          dentists for a second oppinion.
+          dentists for a Second Appinion.
         </h1>
-        <img className="img1" src={onboard1} alt="" />
+        <img
+          className="img1"
+          src={onboard1}
+          alt="Customer in a Dentist Chair"
+        />
       </Grid>
     </>
   );
