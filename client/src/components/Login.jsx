@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Grid, Button, TextField } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 import HamBurger from "./HamBurger";
 import Footer from "./Footer";
 import axios from "axios";
@@ -15,6 +16,7 @@ import axios from "axios";
 //     },
 //   }));
 const Login = () => {
+  let history = useHistory();
   const [formData, setFormData] = useState(null);
   // const classes = useStyles();
   const handleChange = (e) => {
@@ -23,8 +25,8 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("/api/users/");
-    // history.push('/dashboard')
+    axios.post("/api/users/", formData);
+    history.push("/dashboard");
   };
   return (
     <>
@@ -37,9 +39,17 @@ const Login = () => {
         </h1>
         <form onSubmit={handleSubmit}>
           <h4>Email</h4>
-          <TextField className="text" variant="outlined" />
+          <TextField
+            className="text"
+            variant="outlined"
+            onChange={handleChange}
+          />
           <h4>Password</h4>
-          <TextField className="text" variant="outlined" />
+          <TextField
+            className="text"
+            variant="outlined"
+            onChange={handleChange}
+          />
           <Button variant="contained" size="large" id="bookbutton">
             Sign In
           </Button>

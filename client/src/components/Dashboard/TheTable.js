@@ -8,6 +8,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import "boxicons";
+import axios from "axios";
 
 const useStyles = makeStyles({
   table: {
@@ -19,6 +20,12 @@ export default function TheTable({ theData }) {
   const classes = useStyles();
   let data = theData;
   console.log(data);
+
+  const handleDelete = async (id, e) => {
+    await axios.delete(`/api/forms/${id}`).then((res) => {
+      console.log(res);
+    });
+  };
 
   if (!data) return null;
   return (
@@ -35,7 +42,7 @@ export default function TheTable({ theData }) {
         </TableHead>
         <TableBody>
           {data.map((row) => (
-            <TableRow>
+            <TableRow key={row.id}>
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
@@ -47,7 +54,11 @@ export default function TheTable({ theData }) {
                 <box-icon type="solid" name="edit-alt"></box-icon>
               </TableCell>
               <TableCell align="right">
-                <box-icon name="trash" color="red"></box-icon>
+                <box-icon
+                  name="trash"
+                  color="red"
+                  onClick={(e) => handleDelete(row.id, e)}
+                ></box-icon>
               </TableCell>
             </TableRow>
           ))}
