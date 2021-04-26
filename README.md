@@ -1,4 +1,4 @@
-# ![Imgur](https://imgur.com/a/rBKJDrU)  #Second Appinion
+# Second Appinion
 
 ## Intro
 
