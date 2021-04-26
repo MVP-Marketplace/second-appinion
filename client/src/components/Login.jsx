@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import HamBurger from "./HamBurger";
 import Footer from "./Footer";
-
 import axios from "axios";
 
 
