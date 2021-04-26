@@ -1,6 +1,7 @@
 const mongoose = require("mongoose"),
   { sendConfirmationEmail } = require("../emails/"),
   cloudinary = require("cloudinary").v2,
+  querystring = require("querystring"),
   Form = require("../db/models/form");
 
 // ***********************************************//
@@ -62,33 +63,34 @@ exports.getSpecificForm = async (req, res) => {
 // /forms?sortBy=dueDate:desc
 // ***********************************************//
 exports.getAllForms = async (req, res) => {
-  const match = {},
-    sort = {};
-
-  if (req.query.completed) match.completed = req.query.completed === "true";
-
-  if (req.query.sortBy) {
-    const parts = req.query.sortBy.split(":");
-    sort[parts[0]] = parts[1] === "desc" ? -1 : 1;
-  }
   try {
-    await req.user
-      .populate({
-        path: "forms",
-        match,
-        options: {
-          limit: parseInt(req.query.limit),
-          skip: parseInt(req.query.skip),
-          sort,
-        },
-      })
-      .execPopulate();
-    res.json(req.forms);
+    const allForms = await Form.find({});
+    res.json(allForms);
   } catch (e) {
     res.status(500).json({ error: e.toString() });
   }
 };
 
+// ***********************************************//
+// Search form
+// ***********************************************//
+
+exports.getSearchForms = async (req, res) => {
+  const request = req.body;
+  let queryString = querystring.stringify(request);
+  try {
+    const forms = await Form.find({
+      $text: {
+        $search: queryString,
+        $caseSensitive: false,
+        $diacriticSensitive: true,
+      },
+    });
+    res.json(forms);
+  } catch (e) {
+    res.status(500).json({ error: e.toString() });
+  }
+};
 // ***********************************************//
 // Delete form
 // ***********************************************//

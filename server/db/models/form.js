@@ -3,6 +3,10 @@ const mongoose = require("mongoose"),
 
 const formSchema = mongoose.Schema(
   {
+    name: {
+      type: String,
+      trim: true,
+    },
     email: {
       type: String,
       required: true,
@@ -90,6 +94,13 @@ const formSchema = mongoose.Schema(
     timestamps: true,
   }
 );
+
+//to index db for search feature
+//allowing search by name or email
+formSchema.index({
+  name: "text",
+  email: "text",
+});
 
 const Form = mongoose.model("Form", formSchema);
 
