@@ -33,10 +33,7 @@ const Login = () => {
       <HamBurger />
 
       <Grid className="login">
-        <h1>
-          Get a Second <br />
-          opinion
-        </h1>
+        <h1>Login Second Appinion</h1>
         <form onSubmit={handleSubmit}>
           <h4>Email</h4>
           <TextField
@@ -46,6 +43,7 @@ const Login = () => {
           />
           <h4>Password</h4>
           <TextField
+            type="password"
             className="text"
             variant="outlined"
             onChange={handleChange}

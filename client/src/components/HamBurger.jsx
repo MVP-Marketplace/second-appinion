@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../Images/Logo.png";
 import "boxicons";
 
@@ -53,6 +54,13 @@ const HamBurger = () => {
                   About
                 </a>
               </li>
+              <Link to="/login">
+                <li className="navbar-text">
+                  <a href="about" className="nav-link">
+                    Login
+                  </a>
+                </li>
+              </Link>
             </ul>
           </li>
         </ul>

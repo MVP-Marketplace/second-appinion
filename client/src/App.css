@@ -61,15 +61,8 @@ body {
 .first-page-form-container-main {
   display: flex;
   justify-content: center;
-  /* text-align: center; */
   align-items: center;
-  /* width: 60%; */
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-  /* border: 4px solid red; */
-  /* align-items: center; */
+  margin-top: 2rem;
 }
 
 .first-page-form-container {
@@ -156,14 +149,17 @@ body {
 }
 
 .all-page-form-container-container {
-  /* max-width: 70%; */
-  /* display: flex;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  text-align: center; */
+  align-items: center;
+  margin-top: 2rem;
+  box-shadow: 3px 2px 2px rgb(148, 147, 147);
+  width: 80%;
 }
 
 .all-page-forms {
-  position: relative;
+  /* position: relative; */
   /* max-width: 70%; */
   /* max-height: 70%; */
   /* width: 100vw; */
@@ -178,12 +174,8 @@ body {
 .single-page-form-question-container {
   background: #ffffff;
   border-radius: 40px;
-  /* width: 60%; */
-  height: auto;
-  padding: 5% 5% 5% 6%;
   display: flex;
   flex-direction: column;
-  margin: auto;
   line-height: 1.8rem;
   flex-wrap: wrap;
   margin-bottom: 3%;
@@ -261,7 +253,7 @@ body {
 
 .confirmation-page-image {
   position: relative;
-  width: 70%;
+  width: 40rem;
   height: auto;
   object-fit: contain;
   margin-top: 10%;
@@ -270,6 +262,32 @@ body {
 .confirmation-text-container {
   width: 80%;
   margin-top: 5%;
+}
+.confirmation-text {
+  font-family: "Space Mono", monospace;
+  font-size: 1.7rem;
+}
+.completeButton {
+  background-color: #517fb6;
+  color: white;
+  width: 100px;
+  height: 45px;
+  font-size: 2.5vh;
+  border-radius: 25px;
+  border: none;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .confirmation-page-image {
+    position: relative;
+    width: 20rem;
+    height: auto;
+    object-fit: contain;
+    margin-top: 10%;
+  }
+  .confirmation-text {
+    font-family: "Space Mono", monospace;
+    font-size: 1rem;
+  }
 }
 
 /*********************************HOMEBODY**********************/
@@ -296,11 +314,6 @@ body {
 
 .headerTitle {
   /* font-weight: 900; */
-  text-align: center;
-}
-
-.headerSubTitle {
-  font-weight: lighter;
 }
 
 .reasonTitle {
@@ -320,20 +333,14 @@ body {
 }
 
 .headerHome {
-  /* position: absolute; */
-  /* width: 100%; */
-  /* display: flex; */
-  /* text-: center; */
-  /* justify-content: center; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .headerTitle {
   font-size: 5vh;
 }
-.headerSubTitle {
-  font-size: 2.5vh;
-}
-
 .homeImg {
   width: 475px;
   margin: 10px;
@@ -443,7 +450,6 @@ body {
   width: 30%;
 }
 .picSubTitle {
-  width: 100%;
   text-align: center;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -455,6 +461,10 @@ body {
     width: 50%;
     font-size: 5px;
     border: 2rem;
+  }
+  .picSubTitle {
+    font-size: 0.5rem;
+    text-align: center;
   }
 }
 
@@ -684,7 +694,6 @@ body {
   font-weight: bold;
 }
 
-
 .navbar-toggle {
   width: 100%;
   height: 80px;
@@ -692,20 +701,42 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
+.closeicon {
+  padding-top: 7rem;
+}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .second-appinion-logo {
-    padding-top: 8rem;
-    width: 1.5rem;
-    height: 1.2rem;
-    font-size: 10px;
+    padding-top: 0.5rem;
+    width: 25vh;
+    height: 5vw;
   }
-  .hamburger-button {
-    font-size: medium;
+  /* .hamburger-button {
+    width: 2px;
+  } */
+  .hamburger-button,
+  .close-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 5rem;
+  }
+
+  .hamburger-button:focus,
+  .close-button:focus {
+    outline: none;
+  }
+
+  .close-button {
+    position: absolute;
+    bottom: 90%;
+    right: -2%;
+    margin-right: 2rem;
+    transform: translate(-50%, -50%);
   }
 }
 
-    /* padding-top: 8rem; */
+/* padding-top: 8rem; */
 /* width: 1.5rem; */
 /* height: 1.2rem; */
 /* font-size: 10px; */
@@ -715,12 +746,13 @@ body {
   margin-right: 2rem;
 }
 
-@media only screen and (min-device-width: 320px) {
+/* @media only screen and (min-device-width: 320px) {
   .second-appinion-logo {
     height: 0.9rem;
     position: absolute;
     top: 0.8rem;
     left: 2rem;
   }
-}
+} */
 
+/*********************************CONFIRM PAGE**********************/

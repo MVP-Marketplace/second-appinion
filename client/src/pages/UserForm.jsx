@@ -14,6 +14,7 @@ import { StylesProvider } from "@material-ui/core/styles";
 import FirstOnboard from "../components/Onboard/FirstOnboard";
 import SecondOnboard from "../components/Onboard/SecondOnboard";
 import ThirdOnboard from "../components/Onboard/ThirdOnboard";
+import TestOnboard from "../components/Onboard/testOnboard";
 
 export default function UserForm() {
   const [formData, setFormData] = useState([]);
@@ -56,6 +57,9 @@ export default function UserForm() {
     },
     {
       path: <SubmitPageForm setFormData={setFormData} formData={formData} />,
+    },
+    {
+      path: <TestOnboard setFormData={setFormData} formData={formData} />,
     },
     {
       path: <Confirm setFormData={setFormData} formData={formData} />,
