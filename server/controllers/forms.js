@@ -1,6 +1,7 @@
 const mongoose = require("mongoose"),
   { sendConfirmationEmail } = require("../emails/"),
   cloudinary = require("cloudinary").v2,
+  querystring = require("querystring"),
   Form = require("../db/models/form");
 
 // ***********************************************//
@@ -70,6 +71,26 @@ exports.getAllForms = async (req, res) => {
   }
 };
 
+// ***********************************************//
+// Search form
+// ***********************************************//
+
+exports.getSearchForms = async (req, res) => {
+  const request = req.body;
+  let queryString = querystring.stringify(request);
+  try {
+    const forms = await Form.find({
+      $text: {
+        $search: queryString,
+        $caseSensitive: false,
+        $diacriticSensitive: true,
+      },
+    });
+    res.json(forms);
+  } catch (e) {
+    res.status(500).json({ error: e.toString() });
+  }
+};
 // ***********************************************//
 // Delete form
 // ***********************************************//
