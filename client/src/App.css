@@ -771,18 +771,6 @@ body {
   color: #4297fd;
 }
 
-.sidebar-button {
-  /* padding-top: 10px;
-  padding-bottom: 10px; */
-  /* padding: 10px; */
-  /* display: inline-block; */
-  /* align-content: center; */
-  /* justify-content: center; */
-}
-
-.sidebarlinks {
-}
-
 .piechart-logo,
 .question-mark {
   width: 1.5rem;
@@ -791,8 +779,6 @@ body {
   align-content: center;
   justify-content: center;
   padding-right: 1rem;
-  /* cursor: pointer; */
-  /* display: inline-block; */
 }
 
 /*********************************HEADER**********************/
@@ -810,25 +796,22 @@ body {
 
 .search-container {
   display: flex;
-  /* justify-content: center; */
+
   align-items: center;
 }
 
 .search-bar-container {
-  /* border: 1px solid white; */
   box-shadow: 0.01rem 0.01rem 0.01rem 0.01rem gray;
   margin-left: 2.2rem;
   border-radius: 20px;
   padding: 0.5rem;
   width: 450px;
   height: 20%;
-  /* display: center; */
+
   align-items: center;
   display: flex;
   background-color: white;
   float: left;
-  /* padding: 10px; */
-  /* top: 24px; */
 }
 
 .search {
@@ -853,20 +836,10 @@ body {
 
 .header-icons {
   display: flex;
-  /* position: absolute; */
   float: left;
   align-content: center;
-  /* border: 1px solid yellow; */
   position: relative;
   padding-left: 58rem;
-  /* width: 100%; */
-  /* height: 5rem; */
-  /* top: 0; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: space-evenly;
-  justify-content: center;
-  align-items: center; */
 }
 
 .icons {
@@ -874,22 +847,12 @@ body {
   justify-content: space-between;
   align-content: center;
   padding-right: 1.5rem;
-  /* margin-right: 4rem; */
-  /* float: right; */
 }
 
 /*********************************TABLE**********************/
 
 .table-title {
   font-weight: bold;
-}
-
-.table {
-  /* position: absolute;
-  height: 410px;
-  left: 292px;
-  right: 38px;
-  top: 125px; */
 }
 
 .tableTitle {
@@ -906,5 +869,4 @@ body {
   transform: translate(-50%, -50%);
   min-width: 78.9vw;
   height: 80vh;
-  /* box-shadow: 0px 4px 4px 5px whitesmoke; */
 }
