@@ -14,7 +14,6 @@ import "./App.css";
 
 const App = () => {
   return (
-
     <AppContextProvider>
       <BrowserRouter>
         <Switch>
@@ -24,10 +23,10 @@ const App = () => {
           <Route exact path="/welcome" component={Welcome} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/dashboard" component={Dashboard} />
-          {/* <Route exact path="/signup" component={SignUp} /> */}
-          {/* <Route exact path="/login" component={Login} /> */}
-          {/* <Route exact path="/onboard" component={UserOnboard} /> */}
-          {/*<Route exact path="/resetpassword" component={ResetPassword} />
+          {/* <Route exact path="/signup" component={SignUp} /> 
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/onboard" component={UserOnboard} /> 
+          <Route exact path="/resetpassword" component={ResetPassword} /> */}
         </Switch>
       </BrowserRouter>
     </AppContextProvider>

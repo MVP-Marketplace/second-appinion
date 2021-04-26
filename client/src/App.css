@@ -98,7 +98,7 @@ body {
 }
 
 .small-input-form {
-  width: 70%;
+  width: 50%;
   height: 1.8rem;
 }
 
@@ -125,8 +125,8 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  box-shadow: 3px 2px 2px rgb(148, 147, 147);
-  width: 80%;
+  /* box-shadow: 3px 2px 2px rgb(148, 147, 147); */
+  /* width: 80%; */
 }
 
 .all-page-form-container-container,
@@ -140,7 +140,6 @@ body {
 .all-page-forms {
   width: 30%;
   position: relative;
-
   flex-direction: column;
   margin-top: 10%;
   margin-bottom: 10%;
@@ -311,13 +310,11 @@ body {
   margin-top: 5rem;
 }
 
-
 .headerHome {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
 
 .headerTitle {
   font-size: 5vh;
@@ -664,7 +661,6 @@ body {
   }
 } */
 
-
 /*********************************START QUESTIONAIRE**********************/
 
 .start-container {
@@ -725,4 +721,3 @@ body {
     font-size: 5px;
   }
 }
-
