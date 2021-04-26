@@ -62,28 +62,9 @@ exports.getSpecificForm = async (req, res) => {
 // /forms?sortBy=dueDate:desc
 // ***********************************************//
 exports.getAllForms = async (req, res) => {
-  const match = {},
-    sort = {};
-
-  if (req.query.completed) match.completed = req.query.completed === "true";
-
-  if (req.query.sortBy) {
-    const parts = req.query.sortBy.split(":");
-    sort[parts[0]] = parts[1] === "desc" ? -1 : 1;
-  }
   try {
-    await req
-      .populate({
-        path: "forms",
-        match,
-        options: {
-          limit: parseInt(req.query.limit),
-          skip: parseInt(req.query.skip),
-          sort,
-        },
-      })
-      .execPopulate();
-    res.json(req.forms);
+    const allForms = await Form.find({});
+    res.json(allForms);
   } catch (e) {
     res.status(500).json({ error: e.toString() });
   }

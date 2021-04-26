@@ -7,6 +7,8 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import "boxicons";
+import axios from "axios";
 
 const useStyles = makeStyles({
   table: {
@@ -14,43 +16,50 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-];
-
-export default function TheTable() {
+export default function TheTable({ theData }) {
   const classes = useStyles();
+  let data = theData;
+  console.log(data);
 
+  const handleDelete = async (id, e) => {
+    await axios.delete(`/api/forms/${id}`).then((res) => {
+      console.log(res);
+    });
+  };
+
+  if (!data) return null;
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell align="right">Email</TableCell>
+            <TableCell align="right">Date</TableCell>
+            <TableCell align="right">Completed</TableCell>
+            <TableCell align="right">PainCause</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.name}>
+          {data.map((row) => (
+            <TableRow key={row.id}>
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="right">{row.email}</TableCell>
+              <TableCell align="right">{row.date}</TableCell>
+              <TableCell align="right">{row.completed}</TableCell>
+              <TableCell align="right">{row.painCause}</TableCell>
+              <TableCell align="right">
+                <box-icon type="solid" name="edit-alt"></box-icon>
+              </TableCell>
+              <TableCell align="right">
+                <box-icon
+                  name="trash"
+                  color="red"
+                  onClick={(e) => handleDelete(row.id, e)}
+                ></box-icon>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

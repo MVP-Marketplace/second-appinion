@@ -8,8 +8,6 @@ isAdmin = require("../../middleware/authorization/index");
 
 router.get("/:id", getSpecificForm);
 
-router.get("/", getAllForms);
-
-router.delete("/:id", deleteForm);
+router.delete("/:id", isAdmin(), deleteForm);
 
 module.exports = router;
