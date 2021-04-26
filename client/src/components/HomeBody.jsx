@@ -15,40 +15,44 @@ import { Grid, Button } from "@material-ui/core";
 const HomeBody = () => {
   // const classes = useStyles();
   return (
+
     <Grid className="container">
       <Grid className="headerHome">
-        <h1>
-          Get a second
-          <br /> opinion
+        <h1 className="headerTitle">
+          Get a second <br />
+          opinion
         </h1>
-        <h3>Meet your new Specialist</h3>
-        <img className="homeImg" src={Home} />
+        <h3 className="headerSubTitle">Meet your new Specialist</h3>
+        {/* <img className="homeImg" src={Home} alt="Customer in a Dentist Chair"/> */}
       </Grid>
+      <img className="homeImg" src={Home} alt="Customer in a Dentist Chair" />
       <Grid>
-        <Link to="/form">
+        <Link className="button-link" to="/form">
           <Button variant="contained" size="large" id="bookbutton">
-            START HERE!
+            Book Now
           </Button>
         </Link>
       </Grid>
-      <div>
-        <h1>Why us?</h1>
-      </div>
       <Grid className="btmBody">
-        <Grid>
-          <img className="pic" src={time} alt="" />
-          <h4>Timely Second Opinion from field experts</h4>
+        <Grid className="picAndText">
+          <img className="pic" src={time} alt="Clock" />
+          <h4 className="picSubTitle">
+            Timely Second <br /> Opinion From <br /> Field Experts
+          </h4>
         </Grid>
-        <Grid>
-          <img className="pic" src={customer} alt="" />
-          <h4>Build Trusting relationshipsd</h4>
+        <Grid className="picAndText">
+          <img className="pic" src={customer} alt="Customer on the Phone" />
+          <h4 className="picSubTitle">
+            Build Trusting <br />
+            Relationships
+          </h4>
         </Grid>
-        <Grid>
-          <img className="pic" src={pill} alt="" />
-          <h4>Service promise</h4>
+        <Grid className="picAndText">
+          <img className="pic" src={pill} alt="Pill" />
+          <h4 className="picSubTitle">Service Promise</h4>
         </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 };
 

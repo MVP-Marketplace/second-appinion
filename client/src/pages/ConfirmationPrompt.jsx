@@ -39,7 +39,7 @@ const ConfirmationPrompt = () => {
             </p>
           </div>
           <div className="wide-button-form-container">
-            <button className="wide-button" onClick={handleRedirect}>
+            <button id="bookbutton" onClick={handleRedirect}>
               Done
             </button>
           </div>
