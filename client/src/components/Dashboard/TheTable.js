@@ -20,6 +20,7 @@ export default function TheTable({ theData }) {
   const classes = useStyles();
   let data = theData;
   console.log(data);
+  console.log(data);
 
   const handleDelete = async (id, e) => {
     await axios.delete(`/api/forms/${id}`).then((res) => {
@@ -42,7 +43,7 @@ export default function TheTable({ theData }) {
         </TableHead>
         <TableBody>
           {data.map((row) => (
-            <TableRow key={row.id}>
+            <TableRow key={row._id}>
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
@@ -57,7 +58,7 @@ export default function TheTable({ theData }) {
                 <box-icon
                   name="trash"
                   color="red"
-                  onClick={(e) => handleDelete(row.id, e)}
+                  onClick={(e) => handleDelete(row._id, e)}
                 ></box-icon>
               </TableCell>
             </TableRow>

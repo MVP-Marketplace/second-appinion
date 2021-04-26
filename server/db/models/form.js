@@ -95,6 +95,13 @@ const formSchema = mongoose.Schema(
   }
 );
 
+//to index db for search feature
+//allowing search by name or email
+formSchema.index({
+  name: "text",
+  email: "text",
+});
+
 const Form = mongoose.model("Form", formSchema);
 
 module.exports = Form;
