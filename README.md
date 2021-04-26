@@ -34,7 +34,7 @@ Application uses ports localhost 3000 and 8080.
 
 -We used the MERN stack for our app: MongoDB to store data, Express for our server, React for our front end and Node.js as our runtime.
 
-- Used the MongoDB database to store our information. We have eight models/collections: users, cyclist, bikeshops, bicycles, orders, events, reviews, repairs. Users become cyclist when isAdmin is not in place. Cyclists can place order and leave reviews for bikeshops. Admins are bikeshops and have ability to create and edit their shops, repairs they offer, and update the progress of orders. We created our own event API to render local cycling events and group rides.
+- Used the MongoDB database to store our information. 
 
 ## Back End Usage
 
