@@ -51,10 +51,21 @@ We have a seed file available in server/db/seeds/index.js for you to start up wi
 | react                     | bcryptjs |
 | react-dom                 | cloudinary |
 | react-router-dom          | cloudinary-react
-| |concurrently|
+| react-images-uploard|concurrently|
 || cookie-parser |
 ||express|
-    
+|| express-fileupload |
+|| heroku |
+|| js-cookie |
+|| jsonwebtoken |
+||mongodb|
+||mongoose| 
+||morgan| 
+||passport|
+||passport-jwt|
+||querystring|
+||sweetalert |
+||validator|
 
 ## Available build commands
 
@@ -62,6 +73,6 @@ We have a seed file available in server/db/seeds/index.js for you to start up wi
 - `yarn server`: Runs JUST your Express.JS server.
 - `yarn client`: Runs JUST your front-end React app.
 
-## Runs on Herkoku
+## Runs on Heroku
 
-https://thebikeshop305.herokuapp.com/
+
