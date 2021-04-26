@@ -1,4 +1,4 @@
-# ![]('https://imgur.com/vmdx9cs')  #Second Appinion
+# ![secondApp Logo]('https://imgur.com/vmdx9cs')  #Second Appinion
 
 ## Intro
 
