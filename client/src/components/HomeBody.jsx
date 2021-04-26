@@ -9,9 +9,9 @@ import { Grid, Button } from "@material-ui/core";
 
 const HomeBody = () => {
   return (
-      <Grid className="container">
-        <Grid className="headerHome">
-          <h1 className="headerTitle">Get a Second Appinion</h1>
+    <Grid className="container">
+      <Grid className="headerHome">
+        <h1 className="headerTitle">Get a Second Appinion</h1>
         <h3 className="headerSubTitle">Meet your new Specialist</h3>
       </Grid>
       <img className="homeImg" src={Home} alt="Customer in a Dentist Chair" />
@@ -28,7 +28,6 @@ const HomeBody = () => {
           <h4 className="picSubTitle">
             Timely Second <br /> Opinion From <br /> Field Experts
           </h4>
-
         </Grid>
         <img className="homeImg" src={Home} alt="Customer in a Dentist Chair" />
         <Grid>

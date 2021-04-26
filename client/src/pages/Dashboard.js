@@ -6,7 +6,7 @@ import axios from "axios";
 import Sidebar from "../components/Dashboard/Sidebar";
 
 const Dashboard = () => {
-  const [forms, setForms] = useContext(AppContext);
+  const { forms, setForms } = useContext(AppContext);
 
   const fetchData = async () => {
     const response = await axios.get("/api/forms/");
