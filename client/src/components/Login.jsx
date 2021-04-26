@@ -4,19 +4,12 @@ import { useHistory } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import HamBurger from "./HamBurger";
 import Footer from "./Footer";
+
 import axios from "axios";
-// import { makeStyles } from '@material-ui/core/styles';
 
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//       '& > *': {
-//         margin: theme.spacing(1),
-//         width: '25ch',
 
-//       },
-//     },
-//   }));
 const Login = () => {
+
   let history = useHistory();
   const [formData, setFormData] = useState(null);
   const { currentUser, setCurrentUser } = useContext(AppContext);
@@ -31,6 +24,7 @@ const Login = () => {
     setCurrentUser(response.data);
     history.push("/dashboard");
   };
+
   return (
     <>
       <HamBurger />
