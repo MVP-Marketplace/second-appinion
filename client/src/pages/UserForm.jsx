@@ -10,10 +10,13 @@ import DentalPainFormPart2 from "../components/Form/DentalPainFormPart2";
 import PreviousWorkForm from "../components/Form/PreviousWorkForm";
 import SubmitPageForm from "../components/Form/SubmitPageForm";
 import Confirm from "../components/Form/Confirm";
+import Results from "../components/Form/Results";
+import StartQuestionaire from "../components/Form/StartQuestionaire";
 import { StylesProvider } from "@material-ui/core/styles";
 import FirstOnboard from "../components/Onboard/FirstOnboard";
 import SecondOnboard from "../components/Onboard/SecondOnboard";
 import ThirdOnboard from "../components/Onboard/ThirdOnboard";
+import TestOnboard from "../components/Onboard/testOnboard";
 
 export default function UserForm() {
   const [formData, setFormData] = useState([]);
@@ -36,6 +39,9 @@ export default function UserForm() {
       path: <ThirdOnboard setFormData={setFormData} formData={formData} />,
     },
     {
+      path: <StartQuestionaire />,
+    },
+    {
       path: (
         <FormPersonalDetails setFormData={setFormData} formData={formData} />
       ),
@@ -56,6 +62,9 @@ export default function UserForm() {
     },
     {
       path: <SubmitPageForm setFormData={setFormData} formData={formData} />,
+    },
+    {
+      path: <Results />,
     },
     {
       path: <Confirm setFormData={setFormData} formData={formData} />,

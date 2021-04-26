@@ -26,20 +26,16 @@ const ConfirmationPrompt = () => {
           <div className="confirmation-text-container">
             <p className="confirmation-text">
               Congrats you're ready for a second opinion!
-            </p>
-            <p className="confirmation-text">
-              The dentist has 24 hours to review the x-rays.
-            </p>
-            <p className="confirmation-text">
-              You'll receive an email with the results of the consultation and
-              the dentist who viewed your x-rays.
-            </p>
-            <p className="confirmation-text">
+              <br />
+              <br />
+              A dentist wil review your x-rays in 24 hours.
+              <br />
+              <br />
               Now you can make an educated decision about your dental health.
             </p>
           </div>
           <div className="wide-button-form-container">
-            <button id="bookbutton" onClick={handleRedirect}>
+            <button className="completeButton" onClick={handleRedirect}>
               Done
             </button>
           </div>

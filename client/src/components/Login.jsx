@@ -4,18 +4,9 @@ import { useHistory } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import HamBurger from "./HamBurger";
 import Footer from "./Footer";
+
 import axios from "axios";
-// import { makeStyles } from '@material-ui/core/styles';
 
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//       '& > *': {
-//         margin: theme.spacing(1),
-//         width: '25ch',
-
-//       },
-//     },
-//   }));
 const Login = () => {
   let history = useHistory();
   const [formData, setFormData] = useState(null);
@@ -31,15 +22,13 @@ const Login = () => {
     setCurrentUser(response.data);
     history.push("/dashboard");
   };
+
   return (
     <>
       <HamBurger />
 
       <Grid className="login">
-        <h1>
-          Get a Second <br />
-          opinion
-        </h1>
+        <h1>Login Second Appinion</h1>
         <form onSubmit={handleSubmit}>
           <h4>Email</h4>
           <TextField
@@ -49,6 +38,7 @@ const Login = () => {
           />
           <h4>Password</h4>
           <TextField
+            type="password"
             className="text"
             variant="outlined"
             onChange={handleChange}
