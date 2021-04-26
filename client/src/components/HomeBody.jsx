@@ -9,8 +9,6 @@ import { Grid, Button } from "@material-ui/core";
 
 const HomeBody = () => {
   return (
-
-    <>
       <Grid className="container">
         <Grid className="headerHome">
           <h1 className="headerTitle">Get a Second Appinion</h1>
