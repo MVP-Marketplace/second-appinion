@@ -4,7 +4,7 @@ import TheTable from "./TheTable";
 function Dashboard({ formData }) {
   console.log(formData);
   return (
-    <div>
+    <div className="dashboard-container">
       <TheTable theData={formData} />
     </div>
   );

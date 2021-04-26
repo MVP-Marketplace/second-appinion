@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { AppContext } from "../../context/AppContext";
+import notification from "../../Images/notification.png";
 import axios from "axios";
 import swal from "sweetalert";
 import "boxicons";
@@ -23,22 +24,31 @@ function Header() {
     textSearch();
   };
   return (
-    <div>
-      <div className="search-bar-container">
-        <form onSubmit={handleSubmit}>
-          <input type="text" className="search" placeholder="Search . . ." />
-          <box-icon
-            className="search-bar-icon"
-            name="search"
-            size="sm"
-            type="submit"
-          ></box-icon>
+    <div className="header-container">
+      <div className="search-container">
+        <form onSubmit={handleSubmit} className="search-bar-container">
+          <a>
+            <box-icon
+              className="search-bar-icon"
+              name="search"
+              size="sm"
+              type="submit"
+              color="gray"
+            ></box-icon>
+          </a>
+          <input type="text" className="search" placeholder="Search" />
         </form>
+        <div className="header-icons">
+          <img src={notification} className="icons" alt="Bell"></img>
+          <box-icon
+            className="icons"
+            name="user"
+            size="sm"
+            alt="User Icon"
+            color="gray"
+          ></box-icon>
+        </div>
       </div>
-      <div>
-        <box-icon color="grey" name="bell"></box-icon>
-      </div>
-      <box-icon name="user"></box-icon>
     </div>
   );
 }
