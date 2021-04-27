@@ -176,3 +176,28 @@
     font-size: 1.3rem;
   }
 }
+
+.onboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+}
+
+.onboard h1 {
+  font-weight: 700;
+  text-align: left !important;
+  font-size: 1.5rem;
+}
+.onboard p {
+  font-weight: 400;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.onboard img {
+  height: 40vh;
+  width: 25vw;
+}
