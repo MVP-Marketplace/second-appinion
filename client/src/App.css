@@ -42,9 +42,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
-.stepper {
-  margin-top: 100px;
-}
+
 .MuiMobileStepper-dotActive {
   background-color: #4972a3;
 }
@@ -465,28 +463,6 @@ body {
 .text {
   border-radius: 50%;
 }
-/* .loginButton{
-  background-color: #517fb6;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25px;
-  margin: 10px;
-  font-size: 16px;
-  letter-spacing: 0.1rem;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: none;
-}
-login-button{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-} */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .login {
@@ -498,8 +474,8 @@ login-button{
   }
 }
 
-/*********************************ONBOARD1**********************/
-.onboardWelcome {
+********************************ONBOARD1*********************
+/* .onboardWelcome {
   font-weight: bold;
 }
 .onboard1 {
@@ -527,9 +503,9 @@ login-button{
     width: 80%;
     font-size: 5px;
   }
-}
+} */
 /*********************************ONBOARD2**********************/
-.onboard2 {
+/* .onboard2 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -559,14 +535,15 @@ login-button{
     width: 75%;
     font-size: 5px;
   }
-}
+} */
 /*********************************ONBOARD3**********************/
-.onboard3 {
+/* .onboard3 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 4rem;
+  height: 60vh;
 }
 
 .onboard3Title,
@@ -577,6 +554,8 @@ login-button{
 
 .img3 {
   width: 400px;
+  height: 45vh;
+  margin-top: 6rem;
 }
 .uploadbutton {
   background-color: #517fb6;
@@ -602,7 +581,7 @@ login-button{
     width: 75%;
     font-size: 5px;
   }
-}
+} */
 
 /*********************************NAVBAR / MENU**********************/
 

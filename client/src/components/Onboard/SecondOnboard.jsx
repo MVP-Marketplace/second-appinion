@@ -1,12 +1,13 @@
 import React from "react";
 import onboard2 from "../../Images/onboard1.png";
 import { Grid } from "@material-ui/core";
+import "../../styles/onboard.css";
 
 const SecondOnboard = () => {
   return (
     <>
-      <Grid className="onboard2">
-        <h1 className="onboard2Title">
+      <Grid className="onboard">
+        <h1 className="onboardSubTitle">
           First, let’s get your X-rays. Call
           <br />
           your dentist and ask them to

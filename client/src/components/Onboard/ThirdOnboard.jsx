@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Grid, Button, Input } from "@material-ui/core";
+import { Grid, Button, Input, Alert } from "@material-ui/core";
 import onboard3 from "../../Images/onboard3.png";
-import { Image } from "cloudinary-react";
+import "../../styles/onboard.css";
+
 const ThirdOnboard = ({ formData, setFormData }) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -23,9 +24,9 @@ const ThirdOnboard = ({ formData, setFormData }) => {
   };
   return (
     <>
-      <Grid className="onboard3">
-        <img className="img3" src={onboard3} alt="" />
-        <h1>
+      <Grid className="onboard">
+        <img src={onboard3} alt="doctor looking at xrays" />
+        <h1 className="onboardSubTitle">
           Now, let's upload or take a photo
           <br />
           of your Xrays and submit them
@@ -46,19 +47,14 @@ const ThirdOnboard = ({ formData, setFormData }) => {
         <Button
           onClick={uploadImage}
           variant="contained"
-          size="large"
-          className="uploadbutton"
+          size="md"
+          className="btn-upload mt-4"
           name="xrayUpload"
           htmlFor="xrayUpload"
           enable="true"
         >
           Upload your X-ray
         </Button>
-        <h3>
-          dont have an X-ray? No problem, you can
-          <br />
-          <a>can send us a picture of your mouth.</a>
-        </h3>
       </Grid>
     </>
   );
