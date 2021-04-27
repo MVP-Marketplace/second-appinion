@@ -16,7 +16,6 @@ import { StylesProvider } from "@material-ui/core/styles";
 import FirstOnboard from "../components/Onboard/FirstOnboard";
 import SecondOnboard from "../components/Onboard/SecondOnboard";
 import ThirdOnboard from "../components/Onboard/ThirdOnboard";
-import "../styles/Form.css";
 
 export default function UserForm() {
   const [formData, setFormData] = useState([]);
