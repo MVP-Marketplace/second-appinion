@@ -9,7 +9,6 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import "boxicons";
 import axios from "axios";
-import { FormHelperText } from "@material-ui/core";
 
 const useStyles = makeStyles({
   table: {
@@ -54,7 +53,7 @@ export default function TheTable({ theData }) {
           {data.map((row) => (
             <TableRow key={row._id}>
               <TableCell component="th" scope="row">
-                {row.name}
+                <a href="/patient">{row.name}</a>
               </TableCell>
               <TableCell align="right">
                 <a href={`mailto:${row.email}`} target="_blank">
