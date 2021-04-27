@@ -1,6 +1,6 @@
 import React from "react";
 import startquestionaire from "../../Images/startquestionaire.png";
-import "../../styles/onboard.css";
+import "../../styles/Onboard.css";
 
 const StartQuestionaire = () => {
   return (

@@ -1,0 +1,48 @@
+.confirm-page-header {
+  margin-bottom: 5%;
+}
+
+.MuiInputBase-input {
+  color: #000;
+}
+
+.confirmation-page-container {
+  width: 100vw;
+  height: 100vh;
+}
+.confirmation-image-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.confirmation-page-image,
+.confirmation-text-container {
+  margin: auto;
+}
+
+.confirmation-page-image {
+  position: relative;
+  width: 40rem;
+  height: auto;
+  object-fit: contain;
+  margin-top: 10%;
+}
+
+.confirmation-text-container {
+  width: 80%;
+  margin-top: 5%;
+}
+.confirmation-text {
+  font-family: "Space Mono", monospace;
+  font-size: 1.7rem;
+}
+.completeButton {
+  background-color: #517fb6;
+  color: white;
+  width: 100px;
+  height: 45px;
+  font-size: 2.5vh;
+  border-radius: 25px;
+  border: none;
+}

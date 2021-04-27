@@ -1,6 +1,7 @@
 import React from "react";
 import ImageUploader from "react-images-upload";
 import { Grid } from "@material-ui/core";
+import "../../styles/Onboard.css";
 
 class UploadImage extends React.Component {
   constructor(props) {

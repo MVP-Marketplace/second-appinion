@@ -1,6 +1,7 @@
 import React from "react";
 import ConfirmationImg from "../Images/second_app_confirmation.png";
 import { useHistory } from "react-router-dom";
+import "../styles/Confirmation.css";
 
 const ConfirmationPrompt = () => {
   const history = useHistory();

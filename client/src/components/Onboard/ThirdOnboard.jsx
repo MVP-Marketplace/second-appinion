@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Grid, Button, Input } from "@material-ui/core";
 import onboard3 from "../../Images/onboard3.png";
-import "../../styles/onboard.css";
+import { Image } from "cloudinary-react";
+import "../../styles/Onboard.css";
 
 const ThirdOnboard = ({ formData, setFormData }) => {
   const handleChange = (e) => {
