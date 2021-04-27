@@ -23,7 +23,7 @@ const HomeBody = () => {
             </Button>
           </Link>
         </Grid>
-        <Grid className="btnBody">
+        <Grid className="btmBody">
           <Grid>
             <h2>How It Works?</h2>
           </Grid>

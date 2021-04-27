@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
+  padding-left: 5px;
   width: 40vw;
 }
 
@@ -49,18 +49,18 @@
 }
 
 /*********************************BOTTOMBODY**********************/
-h2 {
-  color: #517fb6;
-  font-weight: 600;
-  font-size: 2.5rem;
-  text-align: left;
-}
 
 .btmBody {
   width: 100;
   display: flex;
   flex-direction: column;
   align-items: left;
+}
+h2 {
+  color: #517fb6;
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: left;
 }
 
 .square-icons {
@@ -80,4 +80,23 @@ h2 {
 .picAndText p {
   text-align: left;
   word-wrap: inherit;
+  font-size: 2vh;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .container {
+    width: 100%;
+    border-radius: 10%;
+  }
+  .homeImg {
+    width: 75%;
+  }
+  #bookbutton {
+    width: 100%;
+  }
+
+  .picAndText img {
+    width: 70%;
+    height: 57%;
+  }
 }
