@@ -9,7 +9,6 @@ body {
 }
 
 .footer-main-container {
-  /* position: absolute; */
   background-color: #4972a3;
   height: 75px;
   width: 100%;
@@ -43,7 +42,9 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
+.stepper {
+  margin-top: 100px;
+}
 .MuiMobileStepper-dotActive {
   background-color: #4972a3;
 }
@@ -126,7 +127,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-
   box-shadow: 3px 2px 2px rgb(148, 147, 147);
 }
 
@@ -724,15 +724,6 @@ login-button{
   font-size: medium;
   margin-right: 2rem;
 }
-
-/* @media only screen and (min-device-width: 320px) {
-  .second-appinion-logo {
-    height: 0.9rem;
-    position: absolute;
-    top: 0.8rem;
-    left: 2rem;
-  }
-} */
 
 /*********************************START QUESTIONAIRE**********************/
 

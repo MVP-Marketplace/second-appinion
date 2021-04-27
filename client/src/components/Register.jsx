@@ -9,7 +9,6 @@ const Register = () => {
   let history = useHistory();
   const [formData, setFormData] = useState(null);
   const { setCurrentUser } = useContext(AppContext);
-  // const classes = useStyles();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };

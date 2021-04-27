@@ -16,7 +16,6 @@ import { StylesProvider } from "@material-ui/core/styles";
 import FirstOnboard from "../components/Onboard/FirstOnboard";
 import SecondOnboard from "../components/Onboard/SecondOnboard";
 import ThirdOnboard from "../components/Onboard/ThirdOnboard";
-import TestOnboard from "../components/Onboard/testOnboard";
 
 export default function UserForm() {
   const [formData, setFormData] = useState([]);
@@ -84,32 +83,28 @@ export default function UserForm() {
           <div className="form-questions-container">
             {steps[activeStep].path}
           </div>
-          <MobileStepper
-            steps={maxSteps}
-            position="bottom"
-            variant="dots"
-            activeStep={activeStep}
-            nextButton={
-              <Button
-                size="small"
-                onClick={handleNext}
-                disabled={activeStep === maxSteps - 1}
-              >
-                <KeyboardArrowRight />
-              </Button>
-            }
-            backButton={
-              <Button
-                size="small"
-                onClick={handleBack}
-                disabled={activeStep === 0}
-              >
-                <KeyboardArrowLeft />
-              </Button>
-            }
-          />
         </StylesProvider>
       </div>
+      <MobileStepper
+        steps={maxSteps}
+        position="bottom"
+        variant="dots"
+        activeStep={activeStep}
+        nextButton={
+          <Button
+            size="small"
+            onClick={handleNext}
+            disabled={activeStep === maxSteps - 1}
+          >
+            <KeyboardArrowRight />
+          </Button>
+        }
+        backButton={
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+            <KeyboardArrowLeft />
+          </Button>
+        }
+      />
     </>
   );
 }
