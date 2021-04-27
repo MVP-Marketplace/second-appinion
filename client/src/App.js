@@ -28,6 +28,7 @@ const App = () => {
           {/* <Route exact path="/login" component={Login} /> */}
           {/* <Route exact path="/onboard" component={UserOnboard} /> */}
           {/*<Route exact path="/resetpassword" component={ResetPassword} />*/}
+
         </Switch>
       </BrowserRouter>
     </AppContextProvider>

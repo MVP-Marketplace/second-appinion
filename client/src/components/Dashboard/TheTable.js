@@ -9,6 +9,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import "boxicons";
 import axios from "axios";
+import { FormHelperText } from "@material-ui/core";
 
 const useStyles = makeStyles({
   table: {
@@ -30,7 +31,7 @@ export default function TheTable({ theData }) {
 
   if (!data) return null;
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} className={classes.tableContainer}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -38,7 +39,7 @@ export default function TheTable({ theData }) {
             <TableCell align="right">Email</TableCell>
             <TableCell align="right">Date</TableCell>
             <TableCell align="right">Completed</TableCell>
-            <TableCell align="right">PainCause</TableCell>
+            <TableCell align="right">Pain Cause</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

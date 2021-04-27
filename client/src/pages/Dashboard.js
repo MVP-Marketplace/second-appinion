@@ -17,7 +17,7 @@ const Dashboard = () => {
     fetchData();
   }, []);
   return (
-    <div>
+    <div className="">
       <Sidebar />
       <Header />
       <Mainview formData={forms} />

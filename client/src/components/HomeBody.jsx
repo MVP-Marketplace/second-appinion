@@ -9,6 +9,7 @@ import { Grid, Button } from "@material-ui/core";
 
 const HomeBody = () => {
   return (
+
     <>
       <Grid className="container">
         <Grid className="headerHome">
