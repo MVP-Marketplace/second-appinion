@@ -9,7 +9,6 @@ Get a dentist to review your X-Rays and diagnosis and give you a second opinion 
 
 We integrated several APIs and frameworks into our site:
 
-- [Fullcalendar](https://fullcalendar.io/) as our calendar framework.
 - [Sendgrid](https://sendgrid.com/) for our email functionality.
 - [MATERIAL-UI](https://material-ui.com/) for the front end components and design.
 - [Cloudinary](https://cloudinary.com/) to upload and manage user images.
