@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 .confirm-page-header {
   margin-bottom: 5%;
 }
@@ -23,18 +25,18 @@
 
 .confirmation-page-image {
   position: relative;
-  width: 40rem;
+  width: 20rem;
   height: auto;
   object-fit: contain;
   margin-top: 10%;
 }
 
 .confirmation-text-container {
-  width: 80%;
+  width: 60%;
   margin-top: 5%;
 }
 .confirmation-text {
-  font-family: "Space Mono", monospace;
+  font-family: Lato;
   font-size: 1.7rem;
 }
 .completeButton {
