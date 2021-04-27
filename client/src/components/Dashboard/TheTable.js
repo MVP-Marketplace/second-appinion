@@ -9,6 +9,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import "boxicons";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
   table: {
@@ -18,9 +19,13 @@ const useStyles = makeStyles({
 
 export default function TheTable({ theData }) {
   const classes = useStyles();
+  let history = useHistory();
   let data = theData;
   console.log(data);
-  console.log(data);
+
+  const handleClick = (_id) => {
+    history.push(`/patient/${_id}`);
+  };
 
   const handleDelete = async (id, e) => {
     await axios.delete(`/api/forms/${id}`).then((res) => {
@@ -53,7 +58,7 @@ export default function TheTable({ theData }) {
           {data.map((row) => (
             <TableRow key={row._id}>
               <TableCell component="th" scope="row">
-                <a href="/patient">{row.name}</a>
+                {row.name}
               </TableCell>
               <TableCell align="right">
                 <a href={`mailto:${row.email}`} target="_blank">
@@ -64,7 +69,11 @@ export default function TheTable({ theData }) {
               <TableCell align="right">{row.completed}</TableCell>
               <TableCell align="right">{row.painCause}</TableCell>
               <TableCell align="right">
-                <box-icon type="solid" name="edit-alt"></box-icon>
+                <box-icon
+                  type="solid"
+                  name="edit-alt"
+                  onClick={() => handleClick(row._id)}
+                ></box-icon>
               </TableCell>
               <TableCell align="right">
                 <box-icon

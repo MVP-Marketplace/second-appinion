@@ -1,17 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Divider from "@material-ui/core/Divider";
 import "../../styles/Form.css";
 import Pdf from "react-to-pdf";
+import { useParams } from "react-router-dom";
 
 const ref = React.createRef();
 
-const Patient = ({ theData }) => {
-  let data = theData;
-  console.log(data);
+const Patient = () => {
+  let { _id } = useParams;
+  const [form, setForm] = useState({});
+  console.log(_id);
 
-  if (!data) return null;
+  useEffect(() => {
+    fetch(`/api/forms/${_id}`)
+      .then((res) => res.json())
+      .then((data) => setForm(data));
+  }, []);
 
+  console.log(form);
+
+  // const data = async () => {
+  //   const response = await axios.get(`/api/forms/${id}`);
+  //   console.log(response);
+  //   setForm(response.data);
+  // };
+
+  // useEffect(() => {
+  //   data();
+  // });
+
+  if (!form) return null;
   return (
     <>
       <Pdf targetRef={ref} filename="patient.pdf">
@@ -21,22 +40,22 @@ const Patient = ({ theData }) => {
         <div className="first-page-form-container">
           <form className="first-page-form">
             <p>Name:</p>
-            <p>{data.name}</p>
+            <p>{form.name}</p>
             <Divider />
             <p>Email:</p>
-            <p>{data.email}</p>
+            <p>{form.email}</p>
             <Divider />
             <p>Age:</p>
-            <p>{data.age}</p>
+            <p>{form.age}</p>
             <Divider />
             <p>Gender:</p>
-            <p>{data.gender}</p>
+            <p>{form.gender}</p>
             <Divider />
             <p>When was your last dental visit?</p>
-            <p>{data.lastDentalVisit}</p>
+            <p>{form.lastDentalVisit}</p>
             <Divider />
             <p>Did the dentist tell you that you need dental work?</p>
-            <p>{data.dentalWorkNeeded}</p>
+            <p>{form.dentalWorkNeeded}</p>
             <Divider />
             <p>What were you told by the dentist?</p>
             <TextField
@@ -45,52 +64,52 @@ const Patient = ({ theData }) => {
               id="dentistTold"
               multiline
               variant="outlined"
-              value={data.dentistTold || ""}
+              value={form.dentistTold || ""}
             />
             <Divider style={{ marginTop: 20 }} />
             <p>Are you currently experiencing any oral pain?</p>
-            <p>{data.dentalPain}</p>
+            <p>{form.dentalPain}</p>
             <Divider />
             <p>Where is the pain?</p>
-            <p>{data.painLocation}</p>
+            <p>{form.painLocation}</p>
             <Divider />
             <p>How bad is your pain?</p>
-            <p>{data.painStrength}</p>
+            <p>{form.painStrength}</p>
             <Divider />
             <p>How long have you been in pain?</p>
-            <p>{data.painDuration}</p>
+            <p>{form.painDuration}</p>
             <Divider />
             <p>What causes the pain?</p>
-            <p>{data.painCause}</p>
+            <p>{form.painCause}</p>
             <Divider />
             <p>
               If hot and cold causes pain does the pain linger for more than 30
               seconds?
             </p>
-            <p>{data.painLingering}</p>
+            <p>{form.painLingering}</p>
             <Divider />
             <p>If chewing causes pain, is the pain upon release of the bite?</p>
-            <p>{data.painBiteRelease}</p>
+            <p>{form.painBiteRelease}</p>
             <Divider />
             <p>Have you ever had a cavity?</p>
-            <p>{data.cavitiesBefore}</p>
+            <p>{form.cavitiesBefore}</p>
             <Divider />
             <p>Have you ever had a root canal?</p>
-            <p>{data.rootCanalBefore}</p>
+            <p>{form.rootCanalBefore}</p>
             <Divider />
             <p>Have you had a tooth pulled or removed?</p>
-            <p>{data.toothPulledRemoved}</p>
+            <p>{form.toothPulledRemoved}</p>
             <Divider />
             <p>
               Please add any other information you would like the dentist to
               know.
             </p>
 
-            <p>{data.additionalInformationForDentist}</p>
+            <p>{form.additionalInformationForDentist}</p>
             <div>
               <p>X-ray Upload</p>
               <p>
-                <img src={data.xrayUpload} alt="xray" />
+                <img src={form.xrayUpload} alt="xray" />
               </p>
             </div>
 
@@ -100,7 +119,7 @@ const Patient = ({ theData }) => {
               id="additionalInformationForDentist"
               multiline
               variant="outlined"
-              value={data.additionalInformationForDentist || ""}
+              value={form.additionalInformationForDentist || ""}
             />
           </form>
         </div>

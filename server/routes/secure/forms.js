@@ -6,7 +6,7 @@ const router = require("express").Router(),
   } = require("../../controllers/forms");
 isAdmin = require("../../middleware/authorization/index");
 
-router.get("/:id", getSpecificForm);
+// router.get("/:id", getSpecificForm);
 
 router.delete("/:id", isAdmin(), deleteForm);
 
