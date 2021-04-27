@@ -128,7 +128,6 @@ body {
   margin-top: 2rem;
 
   box-shadow: 3px 2px 2px rgb(148, 147, 147);
-
 }
 
 .all-page-form-container-container,
@@ -652,8 +651,6 @@ login-button{
   top: -100%;
   right: 0;
   transition: 2000ms;
-  border-bottom-left-radius: 60px;
-  border-bottom-right-radius: 60px;
   z-index: 5;
 }
 
@@ -805,8 +802,6 @@ login-button{
   }
 }
 
-
-
 /*********************************SIDEBAR**********************/
 
 .sidebar-container {
@@ -956,4 +951,3 @@ login-button{
   min-width: 78.9vw;
   height: 80vh;
 }
-
