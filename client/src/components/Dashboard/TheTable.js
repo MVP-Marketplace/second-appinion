@@ -35,11 +35,19 @@ export default function TheTable({ theData }) {
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell align="right">Email</TableCell>
-            <TableCell align="right">Date</TableCell>
-            <TableCell align="right">Completed</TableCell>
-            <TableCell align="right">Pain Cause</TableCell>
+            <TableCell className="table-label">Name</TableCell>
+            <TableCell align="right" className="table-label">
+              Email
+            </TableCell>
+            <TableCell align="right" className="table-label">
+              Date
+            </TableCell>
+            <TableCell align="right" className="table-label">
+              Completed
+            </TableCell>
+            <TableCell align="right" className="table-label">
+              Pain Cause
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -48,7 +56,11 @@ export default function TheTable({ theData }) {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.email}</TableCell>
+              <TableCell align="right">
+                <a href="mailto:email" target="_blank">
+                  {row.email}
+                </a>
+              </TableCell>
               <TableCell align="right">{row.date}</TableCell>
               <TableCell align="right">{row.completed}</TableCell>
               <TableCell align="right">{row.painCause}</TableCell>
