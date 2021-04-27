@@ -9,6 +9,8 @@ import userForm from "./pages/UserForm";
 import ConfirmationPrompt from "./pages/ConfirmationPrompt";
 import Dashboard from "./pages/Dashboard";
 import Login from "./components/Login";
+import Register from "./components/Register";
+import Confirm from "./components/Form/Confirm";
 import "./App.css";
 
 const App = () => {
@@ -22,7 +24,7 @@ const App = () => {
           <Route exact path="/welcome" component={Welcome} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/dashboard" component={Dashboard} />
-          {/* <Route exact path="/signup" component={SignUp} /> */}
+          <Route exact path="/register" component={Register} />
           {/* <Route exact path="/login" component={Login} /> */}
           {/* <Route exact path="/onboard" component={UserOnboard} /> */}
           {/*<Route exact path="/resetpassword" component={ResetPassword} />*/}

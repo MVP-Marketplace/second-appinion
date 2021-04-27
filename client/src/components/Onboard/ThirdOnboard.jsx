@@ -47,7 +47,7 @@ const ThirdOnboard = ({ formData, setFormData }) => {
           onClick={uploadImage}
           variant="contained"
           size="large"
-          id="bookbutton"
+          className="uploadbutton"
           name="xrayUpload"
           htmlFor="xrayUpload"
           enable="true"

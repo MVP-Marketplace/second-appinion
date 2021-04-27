@@ -9,31 +9,17 @@ import { Grid, Button } from "@material-ui/core";
 
 const HomeBody = () => {
   return (
-    <Grid className="container">
-      <Grid className="headerHome">
-        <h1 className="headerTitle">Get a Second Appinion</h1>
-        <h3 className="headerSubTitle">Meet your new Specialist</h3>
-      </Grid>
-      <img className="homeImg" src={Home} alt="Customer in a Dentist Chair" />
-      <Grid>
-        <Link className="button-link" to="/form">
-          <Button variant="contained" size="large" id="bookbutton">
-            Book Now
-          </Button>
-        </Link>
-      </Grid>
-      <Grid className="btmBody">
-        <Grid className="picAndText">
-          <img className="pic" src={time} alt="Clock" />
-          <h4 className="picSubTitle">
-            Timely Second <br /> Opinion From <br /> Field Experts
-          </h4>
+
+    <>
+      <Grid className="container">
+        <Grid className="headerHome">
+          <h1 className="headerTitle">Get a Second Appinion</h1>
         </Grid>
         <img className="homeImg" src={Home} alt="Customer in a Dentist Chair" />
         <Grid>
           <Link className="button-link" to="/form">
             <Button variant="contained" size="large" id="bookbutton">
-              Book Now
+              Start Here
             </Button>
           </Link>
         </Grid>
@@ -57,7 +43,7 @@ const HomeBody = () => {
           </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 };
 

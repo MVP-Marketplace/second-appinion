@@ -8,9 +8,6 @@ const Footer = () => {
     <>
       <div className="footer-main-container">
         <div className="footer-column-1">
-          <p>About us</p>
-          <p>Services</p>
-          <p>FAQ</p>
           <div className="footer-bottom-row">
             <p>Social</p>
             <div className="footer-bottom-row__icons">
