@@ -10,7 +10,6 @@ import ConfirmationPrompt from "./pages/ConfirmationPrompt";
 import Dashboard from "./pages/Dashboard";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import Confirm from "./components/Form/Confirm";
 import Patient from "./components/Dashboard/Patient";
 import "./App.css";
 

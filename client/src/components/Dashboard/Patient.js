@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Divider from "@material-ui/core/Divider";
-import "../../styles/form.css";
+import "../../styles/Form.css";
 import Pdf from "react-to-pdf";
 import { useParams } from "react-router-dom";
 
@@ -20,24 +20,11 @@ const Patient = () => {
 
   console.log(form);
 
-  // const data = async () => {
-  //   const response = await axios.get(`/api/forms/${id}`);
-  //   console.log(response);
-  //   setForm(response.data);
-  // };
-
-  // useEffect(() => {
-  //   data();
-  // });
-
   if (!form) return null;
   return (
-    <>
-      <Pdf targetRef={ref} filename="patient.pdf">
-        {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
-      </Pdf>
-      <div className="first-page-form-container-main submit-page" ref={ref}>
-        <div className="first-page-form-container">
+    <div className="patientInfo">
+      <div className="first-page-form-container-main">
+        <div className="first-page-form-container" ref={ref}>
           <form className="first-page-form">
             <p>Name:</p>
             <p>{form.name}</p>
@@ -124,7 +111,14 @@ const Patient = () => {
           </form>
         </div>
       </div>
-    </>
+      <Pdf targetRef={ref} filename="patient.pdf">
+        {({ toPdf }) => (
+          <button id="pdf-btn" onClick={toPdf}>
+            Download PDF
+          </button>
+        )}
+      </Pdf>
+    </div>
   );
 };
 

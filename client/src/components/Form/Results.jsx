@@ -1,6 +1,6 @@
 import React from "react";
 import finalresults from "../../Images/finalresults.png";
-import "../../styles/form.css";
+import "../../styles/Form.css";
 
 const Results = () => {
   return (
