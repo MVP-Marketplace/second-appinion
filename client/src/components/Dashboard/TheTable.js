@@ -11,23 +11,19 @@ import {
 } from "@material-ui/core";
 import "boxicons";
 import axios from "axios";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 650,
+    minWidth: 400,
+    maxWidth: 900,
   },
 });
 
 export default function TheTable({ theData }) {
   const classes = useStyles();
-  let history = useHistory();
   let data = theData;
   console.log(data);
-
-  const handleClick = (_id) => {
-    history.push(`/patient/${_id}`);
-  };
 
   const handleCheck = async (id, e) => {
     await axios.patch(`api/forms/${id}`).then((res) => {
@@ -44,7 +40,7 @@ export default function TheTable({ theData }) {
   return (
     <TableContainer component={Paper} className={classes.tableContainer}>
       <Table className={classes.table} aria-label="simple table">
-        <TableHead>
+        <TableHead className="table-header">
           <TableRow>
             <TableCell className="table-label">Name</TableCell>
             <TableCell align="right" className="table-label">
@@ -58,6 +54,15 @@ export default function TheTable({ theData }) {
             </TableCell>
             <TableCell align="right" className="table-label">
               Pain Cause
+            </TableCell>
+            <TableCell align="right" className="table-label">
+              View
+            </TableCell>
+            <TableCell align="right" className="table-label">
+              Complete
+            </TableCell>
+            <TableCell align="right" className="table-label">
+              Delete
             </TableCell>
           </TableRow>
         </TableHead>
@@ -77,11 +82,7 @@ export default function TheTable({ theData }) {
               <TableCell align="right">{row.painCause}</TableCell>
               <TableCell align="right">
                 <Link to={`/patient/${row._id}`}>
-                  <box-icon
-                    type="solid"
-                    name="edit-alt"
-                    //onClick={() => handleClick(row._id)}
-                  ></box-icon>
+                  <box-icon type="solid" name="edit-alt"></box-icon>
                 </Link>
               </TableCell>
               <TableCell align="right">
