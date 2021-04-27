@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import "boxicons";
 import axios from "axios";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   table: {
@@ -21,13 +21,8 @@ const useStyles = makeStyles({
 
 export default function TheTable({ theData }) {
   const classes = useStyles();
-  let history = useHistory();
   let data = theData;
   console.log(data);
-
-  const handleClick = (_id) => {
-    history.push(`/patient/${_id}`);
-  };
 
   const handleCheck = async (id, e) => {
     await axios.patch(`api/forms/${id}`).then((res) => {
@@ -77,11 +72,7 @@ export default function TheTable({ theData }) {
               <TableCell align="right">{row.painCause}</TableCell>
               <TableCell align="right">
                 <Link to={`/patient/${row._id}`}>
-                  <box-icon
-                    type="solid"
-                    name="edit-alt"
-                    //onClick={() => handleClick(row._id)}
-                  ></box-icon>
+                  <box-icon type="solid" name="edit-alt"></box-icon>
                 </Link>
               </TableCell>
               <TableCell align="right">

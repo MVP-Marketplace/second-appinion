@@ -1,54 +1,30 @@
 /*********************************SIDEBAR**********************/
 
 .sidebar-container {
-  /* border: .1rem solid black; */
-  width: 356px;
-  height: 100vh;
+  width: 15%;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
-  /* bottom: -461px; */
-  /* padding: 30px; */
   box-shadow: 0px 5px 2px 5px whitesmoke;
   -moz-box-shadow: 0px 5px 2px 5px whitesmoke;
   -webkit-box-shadow: 0px 5px 2px 5px whitesmoke;
-  /* border-bottom: 1px solid gray; */
 }
 
 .sidebar {
   padding: 2.6rem;
-  border-bottom: 1px solid gray;
-  /* box-shadow: 0px 0px 2px 0px gray; */
+}
+.sidebarlinks {
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .dashboard-logo {
-  /* position: absolute; */
-  width: 250px;
-  height: 70px;
+  width: 10vw;
+  height: 5vh;
   padding-bottom: 3rem;
-  /* left: 26px; */
-  /* top: 29.46px; */
 }
 
-.sidebar-subtitle {
-  font-size: 24px;
-  font-weight: lighter;
-  text-transform: uppercase;
-  letter-spacing: 0.1px;
-}
-
-.sidebarlinks {
-  letter-spacing: 0.2px;
-  font-size: 24px;
-  padding-left: 2px;
-  cursor: pointer;
-}
-
-.link {
-  color: #4297fd;
-}
-
-.piechart-logo,
 .question-mark {
   width: 1.5rem;
   float: left;
@@ -63,12 +39,12 @@
 .header-container {
   left: 18.9%;
   right: 0;
-  position: relative;
-  width: 100%;
+  width: 70%;
   height: 7rem;
   top: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .search-container {
