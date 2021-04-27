@@ -5,6 +5,7 @@ const router = require("express").Router(),
     getAllForms,
     getSearchForms,
     getSpecificForm,
+    updateCurrentForm,
   } = require("../../controllers/forms");
 
 router.post("/", createForm);
@@ -12,5 +13,6 @@ router.post("/", createForm);
 router.get("/", getAllForms);
 router.get("/search", getSearchForms);
 router.get("/:id", getSpecificForm);
+router.get("/:id", updateCurrentForm);
 
 module.exports = router;

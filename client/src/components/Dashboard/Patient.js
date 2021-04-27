@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Divider from "@material-ui/core/Divider";
-import "../../styles/form.css";
+import "../../styles/Form.css";
 import Pdf from "react-to-pdf";
 import { useParams } from "react-router-dom";
 

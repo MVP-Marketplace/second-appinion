@@ -2,7 +2,7 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { Radio } from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
-import "../../styles/form.css";
+import "../../styles/Form.css";
 
 const DefaultRadio = withStyles({
   root: {
