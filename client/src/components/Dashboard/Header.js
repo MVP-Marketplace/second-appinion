@@ -7,12 +7,11 @@ import "boxicons";
 
 function Header() {
   const { forms, setForms } = useContext(AppContext);
-  const [formData, setFormData] = useState(null);
+  const [search, setSearch] = useState("");
 
   const textSearch = async () => {
     try {
-      const formTextsearch = await axios.post("/api/forms/search/", formData);
-      console.log(formTextsearch.data);
+      const formTextsearch = await axios.get(`/api/forms/search?qa=${search}`);
       setForms(formTextsearch.data);
     } catch (error) {
       swal(`Oops!`, "Something went wrong.");
@@ -36,7 +35,14 @@ function Header() {
               color="gray"
             ></box-icon>
           </a>
-          <input type="text" className="search" placeholder="Search" />
+          <input
+            type="text"
+            className="search"
+            placeholder="Search"
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
+          />
         </form>
         <div className="header-icons">
           <img src={notification} className="icons" alt="Bell"></img>
