@@ -100,6 +100,7 @@ const formSchema = mongoose.Schema(
 formSchema.index({
   name: "text",
   email: "text",
+  completed: "text",
 });
 
 const Form = mongoose.model("Form", formSchema);

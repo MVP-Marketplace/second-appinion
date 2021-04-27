@@ -76,12 +76,13 @@ exports.getAllForms = async (req, res) => {
 // ***********************************************//
 
 exports.getSearchForms = async (req, res) => {
-  const request = req.body;
-  let queryString = querystring.stringify(request);
+  const queryParameter = req.query;
+  let newParam = querystring.stringify(queryParameter);
   try {
+    console.log("im in");
     const forms = await Form.find({
       $text: {
-        $search: queryString,
+        $search: newParam,
         $caseSensitive: false,
         $diacriticSensitive: true,
       },

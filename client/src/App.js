@@ -27,7 +27,6 @@ const App = () => {
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/patient/:id" component={Patient} />
-          {/* <Route exact path="/login" component={Login} /> */}
           {/* <Route exact path="/onboard" component={UserOnboard} /> */}
           {/*<Route exact path="/resetpassword" component={ResetPassword} />*/}
         </Switch>
