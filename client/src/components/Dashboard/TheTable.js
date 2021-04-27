@@ -15,7 +15,8 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 650,
+    minWidth: 400,
+    maxWidth: 900,
   },
 });
 
@@ -39,7 +40,7 @@ export default function TheTable({ theData }) {
   return (
     <TableContainer component={Paper} className={classes.tableContainer}>
       <Table className={classes.table} aria-label="simple table">
-        <TableHead>
+        <TableHead className="table-header">
           <TableRow>
             <TableCell className="table-label">Name</TableCell>
             <TableCell align="right" className="table-label">
@@ -53,6 +54,15 @@ export default function TheTable({ theData }) {
             </TableCell>
             <TableCell align="right" className="table-label">
               Pain Cause
+            </TableCell>
+            <TableCell align="right" className="table-label">
+              View
+            </TableCell>
+            <TableCell align="right" className="table-label">
+              Complete
+            </TableCell>
+            <TableCell align="right" className="table-label">
+              Delete
             </TableCell>
           </TableRow>
         </TableHead>

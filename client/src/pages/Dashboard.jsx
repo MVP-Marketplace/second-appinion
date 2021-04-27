@@ -18,10 +18,12 @@ const Dashboard = () => {
     fetchData();
   }, []);
   return (
-    <div className="">
+    <div className="dashboard">
       <Sidebar />
-      <Header />
-      <Mainview formData={forms} />
+      <div className="dashboard-inner">
+        <Header />
+        <Mainview formData={forms} />
+      </div>
     </div>
   );
 };
