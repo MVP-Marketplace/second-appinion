@@ -128,7 +128,6 @@ body {
   margin-top: 2rem;
 
   box-shadow: 3px 2px 2px rgb(148, 147, 147);
-
 }
 
 .all-page-form-container-container,
@@ -805,8 +804,6 @@ login-button{
   }
 }
 
-
-
 /*********************************SIDEBAR**********************/
 
 .sidebar-container {
@@ -944,6 +941,9 @@ login-button{
 .tableTitle {
   font-weight: bold;
 }
+.table-label {
+  font-weight: 700 !important;
+}
 
 /*********************************DASHBOARD**********************/
 
@@ -956,4 +956,3 @@ login-button{
   min-width: 78.9vw;
   height: 80vh;
 }
-
