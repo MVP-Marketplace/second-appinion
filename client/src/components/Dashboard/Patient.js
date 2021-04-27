@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Divider from "@material-ui/core/Divider";
-import "../../styles/Form.css";
+import "../../styles/form.css";
 import Pdf from "react-to-pdf";
 import { useParams } from "react-router-dom";
 
 const ref = React.createRef();
 
 const Patient = () => {
-  let { _id } = useParams;
+  let { id } = useParams();
   const [form, setForm] = useState({});
-  console.log(_id);
+  console.log(id);
 
   useEffect(() => {
-    fetch(`/api/forms/${_id}`)
+    fetch(`/api/forms/${id}`)
       .then((res) => res.json())
       .then((data) => setForm(data));
   }, []);

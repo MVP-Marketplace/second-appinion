@@ -21,6 +21,7 @@
     "querystring": "^0.2.1",
     "react-images-upload": "^1.2.8",
     "react-router-dom": "^5.2.0",
+    "react-to-pdf": "0.0.13",
     "sweetalert": "^2.1.2",
     "validator": "^13.5.2"
   },
@@ -43,6 +44,5 @@
     "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
     "heroku-postbuild": "cd client && yarn && yarn run build",
     "prettify": "prettier '*/**/*.js' '*/**/*.jsx' '*/**/*.html' '*/**/*.css' --write"
-  },
-  "proxy": "http://localhost:8080/"
+  }
 }

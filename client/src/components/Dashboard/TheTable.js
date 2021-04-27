@@ -9,7 +9,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import "boxicons";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
   table: {
@@ -69,11 +69,13 @@ export default function TheTable({ theData }) {
               <TableCell align="right">{row.completed}</TableCell>
               <TableCell align="right">{row.painCause}</TableCell>
               <TableCell align="right">
-                <box-icon
-                  type="solid"
-                  name="edit-alt"
-                  onClick={() => handleClick(row._id)}
-                ></box-icon>
+                <Link to={`/patient/${row._id}`}>
+                  <box-icon
+                    type="solid"
+                    name="edit-alt"
+                    //onClick={() => handleClick(row._id)}
+                  ></box-icon>
+                </Link>
               </TableCell>
               <TableCell align="right">
                 <box-icon

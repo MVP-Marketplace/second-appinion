@@ -3,7 +3,7 @@ import axios from "axios";
 import TextField from "@material-ui/core/TextField";
 import Divider from "@material-ui/core/Divider";
 import { useHistory } from "react-router-dom";
-import "../../styles/Form.css";
+import "../../styles/form.css";
 
 const Confirm = ({ formData }) => {
   const history = useHistory();
