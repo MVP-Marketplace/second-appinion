@@ -1,12 +1,14 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@material-ui/core";
 import "boxicons";
 import axios from "axios";
 import { Link, useHistory } from "react-router-dom";
@@ -27,6 +29,11 @@ export default function TheTable({ theData }) {
     history.push(`/patient/${_id}`);
   };
 
+  const handleCheck = async (id, e) => {
+    await axios.patch(`api/forms/${id}`).then((res) => {
+      console.log(res);
+    });
+  };
   const handleDelete = async (id, e) => {
     await axios.delete(`/api/forms/${id}`).then((res) => {
       console.log(res);
@@ -76,6 +83,16 @@ export default function TheTable({ theData }) {
                     //onClick={() => handleClick(row._id)}
                   ></box-icon>
                 </Link>
+              </TableCell>
+              <TableCell align="right">
+                <form>
+                  <input
+                    type="checkbox"
+                    label="completed"
+                    name="completed"
+                    onCheck={handleCheck}
+                  />
+                </form>
               </TableCell>
               <TableCell align="right">
                 <box-icon
