@@ -939,6 +939,9 @@ login-button{
 .tableTitle {
   font-weight: bold;
 }
+.table-label {
+  font-weight: 700 !important;
+}
 
 /*********************************DASHBOARD**********************/
 
