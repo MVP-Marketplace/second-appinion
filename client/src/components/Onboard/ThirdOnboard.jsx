@@ -3,6 +3,8 @@ import axios from "axios";
 import { Grid, Button, Input } from "@material-ui/core";
 import onboard3 from "../../Images/onboard3.png";
 import { Image } from "cloudinary-react";
+import "../../styles/Onboard.css";
+
 const ThirdOnboard = ({ formData, setFormData }) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

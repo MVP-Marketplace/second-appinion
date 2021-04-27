@@ -1,4 +1,5 @@
 import React from "react";
+import "../../styles/Form.css";
 
 const FormPersonalDetails = ({ formData, setFormData }) => {
   const handleChange = (e) => {

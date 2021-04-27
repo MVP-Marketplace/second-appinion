@@ -1,5 +1,6 @@
 import React from "react";
 import startquestionaire from "../../Images/startquestionaire.png";
+import "../../styles/Onboard.css";
 
 const StartQuestionaire = () => {
   return (

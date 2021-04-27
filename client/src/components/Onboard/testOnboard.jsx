@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import Group452 from "../../Images/Group 452.png";
+import "../../styles/Onboard.css";
 
 const testOnboard = () => {
   return (
