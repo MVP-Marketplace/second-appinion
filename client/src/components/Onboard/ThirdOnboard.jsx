@@ -47,7 +47,7 @@ const ThirdOnboard = ({ formData, setFormData }) => {
           onClick={uploadImage}
           variant="contained"
           size="large"
-          id="bookbutton"
+          className="uploadbutton"
           name="xrayUpload"
           htmlFor="xrayUpload"
           enable="true"
@@ -57,7 +57,6 @@ const ThirdOnboard = ({ formData, setFormData }) => {
         <h3>
           dont have an X-ray? No problem, you can
           <br />
-
           <a>can send us a picture of your mouth.</a>
         </h3>
       </Grid>

@@ -9,8 +9,9 @@ body {
 }
 
 .footer-main-container {
+  /* position: absolute; */
   background-color: #4972a3;
-  height: 175px;
+  height: 75px;
   width: 100%;
   bottom: 0;
   padding-top: 12px;
@@ -126,7 +127,6 @@ body {
   align-items: center;
   margin-top: 2rem;
   box-shadow: 3px 2px 2px rgb(148, 147, 147);
-  width: 80%;
 }
 
 .all-page-form-container-container,
@@ -138,7 +138,6 @@ body {
 }
 
 .all-page-forms {
-  width: 30%;
   position: relative;
 
   flex-direction: column;
@@ -151,12 +150,12 @@ body {
   background: #ffffff;
   border-radius: 40px;
   height: auto;
-  padding: 5% 5% 5% 6%;
+  padding: 5% 10% 15% 6%;
   display: flex;
   flex-direction: column;
-  line-height: 1.8rem;
+  line-height: 1.5rem;
   flex-wrap: wrap;
-  margin-bottom: 3%;
+  margin-bottom: 2rem;
   box-shadow: 0px 4px 4px #eae9e9;
 }
 
@@ -265,6 +264,25 @@ body {
     font-family: "Space Mono", monospace;
     font-size: 1rem;
   }
+  .single-page-form-question-container {
+    background: #ffffff;
+    border-radius: 40px;
+    height: auto;
+    padding: 5rem 10rem 5rem 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 4px #eae9e9;
+  }
+  .all-page-form-container-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    box-shadow: 3px 2px 2px rgb(148, 147, 147);
+  }
 }
 
 /*********************************HOMEBODY**********************/
@@ -291,6 +309,7 @@ body {
 
 .headerTitle {
   text-align: center;
+  color: #09015d;
 }
 
 .headerSubTitle {
@@ -311,13 +330,11 @@ body {
   margin-top: 5rem;
 }
 
-
 .headerHome {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
 
 .headerTitle {
   font-size: 5vh;
@@ -435,9 +452,42 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20rem;
 }
 .text {
   border-radius: 50%;
+}
+/* .loginButton{
+  background-color: #517fb6;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  margin: 10px;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: none;
+}
+login-button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+} */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10rem;
+  }
 }
 
 /*********************************ONBOARD1**********************/
@@ -519,6 +569,21 @@ body {
 
 .img3 {
   width: 400px;
+}
+.uploadbutton {
+  background-color: #517fb6;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  margin: 10px;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: none;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .onboard3 {
@@ -664,7 +729,6 @@ body {
   }
 } */
 
-
 /*********************************START QUESTIONAIRE**********************/
 
 .start-container {
@@ -692,6 +756,13 @@ body {
   .results-image {
     width: 75%;
     font-size: 5px;
+  }
+  .start-image {
+    width: 275px;
+  }
+  .start-text {
+    font-weight: lighter;
+    font-size: 1.3rem;
   }
 }
 
@@ -725,4 +796,3 @@ body {
     font-size: 5px;
   }
 }
-

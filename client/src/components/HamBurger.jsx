@@ -54,10 +54,17 @@ const HamBurger = () => {
                   About
                 </a>
               </li>
-              <Link to="/login">
+              <Link to="/login" style={{ textDecoration: "none" }}>
                 <li className="navbar-text">
                   <a href="about" className="nav-link">
                     Login
+                  </a>
+                </li>
+              </Link>
+              <Link to="/register" style={{ textDecoration: "none" }}>
+                <li className="navbar-text">
+                  <a href="about" className="nav-link">
+                    register
                   </a>
                 </li>
               </Link>
