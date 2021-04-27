@@ -1,24 +1,178 @@
-.onboard {
+/*********************************WELCOME**********************/
+.welcome {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  width: 100%;
+  padding-top: 50px;
+}
+.welcomeImg {
+  width: 475px;
+}
+.welcomeBttn {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 25px;
+  margin: 25px;
+}
+.signup {
+  padding-bottom: 5px;
+}
+.signin {
+  padding-bottom: 5px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .welcome {
+    width: 100%;
+  }
+  .welcomeImg {
+    width: 50%;
+    font-size: 5px;
+  }
+}
+/*********************************ONBOARD1**********************/
+.onboardWelcome {
+  font-weight: bold;
+}
+.onboard1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.onboard h1 {
-  font-weight: 700;
-  text-align: left !important;
-  font-size: 1.5rem;
-}
-.onboard p {
-  font-weight: 400;
-  text-align: left;
-  font-size: 1.5rem;
+.onboardSubTitle {
+  font-weight: lighter;
+  text-align: center;
 }
 
-.onboard img {
-  height: 40vh;
-  width: 25vw;
+.img1 {
+  width: 475px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .onboard1 {
+    padding-top: 4rem;
+    width: 100%;
+    font-size: 10px;
+  }
+  .img1 {
+    width: 80%;
+    font-size: 5px;
+  }
+}
+/*********************************ONBOARD2**********************/
+.onboard2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6rem;
+}
+
+.onboard2Title {
+  text-align: center;
+  font-weight: lighter;
+}
+
+.img2 {
+  width: 475px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .onboard2 {
+    padding-top: 4rem;
+    width: 100%;
+    font-size: 10px;
+  }
+  .img2 {
+    width: 75%;
+    font-size: 5px;
+  }
+}
+/*********************************ONBOARD3**********************/
+.onboard3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.onboard3Title,
+.onboard3SubTitle {
+  text-align: center;
+  font-weight: lighter;
+}
+
+.img3 {
+  width: 400px;
+}
+.uploadbutton {
+  background-color: #517fb6;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  margin: 10px;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: none;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .onboard3 {
+    width: 100%;
+    font-size: 10px;
+  }
+  .img3 {
+    width: 75%;
+    font-size: 5px;
+  }
+}
+
+/*********************************START QUESTIONAIRE**********************/
+
+.start-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.start-image {
+  width: 475px;
+}
+
+.start-text {
+  font-weight: lighter;
+  font-size: 1.7rem;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .start-container {
+    width: 100%;
+    font-size: 10px;
+  }
+  .start-image {
+    width: 75%;
+    font-size: 5px;
+  }
+  .start-image {
+    width: 275px;
+  }
+  .start-text {
+    font-weight: lighter;
+    font-size: 1.3rem;
+  }
 }
