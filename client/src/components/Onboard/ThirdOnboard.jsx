@@ -25,15 +25,15 @@ const ThirdOnboard = ({ formData, setFormData }) => {
   };
   return (
     <>
-      <Grid className="onboard3">
-        <img className="img3" src={onboard3} alt="" />
-        <h1>
+      <Grid className="onboard">
+        <img src={onboard3} alt="doctor looking at xrays" />
+        <p>
           Now, let's upload or take a photo
           <br />
           of your Xrays and submit them
           <br />
           through the app.
-        </h1>
+        </p>
         <Input
           type="file"
           name="xrayUpload"
@@ -48,19 +48,14 @@ const ThirdOnboard = ({ formData, setFormData }) => {
         <Button
           onClick={uploadImage}
           variant="contained"
-          size="large"
-          className="uploadbutton"
+          size="md"
+          className="btn-upload mt-4"
           name="xrayUpload"
           htmlFor="xrayUpload"
           enable="true"
         >
           Upload your X-ray
         </Button>
-        <h3>
-          dont have an X-ray? No problem, you can
-          <br />
-          <a>can send us a picture of your mouth.</a>
-        </h3>
       </Grid>
     </>
   );

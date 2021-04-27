@@ -21,9 +21,9 @@ const DentalPainFormPart2 = ({ formData, setFormData }) => {
 
   return (
     <>
-      <div className="all-page-form-container-container">
+      <div className="form-main">
         <form className="all-page-forms">
-          <div className="single-page-form-question-container">
+          <div className="form-question-container">
             <label htmlFor="painDuration" className="required">
               How long have you been in pain?
             </label>

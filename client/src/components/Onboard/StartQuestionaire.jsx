@@ -5,13 +5,13 @@ import "../../styles/Onboard.css";
 const StartQuestionaire = () => {
   return (
     <>
-      <div className="start-container">
+      <div className="onboard">
         <img
           src={startquestionaire}
           alt="Women on Computer"
           className="start-image"
         ></img>
-        <h3 className="start-text">
+        <p>
           We want to ensure you receive
           <br />
           a timely second opinion.
@@ -19,7 +19,7 @@ const StartQuestionaire = () => {
           Please answer some
           <br />
           questions to better assist you.
-        </h3>
+        </p>
       </div>
     </>
   );

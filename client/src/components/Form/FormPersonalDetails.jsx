@@ -9,13 +9,13 @@ const FormPersonalDetails = ({ formData, setFormData }) => {
 
   return (
     <>
-      <div className="first-page-form-container-main">
-        <div className="first-page-form-container">
+      <div className="form-main">
+        <div className="form-question-container">
           <p className="first-page-header">
             Let's get to know each other a bit better. Please answer the
             following questions.
           </p>
-          <form className="first-page-form">
+          <form className="form-input">
             <label htmlFor="name">Name:</label>
             <div>
               <input

@@ -6,14 +6,14 @@ import "../../styles/Onboard.css";
 const SecondOnboard = () => {
   return (
     <>
-      <Grid className="onboard2">
-        <h1 className="onboard2Title">
+      <Grid className="onboard">
+        <p>
           First, let’s get your X-rays. Call
           <br />
           your dentist and ask them to
           <br />
           send you your X-Rays.
-        </h1>
+        </p>
         <img className="img2" src={onboard2} alt="" />
       </Grid>
     </>

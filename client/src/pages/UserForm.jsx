@@ -84,32 +84,28 @@ export default function UserForm() {
           <div className="form-questions-container">
             {steps[activeStep].path}
           </div>
-          <MobileStepper
-            steps={maxSteps}
-            position="bottom"
-            variant="dots"
-            activeStep={activeStep}
-            nextButton={
-              <Button
-                size="small"
-                onClick={handleNext}
-                disabled={activeStep === maxSteps - 1}
-              >
-                <KeyboardArrowRight />
-              </Button>
-            }
-            backButton={
-              <Button
-                size="small"
-                onClick={handleBack}
-                disabled={activeStep === 0}
-              >
-                <KeyboardArrowLeft />
-              </Button>
-            }
-          />
         </StylesProvider>
       </div>
+      <MobileStepper
+        steps={maxSteps}
+        position="bottom"
+        variant="dots"
+        activeStep={activeStep}
+        nextButton={
+          <Button
+            size="small"
+            onClick={handleNext}
+            disabled={activeStep === maxSteps - 1}
+          >
+            <KeyboardArrowRight />
+          </Button>
+        }
+        backButton={
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+            <KeyboardArrowLeft />
+          </Button>
+        }
+      />
     </>
   );
 }
