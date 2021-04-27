@@ -1,6 +1,7 @@
 import React from "react";
 import onboard2 from "../../Images/onboard1.png";
 import { Grid } from "@material-ui/core";
+import "../../styles/Onboard.css";
 
 const SecondOnboard = () => {
   return (

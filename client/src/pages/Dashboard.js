@@ -4,6 +4,7 @@ import Mainview from "../components/Dashboard/Mainview";
 import Header from "../components/Dashboard/Header";
 import axios from "axios";
 import Sidebar from "../components/Dashboard/Sidebar";
+import "../styles/Dashboard.css";
 
 const Dashboard = () => {
   const { forms, setForms } = useContext(AppContext);

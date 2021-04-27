@@ -11,12 +11,12 @@ import PreviousWorkForm from "../components/Form/PreviousWorkForm";
 import SubmitPageForm from "../components/Form/SubmitPageForm";
 import Confirm from "../components/Form/Confirm";
 import Results from "../components/Form/Results";
-import StartQuestionaire from "../components/Form/StartQuestionaire";
+import StartQuestionaire from "../components/Onboard/StartQuestionaire";
 import { StylesProvider } from "@material-ui/core/styles";
 import FirstOnboard from "../components/Onboard/FirstOnboard";
 import SecondOnboard from "../components/Onboard/SecondOnboard";
 import ThirdOnboard from "../components/Onboard/ThirdOnboard";
-import TestOnboard from "../components/Onboard/testOnboard";
+import "../styles/Form.css";
 
 export default function UserForm() {
   const [formData, setFormData] = useState([]);
