@@ -57,7 +57,7 @@ export default function TheTable({ theData }) {
                 {row.name}
               </TableCell>
               <TableCell align="right">
-                <a href="mailto:email" target="_blank">
+                <a href={`mailto:${row.email}`} target="_blank">
                   {row.email}
                 </a>
               </TableCell>
