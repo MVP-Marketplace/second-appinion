@@ -38,11 +38,6 @@ body {
   margin: auto;
 }
 
-.form-questions-main-container {
-  width: 100vw;
-  height: 100vh;
-}
-
 .MuiMobileStepper-dotActive {
   background-color: #4972a3;
 }
@@ -55,33 +50,6 @@ body {
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
-}
-
-.first-page-form-container-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 6rem;
-}
-
-.first-page-form-container {
-  margin-top: 5%;
-  margin-bottom: 12%;
-  background-color: #ffff;
-  box-shadow: 0px 4px 4px #eae9e9;
-  border-radius: 40px;
-  position: relative;
-  max-width: 70%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5% 5% 5% 6%;
-  word-wrap: break-word;
-}
-
-.first-page-form input {
-  line-height: 2.5rem;
 }
 
 .small-input-form,
@@ -119,32 +87,32 @@ body {
   height: 2.2rem;
 }
 
-.all-page-form-container-container {
+/* .all-page-form-container-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
   box-shadow: 3px 2px 2px rgb(148, 147, 147);
-}
+} */
 
-.all-page-form-container-container,
+/* .all-page-form-container-container,
 .all-page-form-container {
   align-items: center;
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-}
+} */
 
-.all-page-forms {
+/* .all-page-forms {
   position: relative;
   flex-direction: column;
   margin-top: 10%;
   margin-bottom: 10%;
   scroll-behavior: smooth;
-}
+} */
 
-.single-page-form-question-container {
+/* .single-page-form-question-container {
   background: #ffffff;
   border-radius: 40px;
   height: auto;
@@ -155,7 +123,7 @@ body {
   flex-wrap: wrap;
   margin-bottom: 2rem;
   box-shadow: 0px 4px 4px #eae9e9;
-}
+} */
 
 .dental-pain-form-question {
   display: flex;

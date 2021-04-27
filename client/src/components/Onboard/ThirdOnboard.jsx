@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Grid, Button, Input, Alert } from "@material-ui/core";
+import { Grid, Button, Input } from "@material-ui/core";
 import onboard3 from "../../Images/onboard3.png";
 import "../../styles/onboard.css";
 
