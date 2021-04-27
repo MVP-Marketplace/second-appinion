@@ -27,13 +27,13 @@ const ThirdOnboard = ({ formData, setFormData }) => {
     <>
       <Grid className="onboard">
         <img src={onboard3} alt="doctor looking at xrays" />
-        <h1 className="onboardSubTitle">
+        <p>
           Now, let's upload or take a photo
           <br />
           of your Xrays and submit them
           <br />
           through the app.
-        </h1>
+        </p>
         <Input
           type="file"
           name="xrayUpload"

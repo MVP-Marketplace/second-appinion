@@ -7,13 +7,13 @@ const SecondOnboard = () => {
   return (
     <>
       <Grid className="onboard">
-        <h1 className="onboardSubTitle">
+        <p>
           First, let’s get your X-rays. Call
           <br />
           your dentist and ask them to
           <br />
           send you your X-Rays.
-        </h1>
+        </p>
         <img className="img2" src={onboard2} alt="" />
       </Grid>
     </>

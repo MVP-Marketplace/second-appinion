@@ -11,7 +11,7 @@ const StartQuestionaire = () => {
           alt="Women on Computer"
           className="start-image"
         ></img>
-        <h1 className="onboardSubTitle">
+        <p>
           We want to ensure you receive
           <br />
           a timely second opinion.
@@ -19,7 +19,7 @@ const StartQuestionaire = () => {
           Please answer some
           <br />
           questions to better assist you.
-        </h1>
+        </p>
       </div>
     </>
   );
