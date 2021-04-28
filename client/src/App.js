@@ -25,7 +25,7 @@ const App = () => {
           <Route exact path="/login" component={Login} />
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
           <Route exact path="/register" component={Register} />
-          <PrivateRoute exact path="/patient/:id" component={Patient} />
+          <Route exact path="/patient/:id" component={Patient} />
           {/* <Route exact path="/onboard" component={UserOnboard} /> */}
           <Route exact path="/forgotpassword" component={ForgotPassword} />
           {/*<Route exact path="/resetpassword" component={ResetPassword} />*/}
