@@ -51,8 +51,8 @@ We have a seed file available in server/db/seeds/index.js for you to start up wi
 | react-dom                 | cloudinary |
 | react-router-dom          | cloudinary-react
 | react-images-uploard|concurrently|
-|| cookie-parser |
-||express|
+|react-to-pdf| cookie-parser |
+|box-icons|express|
 || express-fileupload |
 || heroku |
 || js-cookie |
