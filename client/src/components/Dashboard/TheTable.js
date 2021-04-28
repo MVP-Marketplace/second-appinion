@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Table,
@@ -12,6 +12,8 @@ import {
 import "boxicons";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { AppContext } from "../../context/AppContext";
+import swal from "sweetalert";
 
 const useStyles = makeStyles({
   table: {
@@ -21,19 +23,29 @@ const useStyles = makeStyles({
 });
 
 export default function TheTable({ theData }) {
+  const { setForms } = useContext(AppContext);
   const classes = useStyles();
   let data = theData;
   console.log(data);
+
+
+  const afterDelete = async () => {
+    const response = await axios.get("/api/forms/");
+    setForms(response.data);
+  };
 
   const handleCheck = async (id, e) => {
     await axios.patch(`api/forms/${id}`).then((res) => {
       console.log(res);
     });
   };
+
   const handleDelete = async (id, e) => {
     await axios.delete(`/api/forms/${id}`).then((res) => {
-      console.log(res);
+      //console.log(res);
     });
+    swal("The form has been deleted");
+    afterDelete();
   };
 
   if (!data) return null;

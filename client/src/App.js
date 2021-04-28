@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
-
 import { AppContextProvider } from "./context/AppContext";
-
+import PrivateRoute from "./components/PrivateRoute";
 import Welcome from "./components/Welcome";
 import userForm from "./pages/UserForm";
 import ConfirmationPrompt from "./pages/ConfirmationPrompt";
@@ -12,6 +11,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Patient from "./components/Dashboard/Patient";
 import "./App.css";
+import ForgotPassword from "./components/ForgetPassword";
 
 const App = () => {
   return (
@@ -23,10 +23,11 @@ const App = () => {
           <Route exact path="/complete" component={ConfirmationPrompt} />
           <Route exact path="/welcome" component={Welcome} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/dashboard" component={Dashboard} />
+          <PrivateRoute exact path="/dashboard" component={Dashboard} />
           <Route exact path="/register" component={Register} />
-          <Route exact path="/patient/:id" component={Patient} />
+          <PrivateRoute exact path="/patient/:id" component={Patient} />
           {/* <Route exact path="/onboard" component={UserOnboard} /> */}
+          <Route exact path="/forgotpassword" component={ForgotPassword} />
           {/*<Route exact path="/resetpassword" component={ResetPassword} />*/}
         </Switch>
       </BrowserRouter>
