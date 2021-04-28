@@ -3,7 +3,7 @@ import { Grid, Button, TextField } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
 import { Link } from "react-router-dom";
-import HamBurger from "../HamBurger";
+import Navbar from "../Navbar";
 import Footer from "../Footer";
 import axios from "axios";
 
@@ -27,7 +27,7 @@ const Login = () => {
 
   return (
     <>
-      <HamBurger />
+      <Navbar />
 
       <Grid className="login">
         <h1 className="headerTitle">Login Second Appinion</h1>

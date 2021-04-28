@@ -42,10 +42,14 @@ const Navbar = () => {
 
   return (
     <div>
-      <AppBar position="static" color="#E8E8E8" elevation="none">
+      <AppBar
+        position="static"
+        style={{ backgroundColor: "#f9fbff", color: "#09015D" }}
+        elevation="none"
+      >
         <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
           <img src={secondAppLogo} alt="second apinion logo" />
-          <MenuIcon onClick={handleClick} style={{ color: "#09015D, 100%" }} />
+          <MenuIcon onClick={handleClick} />
           <StyledMenu
             id="simple-menu"
             anchorEl={anchorEl}

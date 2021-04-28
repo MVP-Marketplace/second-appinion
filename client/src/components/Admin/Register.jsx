@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Grid, Button, TextField } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
-import HamBurger from "../HamBurger";
+import Navbar from "../Navbar";
 import Footer from "../Footer";
 import axios from "axios";
 
@@ -21,7 +21,7 @@ const Register = () => {
   };
   return (
     <>
-      <HamBurger />
+      <Navbar />
       <Grid className="login">
         <form onSubmit={handleSubmit}>
           <h4>Name</h4>
