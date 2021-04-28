@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Grid, Button, TextField } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
-import HamBurger from "./HamBurger";
-import Footer from "./Footer";
+import HamBurger from "../HamBurger";
+import Footer from "../Footer";
 import axios from "axios";
 import swal from "sweetalert";
 

@@ -40,47 +40,6 @@ body {
   margin: auto;
 }
 
-/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .confirmation-page-image {
-    position: relative;
-    width: 20rem;
-    height: auto;
-    object-fit: contain;
-    margin-top: 10%;
-  }
-  .confirmation-text {
-    font-family: "Space Mono", monospace;
-    font-size: 1rem;
-  }
-  .single-page-form-question-container {
-    background: #ffffff;
-    border-radius: 40px;
-    height: auto;
-    padding: 5rem 10rem 5rem 5rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    line-height: 1.8rem;
-    margin-bottom: 2rem;
-    box-shadow: 0px 4px 4px #eae9e9;
-  }
-  .all-page-form-container-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    box-shadow: 3px 2px 2px rgb(148, 147, 147);
-  }
-  .footer-main-container {
-    position: absolute;
-    background-color: #4972a3;
-    height: 75px;
-    width: 100%;
-    bottom: 0;
-    padding-top: 12px;
-  }
-} */
-
 /*********************************LOGIN**********************/
 .login {
   display: flex;

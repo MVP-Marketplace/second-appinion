@@ -1,10 +1,11 @@
 import React, { useState, useContext } from "react";
 import { Grid, Button, TextField } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
-import { AppContext } from "../context/AppContext";
-import HamBurger from "./HamBurger";
-import Footer from "./Footer";
+import { AppContext } from "../../context/AppContext";
+import HamBurger from "../HamBurger";
+import Footer from "../Footer";
 import axios from "axios";
+
 const Register = () => {
   let history = useHistory();
   const [formData, setFormData] = useState(null);

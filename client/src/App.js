@@ -2,16 +2,16 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import { AppContextProvider } from "./context/AppContext";
-import PrivateRoute from "./components/PrivateRoute";
+import PrivateRoute from "./utils/PrivateRoute";
 import Welcome from "./components/Welcome";
 import userForm from "./pages/UserForm";
 import ConfirmationPrompt from "./pages/ConfirmationPrompt";
 import Dashboard from "./pages/Dashboard";
-import Login from "./components/Login";
-import Register from "./components/Register";
+import Login from "./components/Admin/Login";
+import Register from "./components/Admin/Register";
 import Patient from "./components/Dashboard/Patient";
 import "./App.css";
-import ForgotPassword from "./components/ForgetPassword";
+import ForgotPassword from "./components/Admin/ForgetPassword";
 
 const App = () => {
   return (
