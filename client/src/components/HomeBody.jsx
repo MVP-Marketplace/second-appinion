@@ -6,10 +6,12 @@ import customer from "../Images/customer.png";
 import pill from "../Images/pill.png";
 import { Grid, Button } from "@material-ui/core";
 import "../styles/Home.css";
+import Navbar from "./Navbar";
 
 const HomeBody = () => {
   return (
     <>
+      <Navbar />
       <Grid className="container">
         <Grid className="headerHome">
           <h1 className="headerTitle">Use Second Appinion</h1>
