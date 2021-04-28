@@ -13,6 +13,7 @@ import "boxicons";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
+import swal from "sweetalert";
 
 const useStyles = makeStyles({
   table: {
@@ -27,6 +28,7 @@ export default function TheTable({ theData }) {
   let data = theData;
   console.log(data);
 
+
   const afterDelete = async () => {
     const response = await axios.get("/api/forms/");
     setForms(response.data);
@@ -37,10 +39,12 @@ export default function TheTable({ theData }) {
       console.log(res);
     });
   };
+
   const handleDelete = async (id, e) => {
     await axios.delete(`/api/forms/${id}`).then((res) => {
-      console.log(res);
+      //console.log(res);
     });
+    swal("The form has been deleted");
     afterDelete();
   };
 

@@ -7,6 +7,7 @@ import swal from "sweetalert";
 import { useHistory } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
 
+
 function Sidebar() {
   const { setCurrentUser } = useContext(AppContext);
   let history = useHistory();
