@@ -1,43 +1,54 @@
-import React from "react";
+import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@material-ui/core";
 import "boxicons";
 import axios from "axios";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { AppContext } from "../../context/AppContext";
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 650,
+    minWidth: 400,
+    maxWidth: 900,
   },
 });
 
 export default function TheTable({ theData }) {
+  const { setForms } = useContext(AppContext);
   const classes = useStyles();
-  let history = useHistory();
   let data = theData;
   console.log(data);
 
-  const handleClick = (_id) => {
-    history.push(`/patient/${_id}`);
+  const afterDelete = async () => {
+    const response = await axios.get("/api/forms/");
+    setForms(response.data);
   };
 
+  const handleCheck = async (id, e) => {
+    await axios.patch(`api/forms/${id}`).then((res) => {
+      console.log(res);
+    });
+  };
   const handleDelete = async (id, e) => {
     await axios.delete(`/api/forms/${id}`).then((res) => {
       console.log(res);
     });
+    afterDelete();
   };
 
   if (!data) return null;
   return (
     <TableContainer component={Paper} className={classes.tableContainer}>
       <Table className={classes.table} aria-label="simple table">
-        <TableHead>
+        <TableHead className="table-header">
           <TableRow>
             <TableCell className="table-label">Name</TableCell>
             <TableCell align="right" className="table-label">
@@ -51,6 +62,15 @@ export default function TheTable({ theData }) {
             </TableCell>
             <TableCell align="right" className="table-label">
               Pain Cause
+            </TableCell>
+            <TableCell align="right" className="table-label">
+              View
+            </TableCell>
+            <TableCell align="right" className="table-label">
+              Complete
+            </TableCell>
+            <TableCell align="right" className="table-label">
+              Delete
             </TableCell>
           </TableRow>
         </TableHead>
@@ -70,12 +90,18 @@ export default function TheTable({ theData }) {
               <TableCell align="right">{row.painCause}</TableCell>
               <TableCell align="right">
                 <Link to={`/patient/${row._id}`}>
-                  <box-icon
-                    type="solid"
-                    name="edit-alt"
-                    //onClick={() => handleClick(row._id)}
-                  ></box-icon>
+                  <box-icon type="solid" name="edit-alt"></box-icon>
                 </Link>
+              </TableCell>
+              <TableCell align="right">
+                <form>
+                  <input
+                    type="checkbox"
+                    label="completed"
+                    name="completed"
+                    onCheck={handleCheck}
+                  />
+                </form>
               </TableCell>
               <TableCell align="right">
                 <box-icon

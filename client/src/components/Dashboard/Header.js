@@ -6,7 +6,7 @@ import swal from "sweetalert";
 import "boxicons";
 
 function Header() {
-  const { forms, setForms } = useContext(AppContext);
+  const { setForms } = useContext(AppContext);
   const [search, setSearch] = useState("");
 
   const textSearch = async () => {

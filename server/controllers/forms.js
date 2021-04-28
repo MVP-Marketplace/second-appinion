@@ -92,6 +92,30 @@ exports.getSearchForms = async (req, res) => {
     res.status(500).json({ error: e.toString() });
   }
 };
+
+// ***********************************************//
+// Update Form
+// ***********************************************//
+exports.updateCurrentForm = async (req, res) => {
+  const updates = Object.keys(req.body);
+  const allowedUpdates = ["completed"];
+  const isValidOperation = updates.every((update) =>
+    allowedUpdates.includes(update)
+  );
+  if (!isValidOperation)
+    return res.status(400).json({ message: "invalid updates" });
+  const filter = req.params.id;
+  try {
+    const form = await Form.findByIdAndUpdate(filter);
+    if (!form) return res.status(404).json({ message: "form not found" });
+    updates.forEach((update) => (form[update] = req.body[update]));
+    await form.save();
+    res.status(200).json(form);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
 // ***********************************************//
 // Delete form
 // ***********************************************//

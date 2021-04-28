@@ -10,7 +10,7 @@ import axios from "axios";
 const Login = () => {
   let history = useHistory();
   const [formData, setFormData] = useState(null);
-  const { currentUser, setCurrentUser } = useContext(AppContext);
+  const { setCurrentUser } = useContext(AppContext);
   // const classes = useStyles();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,6 +20,8 @@ const Login = () => {
     e.preventDefault();
     const response = await axios.post("/api/users/login", formData);
     setCurrentUser(response.data);
+    console.log(response.data);
+    sessionStorage.setItem("user", response.data);
     history.push("/dashboard");
   };
 
@@ -34,6 +36,7 @@ const Login = () => {
           <TextField
             className="text"
             variant="outlined"
+            name="email"
             onChange={handleChange}
           />
           <h4>Password</h4>
@@ -41,14 +44,19 @@ const Login = () => {
             type="password"
             className="text"
             variant="outlined"
+            name="password"
             onChange={handleChange}
           />
-          <Link to="/dashboard">
-            <Button variant="contained" size="large" id="bookbutton">
-              Sign In
-            </Button>
-          </Link>
+          <Button
+            variant="contained"
+            size="large"
+            id="bookbutton"
+            type="submit"
+          >
+            Sign In
+          </Button>
         </form>
+        <Link to="/forgotpassword">I forgot my password!</Link>
       </Grid>
       <Footer />
     </>

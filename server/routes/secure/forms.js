@@ -1,13 +1,17 @@
 const router = require("express").Router(),
   {
-    getSpecificForm,
     getAllForms,
+    getSearchForms,
+    getSpecificForm,
+    updateCurrentForm,
     deleteForm,
   } = require("../../controllers/forms");
-isAdmin = require("../../middleware/authorization/index");
 
 // router.get("/:id", getSpecificForm);
-
-router.delete("/:id", isAdmin(), deleteForm);
+router.get("/", getAllForms);
+router.get("/search", getSearchForms);
+router.get("/:id", getSpecificForm);
+router.get("/:id", updateCurrentForm);
+router.delete("/:id", deleteForm);
 
 module.exports = router;
