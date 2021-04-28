@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Divider from "@material-ui/core/Divider";
-import "../../styles/Form.css";
+import "../../styles/Dashboard.css";
 import Pdf from "react-to-pdf";
 import { useParams } from "react-router-dom";
 
@@ -23,9 +23,14 @@ const Patient = () => {
   if (!form) return null;
   return (
     <div className="patientInfo">
-      <div className="first-page-form-container-main">
-        <div className="first-page-form-container" ref={ref}>
-          <form className="first-page-form">
+      <Pdf targetRef={ref} filename="patient.pdf">
+        {({ toPdf }) => (
+          <box-icon type="solid" name="download" onClick={toPdf}></box-icon>
+        )}
+      </Pdf>
+      <div ref={ref}>
+        <div>
+          <form>
             <p>Name:</p>
             <p>{form.name}</p>
             <Divider />
@@ -111,13 +116,6 @@ const Patient = () => {
           </form>
         </div>
       </div>
-      <Pdf targetRef={ref} filename="patient.pdf">
-        {({ toPdf }) => (
-          <button id="pdf-btn" onClick={toPdf}>
-            Download PDF
-          </button>
-        )}
-      </Pdf>
     </div>
   );
 };
