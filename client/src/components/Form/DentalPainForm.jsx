@@ -1,7 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { Radio, Checkbox } from "@material-ui/core";
-import "../../styles/Form.css";
+import "../../styles/FormStyles.css";
 
 const DefaultRadio = withStyles({
   root: {
