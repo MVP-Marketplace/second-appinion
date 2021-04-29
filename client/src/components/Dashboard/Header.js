@@ -4,6 +4,7 @@ import notification from "../../Images/notification.png";
 import axios from "axios";
 import swal from "sweetalert";
 import "boxicons";
+import "../../styles/Dashboard.css";
 
 function Header() {
   const { setForms } = useContext(AppContext);
@@ -26,15 +27,6 @@ function Header() {
     <div className="header-container">
       <div className="search-container">
         <form onSubmit={handleSubmit} className="search-bar-container">
-          <a>
-            <box-icon
-              className="search-bar-icon"
-              name="search"
-              size="sm"
-              type="submit"
-              color="gray"
-            ></box-icon>
-          </a>
           <input
             type="text"
             className="search"
@@ -44,16 +36,6 @@ function Header() {
             }}
           />
         </form>
-        <div className="header-icons">
-          <img src={notification} className="icons" alt="Bell"></img>
-          <box-icon
-            className="icons"
-            name="user"
-            size="sm"
-            alt="User Icon"
-            color="gray"
-          ></box-icon>
-        </div>
       </div>
     </div>
   );

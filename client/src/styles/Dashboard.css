@@ -9,10 +9,13 @@
   align-items: center;
   margin-top: 30px;
 }
+.search-bar-container {
+  display: flex;
+}
 
 .search {
   border: grey solid 2px;
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 0.3rem;
   width: 100%;
   margin-left: 0.2rem;
@@ -28,13 +31,6 @@
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   color: gray;
-}
-
-.header-icons {
-  display: flex;
-  /* float: left; */
-  justify-content: space-between;
-  align-content: center;
 }
 
 /*********************************TABLE**********************/
