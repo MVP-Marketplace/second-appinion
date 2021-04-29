@@ -18,16 +18,18 @@ const App = () => {
   return (
     <AppContextProvider>
       <BrowserRouter>
-        <Navbar />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/form" component={userForm} />
-          <Route exact path="/complete" component={ConfirmationPrompt} />
-          <Route exact path="/login" component={Login} />
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/register" component={Register} />
           <PrivateRoute exact path="/patient/:id" component={Patient} />
-          <Route exact path="/forgotpassword" component={ForgotPassword} />
+          <div>
+            <Navbar />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/form" component={userForm} />
+            <Route exact path="/complete" component={ConfirmationPrompt} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/forgotpassword" component={ForgotPassword} />
+          </div>
         </Switch>
       </BrowserRouter>
     </AppContextProvider>

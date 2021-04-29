@@ -3,7 +3,7 @@ import { AppContext } from "../context/AppContext";
 import Mainview from "../components/Dashboard/Mainview";
 import Header from "../components/Dashboard/Header";
 import axios from "axios";
-import Sidebar from "../components/Dashboard/Sidebar";
+import AuthNavbar from "../components/Dashboard/AuthNavbar";
 import "../styles/Dashboard.css";
 
 const Dashboard = () => {
@@ -18,13 +18,15 @@ const Dashboard = () => {
     fetchData();
   }, []);
   return (
-    <div className="dashboard">
-      <Sidebar />
-      <div className="dashboard-inner">
-        <Header />
-        <Mainview formData={forms} />
+    <>
+      <AuthNavbar />
+      <div className="dashboard">
+        <div className="dashboard-inner">
+          <Header />
+          <Mainview formData={forms} />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

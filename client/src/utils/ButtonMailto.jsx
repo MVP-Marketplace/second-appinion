@@ -10,6 +10,7 @@ const ButtonMailto = ({ mailto, label }) => {
         e.preventDefault();
       }}
       target="_blank"
+      style={{ textDecoration: "none", color: "whitesmoke" }}
     >
       {label}
     </Link>
