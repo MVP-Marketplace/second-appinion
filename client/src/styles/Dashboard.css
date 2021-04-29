@@ -1,39 +1,7 @@
-/*********************************SIDEBAR**********************/
-
-.sidebar-container {
-  width: 15%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  box-shadow: 0px 5px 2px 5px whitesmoke;
-  -moz-box-shadow: 0px 5px 2px 5px whitesmoke;
-  -webkit-box-shadow: 0px 5px 2px 5px whitesmoke;
-}
-
-.sidebar {
-  padding: 2.6rem;
-}
-.sidebarlinks {
-  font-weight: 700;
+/*********************************AUTH NAV**********************/
+.mailto-btn {
   text-decoration: none;
 }
-
-.dashboard-logo {
-  width: 10vw;
-  height: 5vh;
-  padding-bottom: 3rem;
-}
-
-.question-mark {
-  width: 1.5rem;
-  float: left;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  padding-right: 1rem;
-}
-
 /*********************************HEADER**********************/
 .search-container {
   display: flex;
