@@ -17,28 +17,27 @@ const ConfirmationPrompt = () => {
   };
 
   return (
-    <>
-      <Grid className="onboard-container">
-        <div className="onboard-img-wrapper">
-          <img
-            className="onboard-img"
-            src={ConfirmationImg}
-            alt="Person using a computer"
-          />
-        </div>
-        <div className="onboard-text">
-          <p>
-            Congrats you're ready for a second opinion! A dentist wil review
-            your x-rays in 24 hours. Now you can make an educated decision about
-            your dental health.
-          </p>
-        </div>
-
+    <Grid className="onboard-container">
+      <div className="onboard-image">
+        <img
+          className="onboard-img"
+          src={ConfirmationImg}
+          alt="Person using a computer"
+        />
+      </div>
+      <div className="onboard-text">
+        <p>
+          Congrats you're ready for a second opinion! A dentist wil review your
+          x-rays in 24 hours. Now you can make an educated decision about your
+          dental health.
+        </p>
+      </div>
+      <div className="wide-button-form-container">
         <button className="completeButton" onClick={handleRedirect}>
           Done
         </button>
-      </Grid>
-    </>
+      </div>
+    </Grid>
   );
 };
 
