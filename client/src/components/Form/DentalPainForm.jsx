@@ -1,6 +1,6 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
-import { Radio, Checkbox } from "@material-ui/core";
+import { Grid, Radio, Checkbox } from "@material-ui/core";
 import "../../styles/FormStyles.css";
 
 const DefaultRadio = withStyles({
@@ -32,7 +32,7 @@ const DentalPainForm = ({ formData, setFormData }) => {
 
   return (
     <>
-      <div className="all-page-form-container-container">
+      <Grid className="all-page-form-container-container">
         <form className="all-page-forms">
           <div className="single-page-form-question-container">
             <label htmlFor="pain" className="required">
@@ -167,7 +167,7 @@ const DentalPainForm = ({ formData, setFormData }) => {
             </select>
           </div>
         </form>
-      </div>
+      </Grid>
     </>
   );
 };

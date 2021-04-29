@@ -23,8 +23,6 @@ const ForgotPassword = () => {
 
   return (
     <>
-      <Navbar />
-
       <Grid className="login">
         <h1 className="headerTitle">Reset Password</h1>
         <form onSubmit={handleSubmit}>
@@ -44,8 +42,6 @@ const ForgotPassword = () => {
           </div>
         </form>
       </Grid>
-
-      <Footer />
     </>
   );
 };

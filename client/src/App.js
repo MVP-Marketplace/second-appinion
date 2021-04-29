@@ -9,13 +9,16 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./components/Admin/Login";
 import Register from "./components/Admin/Register";
 import Patient from "./components/Dashboard/Patient";
+import Navbar from "./components/Navbar";
 import "./App.css";
 import ForgotPassword from "./components/Admin/ForgetPassword";
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
   return (
     <AppContextProvider>
       <BrowserRouter>
+        <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/form" component={userForm} />

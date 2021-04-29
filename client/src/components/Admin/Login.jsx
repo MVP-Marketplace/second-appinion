@@ -27,8 +27,6 @@ const Login = () => {
 
   return (
     <>
-      <Navbar />
-
       <Grid className="login">
         <h1 className="headerTitle">Login</h1>
         <form onSubmit={handleSubmit}>
@@ -56,7 +54,6 @@ const Login = () => {
 
         <Link to="/forgotpassword">I forgot my password!</Link>
       </Grid>
-      <Footer />
     </>
   );
 };

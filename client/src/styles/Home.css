@@ -2,8 +2,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-left: 5px;
+  align-items: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-wrap: wrap;
   margin: auto;
   width: 40vw;
 }
@@ -24,6 +26,12 @@
   font-weight: 600;
   font-size: 1.25rem;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .homeImg {
   width: 40vw;
   margin: 10px;
@@ -31,8 +39,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 80px;
-  box-shadow: 3px 2px 2px rgb(148, 147, 147);
 }
 
 .button-link {
@@ -41,7 +47,7 @@
 
 #bookbutton {
   background-color: #517fb6;
-  width: 40vw;
+  width: 30vw;
   height: 8vh;
   color: whitesmoke;
   font-size: 1.5rem;
@@ -51,12 +57,6 @@
 
 /*********************************BOTTOMBODY**********************/
 
-.btmBody {
-  width: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-}
 h2 {
   color: #517fb6;
   font-weight: 600;
@@ -65,40 +65,36 @@ h2 {
   margin-left: 10px;
 }
 
-.square-icons {
+.square-icons-container {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.picAndText {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 15vw;
 }
-
-.picAndText p {
-  text-align: left;
-  word-wrap: inherit;
-  font-size: 3vh;
+.square-icon {
+  height: 80%;
+  width: 80%;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
-    width: 100%;
-    border-radius: 10%;
+    justify-content: flex-start;
+    width: 100vw;
   }
   .homeImg {
-    width: 75%;
+    width: 90%;
+    margin-right: 2rem;
   }
   #bookbutton {
     width: 100%;
   }
-
-  .picAndText img {
-    width: 70%;
-    height: 57%;
+  .square-icons-container {
+    font-size: 1rem;
+    display: flex;
+  }
+  .square-icon {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    height: 30%;
+    width: 25%;
   }
 }
