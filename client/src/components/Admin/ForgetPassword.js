@@ -37,16 +37,14 @@ const ForgotPassword = () => {
               setEmail(e.target.value);
             }}
           />
-          <Button
-            variant="contained"
-            size="large"
-            id="bookbutton"
-            type="submit"
-          >
-            Reset Password
-          </Button>
+          <div>
+            <Button variant="contained" id="btn-password" type="submit">
+              Reset Password
+            </Button>
+          </div>
         </form>
       </Grid>
+
       <Footer />
     </>
   );
