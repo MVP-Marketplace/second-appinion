@@ -21,7 +21,6 @@ const Register = () => {
   };
   return (
     <>
-      <Navbar />
       <Grid className="login">
         <form onSubmit={handleSubmit}>
           <div>
@@ -51,7 +50,6 @@ const Register = () => {
           </div>
         </form>
       </Grid>
-      <Footer />
     </>
   );
 };

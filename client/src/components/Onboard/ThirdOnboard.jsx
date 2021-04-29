@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Grid, Button, Input } from "@material-ui/core";
-import onboard3 from "../../Images/onboard3.png";
-import { Image } from "cloudinary-react";
+import Xray from "../../Images/XRay.svg";
 import "../../styles/Onboard.css";
 
 const ThirdOnboard = ({ formData, setFormData }) => {
@@ -25,15 +24,16 @@ const ThirdOnboard = ({ formData, setFormData }) => {
   };
   return (
     <>
-      <Grid className="onboard">
-        <img src={onboard3} alt="doctor looking at xrays" />
-        <p>
-          Now, let's upload or take a photo
-          <br />
-          of your Xrays and submit them
-          <br />
-          through the app.
-        </p>
+      <Grid className="onboard-container">
+        <div>
+          <img src={Xray} alt="doctor looking at xrays" />
+        </div>
+        <div className="onboard-text">
+          <p>
+            Now, let's upload or take a photo of your Xrays and submit them
+            through the app.
+          </p>
+        </div>
         <Input
           type="file"
           name="xrayUpload"

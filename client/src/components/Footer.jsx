@@ -2,46 +2,55 @@ import React from "react";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import { AppBar, Toolbar, IconButton } from "@material-ui/core/";
+import {
+  BottomNavigation,
+  BottomNavigationAction,
+  IconButton,
+} from "@material-ui/core/";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme) => ({
-  appBar: {
-    top: "auto",
-    bottom: 0,
-  },
-  grow: {
-    flexGrow: 1,
+const useStyles = makeStyles({
+  root: {
+    width: 500,
   },
   toolBar: {
-    display: "flex",
-    justifyContent: "center",
+    background: "#4972A3",
   },
-}));
+  Action: {
+    color: "whitesmoke",
+  },
+});
 
 const Footer = () => {
   const classes = useStyles();
+  const [value, setValue] = React.useState("recents");
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   return (
     <>
-      <AppBar
-        position="static"
-        className={classes.appBar}
-        color="none"
-        style={{ color: "whitesmoke", backgroundColor: "#4972A3" }}
-      >
-        <Toolbar className={classes.toolBar}>
-          <IconButton edge="start" color="inherit" aria-label="open drawer">
-            <FacebookIcon />
-          </IconButton>
-          <IconButton color="inherit">
-            <InstagramIcon />
-          </IconButton>
-          <IconButton edge="end" color="inherit">
-            <TwitterIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
+      <BottomNavigation className={classes.toolBar}>
+        <BottomNavigationAction
+          className={classes.Action}
+          label="Facebook"
+          value="recents"
+          icon={<FacebookIcon />}
+        />
+        <BottomNavigationAction
+          className={classes.Action}
+          label="Recents"
+          value="recents"
+          icon={<InstagramIcon />}
+        />
+        <BottomNavigationAction
+          className={classes.Action}
+          label="Recents"
+          value="recents"
+          icon={<TwitterIcon />}
+        />
+      </BottomNavigation>
     </>
   );
 };

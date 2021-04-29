@@ -48,7 +48,9 @@ const Navbar = () => {
         elevation="none"
       >
         <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
-          <img src={secondAppLogo} alt="second apinion logo" />
+          <Link to="/">
+            <img src={secondAppLogo} alt="second apinion logo" />
+          </Link>
           <MenuIcon onClick={handleClick} />
           <StyledMenu
             id="simple-menu"

@@ -15,7 +15,6 @@ const Confirm = ({ formData }) => {
       await axios.post("/api/forms", formData);
       history.push("/complete");
       form.reset();
-      console.log("submitted");
     } catch (error) {
       console.log(error);
     }
