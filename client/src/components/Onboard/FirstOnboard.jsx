@@ -15,11 +15,7 @@ const FirstOnboard = () => {
           </p>
         </div>
         <div className="onboard-img-wrapper">
-          <img
-            className="onboard-img"
-            src={DentalExam}
-            alt="Customer in a Dentist Chair"
-          />
+          <img src={DentalExam} alt="Customer in a Dentist Chair" />
         </div>
       </Grid>
     </>
