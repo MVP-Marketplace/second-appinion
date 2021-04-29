@@ -24,27 +24,31 @@ const Register = () => {
       <Navbar />
       <Grid className="login">
         <form onSubmit={handleSubmit}>
-          <h4>Name</h4>
-          <TextField
-            className="text"
-            variant="outlined"
-            onChange={handleChange}
-          />
-          <h4>Email</h4>
-          <TextField
-            className="text"
-            variant="outlined"
-            onChange={handleChange}
-          />
-          <h4>Password</h4>
-          <TextField
-            className="text"
-            variant="outlined"
-            onChange={handleChange}
-          />
-          <Button variant="contained" size="large" id="bookbutton">
-            Sign In
-          </Button>
+          <div>
+            <h4>Name</h4>
+            <TextField
+              className="text"
+              variant="outlined"
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <h4>Email</h4>
+            <TextField className="text" variant="outlined" />
+          </div>
+          <div>
+            <h4>Password</h4>
+            <TextField
+              className="text"
+              variant="outlined"
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <Button variant="contained" size="large" id="bookbutton">
+              Join
+            </Button>
+          </div>
         </form>
       </Grid>
       <Footer />

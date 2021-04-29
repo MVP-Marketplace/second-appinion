@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import axios from "axios";
+import "../../styles/Admin.css";
 
 const Login = () => {
   let history = useHistory();
   const [formData, setFormData] = useState(null);
   const { setCurrentUser } = useContext(AppContext);
-  // const classes = useStyles();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -30,7 +30,7 @@ const Login = () => {
       <Navbar />
 
       <Grid className="login">
-        <h1 className="headerTitle">Login Second Appinion</h1>
+        <h1 className="headerTitle">Login</h1>
         <form onSubmit={handleSubmit}>
           <h4>Email</h4>
           <TextField
@@ -47,15 +47,13 @@ const Login = () => {
             name="password"
             onChange={handleChange}
           />
-          <Button
-            variant="contained"
-            size="large"
-            id="bookbutton"
-            type="submit"
-          >
-            Sign In
-          </Button>
+          <div>
+            <Button variant="contained" id="bookbutton" type="submit">
+              Sign In
+            </Button>
+          </div>
         </form>
+
         <Link to="/forgotpassword">I forgot my password!</Link>
       </Grid>
       <Footer />
