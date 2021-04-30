@@ -60,9 +60,6 @@ export default function TheTable({ theData }) {
               Date
             </TableCell>
             <TableCell align="right" className="table-label">
-              Completed
-            </TableCell>
-            <TableCell align="right" className="table-label">
               Pain Cause
             </TableCell>
             <TableCell align="right" className="table-label">
@@ -92,7 +89,6 @@ export default function TheTable({ theData }) {
                   ? moment(row.createdAt).format("MMM Do, YYYY")
                   : ""}
               </TableCell>
-              <TableCell align="right">{row.completed}</TableCell>
               <TableCell align="right">{row.painCause}</TableCell>
               <TableCell align="right">
                 <Link to={`/patient/${row._id}`}>
