@@ -14,6 +14,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
 import swal from "sweetalert";
+import moment from "moment";
 
 const useStyles = makeStyles({
   table: {
@@ -28,7 +29,6 @@ export default function TheTable({ theData }) {
   let data = theData;
   console.log(data);
 
-
   const afterDelete = async () => {
     const response = await axios.get("/api/forms/");
     setForms(response.data);
@@ -41,9 +41,7 @@ export default function TheTable({ theData }) {
   };
 
   const handleDelete = async (id, e) => {
-    await axios.delete(`/api/forms/${id}`).then((res) => {
-      //console.log(res);
-    });
+    await axios.delete(`/api/forms/${id}`).then((res) => {});
     swal("The form has been deleted");
     afterDelete();
   };
@@ -89,7 +87,11 @@ export default function TheTable({ theData }) {
                   {row.email}
                 </a>
               </TableCell>
-              <TableCell align="right">{row.date}</TableCell>
+              <TableCell align="right">
+                {row.createdAt
+                  ? moment(row.createdAt).format("MMM Do, YYYY")
+                  : ""}
+              </TableCell>
               <TableCell align="right">{row.completed}</TableCell>
               <TableCell align="right">{row.painCause}</TableCell>
               <TableCell align="right">

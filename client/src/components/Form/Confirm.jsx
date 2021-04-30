@@ -13,6 +13,7 @@ const Confirm = ({ formData }) => {
     const form = e.target;
     try {
       await axios.post("/api/forms", formData);
+      console.log(formData);
       history.push("/complete");
       form.reset();
     } catch (error) {
