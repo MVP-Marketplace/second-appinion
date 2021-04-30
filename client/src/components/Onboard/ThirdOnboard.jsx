@@ -3,6 +3,7 @@ import axios from "axios";
 import { Grid, Button, Input } from "@material-ui/core";
 import Xray from "../../Images/XRay.svg";
 import "../../styles/Onboard.css";
+import swal from "sweetalert";
 
 const ThirdOnboard = ({ formData, setFormData }) => {
   const handleChange = (e) => {
@@ -18,9 +19,8 @@ const ThirdOnboard = ({ formData, setFormData }) => {
       .post("https://api.cloudinary.com/v1_1/dannyypz/image/upload", formData)
       .then((response) => {
         setFormData({ ...formData, xrayUpload: response.data.url });
-        console.log(response.data.url);
-        console.log(response);
       });
+    swal("Your Xray has uploaded!");
   };
   return (
     <>
